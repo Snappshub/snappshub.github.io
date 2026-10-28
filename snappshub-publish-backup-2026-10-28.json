@@ -1,0 +1,2617 @@
+{
+  "exportedAt": "2026-10-28T11:49:06.909Z",
+  "settings": {
+    "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+    "siteName": "SN Apps Hub",
+    "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+    "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+    "heroImageUrl": "",
+    "heroTitle": "Your Trusted Source for Apps & Tools",
+    "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+    "heroSize": "standard",
+    "heroAnimation": "fade",
+    "primaryColor": "#079447",
+    "accentColor": "#37c878",
+    "logoText": "SN Apps Hub",
+    "logoUrl": "",
+    "homepageFeatured": 6,
+    "enableSearch": true,
+    "enableCategories": true,
+    "enableRatings": false,
+    "footerText": "© 2026 SnappsHub. Built By Alamin Saheb",
+    "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+    "workerApiUrl": "",
+    "telegramChannelUrl": "https://t.me/snappshub",
+    "telegramBotLabel": "SnappsHub Telegram Bot",
+    "telegramBotEnabled": true,
+    "autopostEnabled": true,
+    "adsenseEnabled": false,
+    "adsensePublisherId": "",
+    "adsenseSlotId": "",
+    "monetizationNote": "",
+    "dashboardWidgets": [
+      {
+        "key": "quick_links",
+        "visible": true
+      },
+      {
+        "key": "earnings",
+        "visible": true
+      },
+      {
+        "key": "status",
+        "visible": true
+      },
+      {
+        "key": "add_app",
+        "visible": true
+      },
+      {
+        "key": "stats",
+        "visible": false
+      }
+    ],
+    "storageProvider": "Supabase Storage",
+    "popupAdEnabled": false,
+    "popupAdPosition": "center",
+    "popupAdSize": "medium",
+    "headerAdEnabled": false,
+    "headerAdPosition": "below-header",
+    "headerAdSize": "responsive",
+    "downloadButtonEnabled": true,
+    "downloadLinkEnabled": true,
+    "tickerEnabled": true,
+    "tickerText": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+    "tickerPosition": "top",
+    "tickerSize": "medium",
+    "panelTheme": "forest",
+    "panelBackground": "soft",
+    "panelAccent": "#1d66f2",
+    "panelAutoSave": true,
+    "panelCompact": false,
+    "panelShowSearch": true,
+    "panelNotifications": false,
+    "publicAutoSync": true,
+    "publicPublishMode": "preview"
+  },
+  "apps": [
+    {
+      "id": "eb505533-78e8-45e4-87ff-379765eedd4e",
+      "name": "Nova Launcher Prime",
+      "packageName": "com.snappshub.novalauncher",
+      "categoryId": "611ac35e-fa76-4c51-92eb-094a20107681",
+      "category": {
+        "id": "611ac35e-fa76-4c51-92eb-094a20107681",
+        "icon": "Box",
+        "name": "Apps",
+        "slug": "apps",
+        "color": "from-accent-500 to-accent-700",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 1
+      },
+      "version": "8.1.1",
+      "sizeLabel": "12.4 MB",
+      "developer": "SnappsHub Labs",
+      "iconName": "LayoutGrid",
+      "iconColor": "from-primary-500 to-primary-700",
+      "status": "published",
+      "downloads": 18420,
+      "rating": 4.7,
+      "fileId": null,
+      "fileName": "nova-launcher-prime-8.1.1.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub",
+      "iconUrl": "",
+      "description": "Personalize your home screen with clean layouts, gesture controls and a fast app drawer.",
+      "featured": false,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T21:58:50.726052+00:00"
+    },
+    {
+      "id": "2f2ae846-113c-4d8d-bd2e-63c7ecef5441",
+      "name": "Pixel Sketch",
+      "packageName": "com.snappshub.pixelsketch",
+      "categoryId": "611ac35e-fa76-4c51-92eb-094a20107681",
+      "category": {
+        "id": "611ac35e-fa76-4c51-92eb-094a20107681",
+        "icon": "Box",
+        "name": "Apps",
+        "slug": "apps",
+        "color": "from-accent-500 to-accent-700",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 1
+      },
+      "version": "1.9.2",
+      "sizeLabel": "18.6 MB",
+      "developer": "SnappsHub Labs",
+      "iconName": "PenTool",
+      "iconColor": "from-accent-500 to-accent-700",
+      "status": "published",
+      "downloads": 12880,
+      "rating": 4.8,
+      "fileId": null,
+      "fileName": "pixel-sketch-1.9.2.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub",
+      "iconUrl": "",
+      "description": "A focused sketchbook with layers, color palettes and quick export for creative ideas.",
+      "featured": false,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T21:58:50.726052+00:00"
+    },
+    {
+      "id": "482c6d45-85bc-407a-afa9-a255af632e31",
+      "name": "Secure Notes",
+      "packageName": "com.snappshub.securenotes",
+      "categoryId": "f8fe9c1b-afc8-49c6-b3c8-5b3ff70698df",
+      "category": {
+        "id": "f8fe9c1b-afc8-49c6-b3c8-5b3ff70698df",
+        "icon": "ShieldCheck",
+        "name": "Tools",
+        "slug": "tools",
+        "color": "from-success-500 to-success-700",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 2
+      },
+      "version": "2.2.7",
+      "sizeLabel": "7.1 MB",
+      "developer": "SnappsHub Labs",
+      "iconName": "ShieldCheck",
+      "iconColor": "from-success-500 to-success-700",
+      "status": "published",
+      "downloads": 15670,
+      "rating": 4.9,
+      "fileId": null,
+      "fileName": "secure-notes-2.2.7.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub",
+      "iconUrl": "",
+      "description": "Keep private notes tidy with folders, quick search and a calm distraction-free editor.",
+      "featured": false,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T21:58:50.726052+00:00"
+    },
+    {
+      "id": "c24fe413-47e8-4b02-b257-7294db7ff65d",
+      "name": "WhatsApp Plus",
+      "packageName": "com.wa.plus",
+      "categoryId": "e2507f0d-dbe1-4062-bb45-48170161a9fc",
+      "category": {
+        "id": "e2507f0d-dbe1-4062-bb45-48170161a9fc",
+        "icon": "Users",
+        "name": "Social",
+        "slug": "social",
+        "color": "from-primary-500 to-accent-500",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 3
+      },
+      "version": "17.56",
+      "sizeLabel": "52 MB",
+      "developer": "WA Mods",
+      "iconName": "MessageCircle",
+      "iconColor": "from-success-500 to-success-700",
+      "status": "published",
+      "downloads": 43000,
+      "rating": 4.3,
+      "fileId": null,
+      "fileName": "whatsapp-plus-17.56.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub",
+      "iconUrl": "",
+      "description": "Enhanced messaging with custom themes, privacy controls, extra features and a smoother sharing experience.",
+      "featured": false,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T21:58:50.726052+00:00"
+    },
+    {
+      "id": "e5e61e09-72a3-44ff-99e8-2d6ca882c1f6",
+      "name": "Learnly English",
+      "packageName": "com.snappshub.learnly",
+      "categoryId": "9835d078-ba0b-44d1-8053-2ff6e6f4f8fb",
+      "category": {
+        "id": "9835d078-ba0b-44d1-8053-2ff6e6f4f8fb",
+        "icon": "GraduationCap",
+        "name": "Education",
+        "slug": "education",
+        "color": "from-warning-500 to-warning-700",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 4
+      },
+      "version": "3.6.0",
+      "sizeLabel": "28.8 MB",
+      "developer": "SnappsHub Labs",
+      "iconName": "GraduationCap",
+      "iconColor": "from-warning-500 to-warning-700",
+      "status": "published",
+      "downloads": 9420,
+      "rating": 4.6,
+      "fileId": null,
+      "fileName": "learnly-english-3.6.0.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub",
+      "iconUrl": "",
+      "description": "Build everyday English confidence with short lessons, pronunciation practice and review cards.",
+      "featured": true,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T21:58:50.726052+00:00"
+    },
+    {
+      "id": "405f340f-26c5-4e7d-b713-31ae813e927b",
+      "name": "GameVault",
+      "packageName": "com.snappshub.gamevault",
+      "categoryId": "6c1595ae-7c72-4045-b9e5-acc7264e288a",
+      "category": {
+        "id": "6c1595ae-7c72-4045-b9e5-acc7264e288a",
+        "icon": "Gamepad2",
+        "name": "Games",
+        "slug": "games",
+        "color": "from-primary-500 to-primary-700",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 0
+      },
+      "version": "5.4.0",
+      "sizeLabel": "9.8 MB",
+      "developer": "SnappsHub Labs",
+      "iconName": "Gamepad2",
+      "iconColor": "from-success-500 to-success-700",
+      "status": "published",
+      "downloads": 31640,
+      "rating": 4.7,
+      "fileId": null,
+      "fileName": "gamevault-5.4.0.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub",
+      "iconUrl": "",
+      "description": "Keep your favorite games organized with quick launch tools, update notes and controller tips.",
+      "featured": true,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T21:58:50.726052+00:00"
+    },
+    {
+      "id": "98e076ed-e7c5-463a-b88c-538b560acaae",
+      "name": "StreamBox",
+      "packageName": "com.snappshub.streambox",
+      "categoryId": "65d020ff-bd4d-4371-989e-733362bf8b01",
+      "category": {
+        "id": "65d020ff-bd4d-4371-989e-733362bf8b01",
+        "icon": "Film",
+        "name": "Entertainment",
+        "slug": "entertainment",
+        "color": "from-error-500 to-error-700",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 5
+      },
+      "version": "2.8.4",
+      "sizeLabel": "41.2 MB",
+      "developer": "SnappsHub Labs",
+      "iconName": "PlayCircle",
+      "iconColor": "from-error-500 to-error-700",
+      "status": "published",
+      "downloads": 21750,
+      "rating": 4.5,
+      "fileId": null,
+      "fileName": "streambox-2.8.4.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub",
+      "iconUrl": "",
+      "description": "A polished entertainment hub for organizing your favorite shows, trailers and watchlist.",
+      "featured": false,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T21:58:50.726052+00:00"
+    },
+    {
+      "id": "0d112827-23ed-4696-93cb-9c8dc5bc445f",
+      "name": "PUBG Mobile Lite",
+      "packageName": "com.tencent.pubglite",
+      "categoryId": "6c1595ae-7c72-4045-b9e5-acc7264e288a",
+      "category": {
+        "id": "6c1595ae-7c72-4045-b9e5-acc7264e288a",
+        "icon": "Gamepad2",
+        "name": "Games",
+        "slug": "games",
+        "color": "from-primary-500 to-primary-700",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 0
+      },
+      "version": "0.23.0",
+      "sizeLabel": "560 MB",
+      "developer": "Tencent Games",
+      "iconName": "Gamepad2",
+      "iconColor": "from-accent-500 to-accent-700",
+      "status": "published",
+      "downloads": 89000,
+      "rating": 4.8,
+      "fileId": null,
+      "fileName": "pubg-mobile-lite-0.23.0.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub",
+      "iconUrl": "",
+      "description": "Battle royale optimized for lower-end devices. 60 players, smaller map, same intense action.",
+      "featured": true,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T20:53:23.755848+00:00"
+    },
+    {
+      "id": "3425db0e-3d53-410d-bd21-3b21096d49a0",
+      "name": "VidMate HD",
+      "packageName": "com.vidmate.hd",
+      "categoryId": "611ac35e-fa76-4c51-92eb-094a20107681",
+      "category": {
+        "id": "611ac35e-fa76-4c51-92eb-094a20107681",
+        "icon": "Box",
+        "name": "Apps",
+        "slug": "apps",
+        "color": "from-accent-500 to-accent-700",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 1
+      },
+      "version": "5.0.2",
+      "sizeLabel": "18.4 MB",
+      "developer": "VidMate Studio",
+      "iconName": "Film",
+      "iconColor": "from-primary-500 to-primary-700",
+      "status": "published",
+      "downloads": 12500,
+      "rating": 4.6,
+      "fileId": null,
+      "fileName": "vidmate-hd-5.0.2.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub",
+      "iconUrl": "",
+      "description": "Download videos from popular platforms in HD quality. Fast, free and easy to use.",
+      "featured": true,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T20:53:23.755848+00:00"
+    },
+    {
+      "id": "0b2a3603-97a7-4d7e-8dc8-77c2f1e8195f",
+      "name": "Photo Editor Pro",
+      "packageName": "com.snapps.photoeditor",
+      "categoryId": "f8fe9c1b-afc8-49c6-b3c8-5b3ff70698df",
+      "category": {
+        "id": "f8fe9c1b-afc8-49c6-b3c8-5b3ff70698df",
+        "icon": "ShieldCheck",
+        "name": "Tools",
+        "slug": "tools",
+        "color": "from-success-500 to-success-700",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 2
+      },
+      "version": "4.2.1",
+      "sizeLabel": "28 MB",
+      "developer": "SnappsHub",
+      "iconName": "Image",
+      "iconColor": "from-warning-500 to-warning-700",
+      "status": "published",
+      "downloads": 8200,
+      "rating": 4.4,
+      "fileId": null,
+      "fileName": "photo-editor-pro-4.2.1.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub",
+      "iconUrl": "",
+      "description": "Professional photo editing with filters, layers, crop tools and AI enhancements.",
+      "featured": false,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T20:53:23.755848+00:00"
+    },
+    {
+      "id": "223dc05c-384a-4643-b9b7-24681613b90a",
+      "name": "Spotify Premium Mod",
+      "packageName": "com.spotify.premium",
+      "categoryId": "6e904e1e-5d72-4ba1-8f03-3a6a67974d4c",
+      "category": {
+        "id": "6e904e1e-5d72-4ba1-8f03-3a6a67974d4c",
+        "icon": "Music",
+        "name": "Music",
+        "slug": "music",
+        "color": "from-primary-600 to-primary-900",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 6
+      },
+      "version": "8.9.84",
+      "sizeLabel": "45 MB",
+      "developer": "Spotify AB",
+      "iconName": "Music",
+      "iconColor": "from-primary-600 to-primary-900",
+      "status": "published",
+      "downloads": 210000,
+      "rating": 4.7,
+      "fileId": null,
+      "fileName": "spotify-premium-8.9.84.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub",
+      "iconUrl": "",
+      "description": "Stream millions of songs ad-free with offline downloads and unlimited skips.",
+      "featured": true,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T20:53:23.755848+00:00"
+    },
+    {
+      "id": "1df33612-b458-4ce7-b69a-ab78b11a51c1",
+      "name": "MX Player Pro",
+      "packageName": "com.mxtech.pro",
+      "categoryId": "f8fe9c1b-afc8-49c6-b3c8-5b3ff70698df",
+      "category": {
+        "id": "f8fe9c1b-afc8-49c6-b3c8-5b3ff70698df",
+        "icon": "ShieldCheck",
+        "name": "Tools",
+        "slug": "tools",
+        "color": "from-success-500 to-success-700",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 2
+      },
+      "version": "1.42.10",
+      "sizeLabel": "32 MB",
+      "developer": "MX Media",
+      "iconName": "Film",
+      "iconColor": "from-error-500 to-error-700",
+      "status": "published",
+      "downloads": 67000,
+      "rating": 4.5,
+      "fileId": null,
+      "fileName": "mx-player-pro-1.42.10.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub",
+      "iconUrl": "",
+      "description": "Powerful video player with hardware acceleration, subtitle support and multi-core decoding.",
+      "featured": false,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T20:53:23.755848+00:00"
+    },
+    {
+      "id": "7d807977-c6f4-4ddb-8edd-7ed7ab217ddc",
+      "name": "Draft Test App (Hidden)",
+      "packageName": "com.snappshub.drafttest",
+      "categoryId": "611ac35e-fa76-4c51-92eb-094a20107681",
+      "category": {
+        "id": "611ac35e-fa76-4c51-92eb-094a20107681",
+        "icon": "Box",
+        "name": "Apps",
+        "slug": "apps",
+        "color": "from-accent-500 to-accent-700",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 1
+      },
+      "version": "0.9.0",
+      "sizeLabel": "5.0 MB",
+      "developer": "SnappsHub",
+      "iconName": "Box",
+      "iconColor": "from-ink-500 to-ink-700",
+      "status": "draft",
+      "downloads": 0,
+      "rating": 0,
+      "fileId": null,
+      "fileName": "draft-test-0.9.0.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub/99",
+      "iconUrl": "",
+      "description": "This is a draft app that should NOT appear on the live website.",
+      "featured": false,
+      "telegramMessageId": null,
+      "githubCommitted": false,
+      "updatedAt": "2026-10-27T20:52:32.230228+00:00"
+    },
+    {
+      "id": "14d0c0f9-bf24-4f2a-821b-a977fae25aa4",
+      "name": "PixelArt Studio",
+      "packageName": "com.snappshub.pixelart",
+      "categoryId": "6c1595ae-7c72-4045-b9e5-acc7264e288a",
+      "category": {
+        "id": "6c1595ae-7c72-4045-b9e5-acc7264e288a",
+        "icon": "Gamepad2",
+        "name": "Games",
+        "slug": "games",
+        "color": "from-primary-500 to-primary-700",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 0
+      },
+      "version": "3.0.1",
+      "sizeLabel": "24.6 MB",
+      "developer": "SnappsHub",
+      "iconName": "Image",
+      "iconColor": "from-accent-500 to-accent-700",
+      "status": "published",
+      "downloads": 5100,
+      "rating": 4.8,
+      "fileId": null,
+      "fileName": "pixelart-studio-3.0.1.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub/17",
+      "iconUrl": "",
+      "description": "Create pixel art on your phone with layers, palette tools and export to PNG. Great for game developers and hobbyists.",
+      "featured": true,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T20:52:32.230228+00:00"
+    },
+    {
+      "id": "5d863c2a-ad31-4cc2-b0e1-3178dffc5575",
+      "name": "TubeVideo Player",
+      "packageName": "com.snappshub.tubevideo",
+      "categoryId": "f8fe9c1b-afc8-49c6-b3c8-5b3ff70698df",
+      "category": {
+        "id": "f8fe9c1b-afc8-49c6-b3c8-5b3ff70698df",
+        "icon": "ShieldCheck",
+        "name": "Tools",
+        "slug": "tools",
+        "color": "from-success-500 to-success-700",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 2
+      },
+      "version": "1.8.3",
+      "sizeLabel": "8.9 MB",
+      "developer": "SnappsHub",
+      "iconName": "Film",
+      "iconColor": "from-error-500 to-error-700",
+      "status": "published",
+      "downloads": 8420,
+      "rating": 4.3,
+      "fileId": null,
+      "fileName": "tubevideo-player-1.8.3.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub/16",
+      "iconUrl": "",
+      "description": "Minimal video player supporting all major formats. Background play, subtitle support and gesture controls.",
+      "featured": false,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T20:52:32.230228+00:00"
+    },
+    {
+      "id": "0a224f72-277b-4b80-bc0d-8344fb4a98f9",
+      "name": "SnappsBoost Cleaner",
+      "packageName": "com.snappshub.boostcleaner",
+      "categoryId": "611ac35e-fa76-4c51-92eb-094a20107681",
+      "category": {
+        "id": "611ac35e-fa76-4c51-92eb-094a20107681",
+        "icon": "Box",
+        "name": "Apps",
+        "slug": "apps",
+        "color": "from-accent-500 to-accent-700",
+        "owner_id": "a2483dc6-6a4f-4207-88fc-8e288b759907",
+        "created_at": "2026-10-25T19:13:13.502104+00:00",
+        "sort_order": 1
+      },
+      "version": "2.1.0",
+      "sizeLabel": "12.4 MB",
+      "developer": "SnappsHub",
+      "iconName": "Zap",
+      "iconColor": "from-primary-500 to-primary-700",
+      "status": "published",
+      "downloads": 15230,
+      "rating": 4.7,
+      "fileId": null,
+      "fileName": "snapps-boost-cleaner-2.1.0.apk",
+      "downloadEnabled": true,
+      "downloadUrl": "https://t.me/snappshub/15",
+      "iconUrl": "",
+      "description": "Lightweight phone cleaner that clears cache, junk files and boosts RAM with one tap. No ads, no extra permissions.",
+      "featured": true,
+      "telegramMessageId": null,
+      "githubCommitted": true,
+      "updatedAt": "2026-10-27T20:52:32.230228+00:00"
+    }
+  ],
+  "categories": [
+    {
+      "id": "6c1595ae-7c72-4045-b9e5-acc7264e288a",
+      "name": "Games",
+      "slug": "games",
+      "icon": "Gamepad2",
+      "color": "from-primary-500 to-primary-700",
+      "sort_order": 0
+    },
+    {
+      "id": "611ac35e-fa76-4c51-92eb-094a20107681",
+      "name": "Apps",
+      "slug": "apps",
+      "icon": "Box",
+      "color": "from-accent-500 to-accent-700",
+      "sort_order": 1
+    },
+    {
+      "id": "f8fe9c1b-afc8-49c6-b3c8-5b3ff70698df",
+      "name": "Tools",
+      "slug": "tools",
+      "icon": "ShieldCheck",
+      "color": "from-success-500 to-success-700",
+      "sort_order": 2
+    },
+    {
+      "id": "e2507f0d-dbe1-4062-bb45-48170161a9fc",
+      "name": "Social",
+      "slug": "social",
+      "icon": "Users",
+      "color": "from-primary-500 to-accent-500",
+      "sort_order": 3
+    },
+    {
+      "id": "9835d078-ba0b-44d1-8053-2ff6e6f4f8fb",
+      "name": "Education",
+      "slug": "education",
+      "icon": "GraduationCap",
+      "color": "from-warning-500 to-warning-700",
+      "sort_order": 4
+    },
+    {
+      "id": "65d020ff-bd4d-4371-989e-733362bf8b01",
+      "name": "Entertainment",
+      "slug": "entertainment",
+      "icon": "Film",
+      "color": "from-error-500 to-error-700",
+      "sort_order": 5
+    },
+    {
+      "id": "6e904e1e-5d72-4ba1-8f03-3a6a67974d4c",
+      "name": "Music",
+      "slug": "music",
+      "icon": "Music",
+      "color": "from-primary-600 to-primary-900",
+      "sort_order": 6
+    }
+  ],
+  "revisions": [
+    {
+      "id": "39b28f71-2020-4ec0-9fff-3a476e730428",
+      "label": "Saved 10/28/2026, 11:12:08 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+        "heroSize": "standard",
+        "logoText": "SN Apps Hub",
+        "siteName": "SN Apps Hub",
+        "heroTitle": "Your Trusted Source for Apps & Tools",
+        "footerText": "© 2026 SnappsHub. Built By Alamin Saheb",
+        "panelTheme": "forest",
+        "tickerSize": "medium",
+        "tickerText": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+        "accentColor": "#37c878",
+        "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelCompact": false,
+        "primaryColor": "#079447",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": false,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": true,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "soft",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": false,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T05:12:09.412737+00:00"
+    },
+    {
+      "id": "2a8c6756-9b6f-452c-9d3e-01edccfe42f3",
+      "label": "Saved 10/28/2026, 11:10:36 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+        "heroSize": "standard",
+        "logoText": "SN Apps Hub",
+        "siteName": "SN Apps Hub",
+        "heroTitle": "Your Trusted Source for Apps & Tools",
+        "footerText": "© 2026 SnappsHub. Built By Alamin Saheb",
+        "panelTheme": "forest",
+        "tickerSize": "medium",
+        "tickerText": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+        "accentColor": "#37c878",
+        "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelCompact": false,
+        "primaryColor": "#079447",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": true,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "soft",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": false,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T05:10:37.708694+00:00"
+    },
+    {
+      "id": "3ab9caef-964f-4eaf-8489-9f94a78b1b04",
+      "label": "Saved 10/28/2026, 11:10:24 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+        "heroSize": "standard",
+        "logoText": "SN Apps Hub",
+        "siteName": "SN Apps Hub",
+        "heroTitle": "Your Trusted Source for Apps & Tools",
+        "footerText": "© 2026 SnappsHub. Built By ",
+        "panelTheme": "forest",
+        "tickerSize": "medium",
+        "tickerText": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+        "accentColor": "#37c878",
+        "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelCompact": false,
+        "primaryColor": "#079447",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": true,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "soft",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": false,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T05:10:25.14633+00:00"
+    },
+    {
+      "id": "d6ca79c7-b8af-440c-b70c-edc27529591e",
+      "label": "Saved 10/28/2026, 11:10:18 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+        "heroSize": "standard",
+        "logoText": "SN Apps Hub",
+        "siteName": "SN Apps Hub",
+        "heroTitle": "Your Trusted Source for Apps & Tools",
+        "footerText": "© 2026 SnappsHub. Built ",
+        "panelTheme": "forest",
+        "tickerSize": "medium",
+        "tickerText": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+        "accentColor": "#37c878",
+        "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelCompact": false,
+        "primaryColor": "#079447",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": true,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "soft",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": false,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T05:10:19.078537+00:00"
+    },
+    {
+      "id": "957a235f-0b96-4c7d-8fa5-8439084a6b31",
+      "label": "Saved 10/28/2026, 11:09:42 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+        "heroSize": "standard",
+        "logoText": "SN Apps Hub",
+        "siteName": "SN Apps Hub",
+        "heroTitle": "Your Trusted Source for Apps & Tools",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "forest",
+        "tickerSize": "medium",
+        "tickerText": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+        "accentColor": "#37c878",
+        "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelCompact": false,
+        "primaryColor": "#079447",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": true,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "soft",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": false,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T05:09:43.138101+00:00"
+    },
+    {
+      "id": "1c673db7-cc7b-4272-ae19-aefd64a35153",
+      "label": "Saved 10/28/2026, 11:09:38 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+        "heroSize": "standard",
+        "logoText": "SN Apps Hub",
+        "siteName": "SN Apps Hub",
+        "heroTitle": "Your Trusted Source for Apps & Tools",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+        "accentColor": "#37c878",
+        "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelCompact": false,
+        "primaryColor": "#079447",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": true,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "soft",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": false,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T05:09:39.455545+00:00"
+    },
+    {
+      "id": "1eba7b9f-f35d-419c-94c6-e8b16d6dce69",
+      "label": "Saved 10/28/2026, 11:09:35 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+        "heroSize": "standard",
+        "logoText": "SN Apps Hub",
+        "siteName": "SN Apps Hub",
+        "heroTitle": "Your Trusted Source for Apps & Tools",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+        "accentColor": "#37c878",
+        "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelCompact": false,
+        "primaryColor": "#079447",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": true,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "aurora",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": false,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T05:09:36.343369+00:00"
+    },
+    {
+      "id": "826e2e34-e4e6-4d7d-b650-399102d4e760",
+      "label": "Saved 10/28/2026, 11:09:32 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+        "heroSize": "standard",
+        "logoText": "SN Apps Hub",
+        "siteName": "SN Apps Hub",
+        "heroTitle": "Your Trusted Source for Apps & Tools",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+        "accentColor": "#37c878",
+        "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelCompact": false,
+        "primaryColor": "#079447",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": true,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "aurora",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": true,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T05:09:33.451994+00:00"
+    },
+    {
+      "id": "5d6b2957-3b06-489a-81d8-d82a7c374bf5",
+      "label": "Saved 10/28/2026, 11:09:14 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+        "heroSize": "standard",
+        "logoText": "SN Apps Hub",
+        "siteName": "SN Apps Hub",
+        "heroTitle": "Your Trusted Source for Apps & Tools",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+        "accentColor": "#37c878",
+        "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelCompact": true,
+        "primaryColor": "#079447",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": true,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "aurora",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": true,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T05:09:14.921825+00:00"
+    },
+    {
+      "id": "509906f4-49d6-41fe-bfc0-7ade8a950cb7",
+      "label": "Saved 10/28/2026, 11:08:29 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+        "heroSize": "standard",
+        "logoText": "SN Apps Hub",
+        "siteName": "SN Apps Hub",
+        "heroTitle": "Your Trusted Source for Apps & Tools",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+        "accentColor": "#37c878",
+        "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelCompact": true,
+        "primaryColor": "#079447",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": true,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "plain",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": true,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T05:08:30.45952+00:00"
+    },
+    {
+      "id": "10bcc8a3-4bd5-477e-89a1-da6903901e78",
+      "label": "Saved 10/28/2026, 11:08:26 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+        "heroSize": "standard",
+        "logoText": "SN Apps Hub",
+        "siteName": "SN Apps Hub",
+        "heroTitle": "Your Trusted Source for Apps & Tools",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+        "accentColor": "#37c878",
+        "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelCompact": true,
+        "primaryColor": "#079447",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": true,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "plain",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": true,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T05:08:27.735792+00:00"
+    },
+    {
+      "id": "b7635cdb-2177-4803-95b7-acafcfe292e8",
+      "label": "Saved 10/28/2026, 10:33:28 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+        "heroSize": "standard",
+        "logoText": "SN Apps Hub",
+        "siteName": "SN Apps Hub",
+        "heroTitle": "Your Trusted Source for Apps & Tools",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+        "accentColor": "#37c878",
+        "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelCompact": true,
+        "primaryColor": "#079447",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": true,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "plain",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": true,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T04:33:29.575506+00:00"
+    },
+    {
+      "id": "a3e6dc85-86b3-4292-add0-bb2cedc86272",
+      "label": "Saved 10/28/2026, 9:23:18 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Your hub for apps, games & tools",
+        "logoText": "SnappsHub",
+        "siteName": "SnappsHub",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "",
+        "accentColor": "#f97316",
+        "description": "SnappsHub is a lightweight app distribution platform hosting Android apps, games, and tools.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "panelCompact": true,
+        "primaryColor": "#1d66f2",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "panelAutoSave": true,
+        "tickerEnabled": false,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://snappshub.github.io",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "plain",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": true,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T03:23:18.785016+00:00"
+    },
+    {
+      "id": "2b897c35-d667-41de-bf1d-ce2dfb776e3e",
+      "label": "Saved 10/28/2026, 9:23:13 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+        "heroSize": "standard",
+        "logoText": "SN Apps Hub",
+        "siteName": "SN Apps Hub",
+        "heroTitle": "Your Trusted Source for Apps & Tools",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+        "accentColor": "#37c878",
+        "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+        "panelCompact": true,
+        "primaryColor": "#079447",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": true,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "plain",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": true,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T03:23:13.947088+00:00"
+    },
+    {
+      "id": "4275c745-fb42-45b4-a14e-7b92230dadc9",
+      "label": "Saved 10/28/2026, 9:23:11 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Your hub for apps, games & tools",
+        "logoText": "SnappsHub",
+        "siteName": "SnappsHub",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "",
+        "accentColor": "#f97316",
+        "description": "SnappsHub is a lightweight app distribution platform hosting Android apps, games, and tools.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "panelCompact": true,
+        "primaryColor": "#1d66f2",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "panelAutoSave": true,
+        "tickerEnabled": false,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://snappshub.github.io",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "plain",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": true,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T03:23:12.301534+00:00"
+    },
+    {
+      "id": "ebafd2f8-2f0e-4b6c-857e-c10b8d391538",
+      "label": "Saved 10/28/2026, 8:56:24 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Your hub for apps, games & tools",
+        "heroSize": "standard",
+        "logoText": "SnappsHub",
+        "siteName": "SnappsHub",
+        "heroTitle": "",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "",
+        "accentColor": "#f97316",
+        "description": "SnappsHub is a lightweight app distribution platform hosting Android apps, games, and tools.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "",
+        "panelCompact": true,
+        "primaryColor": "#1d66f2",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": false,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "plain",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": true,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T02:56:25.294206+00:00"
+    },
+    {
+      "id": "1e4840e2-011f-4a91-9431-0683c858a67e",
+      "label": "Saved 10/28/2026, 8:56:19 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Your hub for apps, games & tools",
+        "heroSize": "standard",
+        "logoText": "SnappsHub",
+        "siteName": "SnappsHub",
+        "heroTitle": "",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "",
+        "accentColor": "#f97316",
+        "description": "SnappsHub is a lightweight app distribution platform hosting Android apps, games, and tools.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "",
+        "panelCompact": true,
+        "primaryColor": "#1d66f2",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": false,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "plain",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": true,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T02:56:20.140462+00:00"
+    },
+    {
+      "id": "3c664353-e6e5-4c44-8b89-96c7419e01be",
+      "label": "Saved 10/28/2026, 8:56:17 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Your hub for apps, games & tools",
+        "heroSize": "standard",
+        "logoText": "SnappsHub",
+        "siteName": "SnappsHub",
+        "heroTitle": "",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "",
+        "accentColor": "#f97316",
+        "description": "SnappsHub is a lightweight app distribution platform hosting Android apps, games, and tools.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "",
+        "panelCompact": true,
+        "primaryColor": "#1d66f2",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": false,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://alaminsaheb.github.iosnappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "plain",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": true,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T02:56:18.195142+00:00"
+    },
+    {
+      "id": "2797605b-3ece-4ba8-b457-09d2df998161",
+      "label": "Saved 10/28/2026, 8:55:46 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Your hub for apps, games & tools",
+        "heroSize": "standard",
+        "logoText": "SnappsHub",
+        "siteName": "SnappsHub",
+        "heroTitle": "",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "",
+        "accentColor": "#f97316",
+        "description": "SnappsHub is a lightweight app distribution platform hosting Android apps, games, and tools.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "",
+        "panelCompact": true,
+        "primaryColor": "#1d66f2",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": false,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "plain",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": true,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T02:55:47.392912+00:00"
+    },
+    {
+      "id": "bea2af2f-b4d9-4dc4-a2f9-f34cc442fa4b",
+      "label": "Saved 10/28/2026, 8:55:40 AM",
+      "settingsSnapshot": {
+        "id": "3d843a3f-23d8-4ea4-ac5f-a33ec9290a2a",
+        "logoUrl": "",
+        "tagline": "Your hub for apps, games & tools",
+        "heroSize": "standard",
+        "logoText": "SnappsHub",
+        "siteName": "SnappsHub",
+        "heroTitle": "",
+        "footerText": "© 2026 SnappsHub. Built with love.",
+        "panelTheme": "mono",
+        "tickerSize": "medium",
+        "tickerText": "",
+        "accentColor": "#f97316",
+        "description": "SnappsHub is a lightweight app distribution platform hosting Android apps, games, and tools.",
+        "panelAccent": "#1d66f2",
+        "popupAdSize": "medium",
+        "enableSearch": true,
+        "headerAdSize": "responsive",
+        "heroImageUrl": "",
+        "heroSubtitle": "",
+        "panelCompact": true,
+        "primaryColor": "#1d66f2",
+        "workerApiUrl": "",
+        "adsenseSlotId": "",
+        "enableRatings": true,
+        "heroAnimation": "fade",
+        "panelAutoSave": true,
+        "tickerEnabled": false,
+        "adsenseEnabled": false,
+        "githubPagesUrl": "https://snappshub.github.io/",
+        "popupAdEnabled": false,
+        "publicAutoSync": true,
+        "tickerPosition": "top",
+        "autopostEnabled": true,
+        "headerAdEnabled": false,
+        "panelBackground": "plain",
+        "panelShowSearch": true,
+        "popupAdPosition": "center",
+        "storageProvider": "Supabase Storage",
+        "dashboardWidgets": [
+          {
+            "key": "status",
+            "visible": true
+          },
+          {
+            "key": "earnings",
+            "visible": true
+          },
+          {
+            "key": "quick_links",
+            "visible": true
+          },
+          {
+            "key": "add_app",
+            "visible": true
+          },
+          {
+            "key": "stats",
+            "visible": false
+          }
+        ],
+        "enableCategories": true,
+        "headerAdPosition": "below-header",
+        "homepageFeatured": 6,
+        "monetizationNote": "",
+        "telegramBotLabel": "SnappsHub Telegram Bot",
+        "publicPublishMode": "preview",
+        "adsensePublisherId": "",
+        "panelNotifications": true,
+        "telegramBotEnabled": true,
+        "telegramChannelUrl": "https://t.me/snappshub",
+        "downloadLinkEnabled": true,
+        "downloadButtonEnabled": true
+      },
+      "createdAt": "2026-10-28T02:55:40.907226+00:00"
+    }
+  ],
+  "syncHistory": [
+    {
+      "id": "f4cec5e9-17e2-4776-ab72-15d13ad45c46",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "73202bcde4fcdc95230d21b395b6cb0e1880ccba",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T05:12:16.98359+00:00"
+    },
+    {
+      "id": "78f3b5c1-2df4-4d1c-8274-1bf82bb159b3",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "73202bcde4fcdc95230d21b395b6cb0e1880ccba",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T05:11:31.95558+00:00"
+    },
+    {
+      "id": "96f988ae-84d3-467d-b0fe-10641a692399",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "73202bcde4fcdc95230d21b395b6cb0e1880ccba",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T05:10:48.59904+00:00"
+    },
+    {
+      "id": "e9103962-bfce-4011-9e69-28ba3f7bbb3c",
+      "status": "error",
+      "files": [],
+      "commitSha": null,
+      "errorMessage": "GitHub PUT apps.json failed (409): is at 2f15fab656c1ef913dac4055197e62a41ae47604 but expected 99ed768c4bf2d090354f3bf47d9464708a9bdf4d",
+      "createdAt": "2026-10-28T05:10:27.661889+00:00"
+    },
+    {
+      "id": "acd05fbc-5827-471a-833c-171087d58eaa",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "73202bcde4fcdc95230d21b395b6cb0e1880ccba",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T05:10:27.210476+00:00"
+    },
+    {
+      "id": "db2a1f57-66af-4fe5-bf46-669929cd82c8",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "73202bcde4fcdc95230d21b395b6cb0e1880ccba",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T05:09:50.832309+00:00"
+    },
+    {
+      "id": "3e4ecf39-acf1-4b23-b967-338f8d6b4ff6",
+      "status": "error",
+      "files": [],
+      "commitSha": null,
+      "errorMessage": "GitHub PUT apps.json failed (409): is at 053de35b966ef4b1d7a4651ac4d7133d0d21c020 but expected 372dd4fa8902642925e71d284d80eb8d82997f1e",
+      "createdAt": "2026-10-28T05:09:41.710818+00:00"
+    },
+    {
+      "id": "ee16539c-343b-49e6-a5fe-b2e822a9cdc5",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "73202bcde4fcdc95230d21b395b6cb0e1880ccba",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T05:09:41.506932+00:00"
+    },
+    {
+      "id": "4311a473-942d-4655-bfbd-f808e71e25cd",
+      "status": "error",
+      "files": [],
+      "commitSha": null,
+      "errorMessage": "GitHub PUT apps.json failed (409): is at bbb82c67af3e6596d8ff31859a4af9ac11156ecc but expected bd4390aa87b35378f4bf4a33e936328850a01465",
+      "createdAt": "2026-10-28T05:09:38.371188+00:00"
+    },
+    {
+      "id": "b222c086-3406-4c34-8fd3-020ff0a79113",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "73202bcde4fcdc95230d21b395b6cb0e1880ccba",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T05:09:26.488561+00:00"
+    },
+    {
+      "id": "155f947f-5754-4b4f-97ba-9fac3635e938",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "73202bcde4fcdc95230d21b395b6cb0e1880ccba",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T05:08:36.149439+00:00"
+    },
+    {
+      "id": "877341c0-5fae-4680-8981-8bf9b498b690",
+      "status": "error",
+      "files": [],
+      "commitSha": null,
+      "errorMessage": "GitHub PUT apps.json failed (409): is at 75428ad1628c930bf000022ff78706b58ddc1797 but expected e8c39c4ed5bfbc9a592aec420c94049a6698f751",
+      "createdAt": "2026-10-28T05:08:33.249378+00:00"
+    },
+    {
+      "id": "80cf16f1-f6cb-4a62-9c5f-93b52d6271d2",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "018ee839751860bfed28263f8476d4a08d3cc157",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T04:33:38.272655+00:00"
+    },
+    {
+      "id": "df5e5afe-a072-4143-b840-d606f83c8ff3",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "018ee839751860bfed28263f8476d4a08d3cc157",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T04:33:31.148498+00:00"
+    },
+    {
+      "id": "f0beded8-bcf4-4752-8261-43f33ef11716",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "c994d01a61ed698686bb172f496f2835422097e2",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T04:01:19.755336+00:00"
+    },
+    {
+      "id": "61ee4b28-91fa-4ab6-8c37-4091f12cd7e0",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "c994d01a61ed698686bb172f496f2835422097e2",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T04:01:08.625249+00:00"
+    },
+    {
+      "id": "86ed7240-4285-47e6-bb84-a6a41df66c66",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "c994d01a61ed698686bb172f496f2835422097e2",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T04:01:00.717493+00:00"
+    },
+    {
+      "id": "77941c05-1736-4c6c-b6d1-16eda339ab68",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "c994d01a61ed698686bb172f496f2835422097e2",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T04:00:51.792225+00:00"
+    },
+    {
+      "id": "708591d6-ad65-4090-9a85-c0a376a76860",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "c994d01a61ed698686bb172f496f2835422097e2",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T04:00:43.459867+00:00"
+    },
+    {
+      "id": "a9602b00-8ce7-4ae5-8a63-06bb74fe7f0a",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "c994d01a61ed698686bb172f496f2835422097e2",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T04:00:35.483929+00:00"
+    },
+    {
+      "id": "7894184b-1796-4a44-926c-a6c3a5471797",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "c1a89a3920d2f8f8d967ecd6c587e7aee98fbc38",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T03:23:47.623292+00:00"
+    },
+    {
+      "id": "2af0f751-064d-43ca-8815-116b3a91ba58",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "c1a89a3920d2f8f8d967ecd6c587e7aee98fbc38",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T03:23:26.716616+00:00"
+    },
+    {
+      "id": "319615c2-636a-4675-b7bc-69ac8700236b",
+      "status": "error",
+      "files": [],
+      "commitSha": null,
+      "errorMessage": "GitHub PUT index.html failed (409): is at c1b78709301fc37d2f1a64e4a182b5bbe087f07a but expected 4da9527162e6b497aa2f14b37f2d729c47c14daa",
+      "createdAt": "2026-10-28T03:23:21.666183+00:00"
+    },
+    {
+      "id": "6c0c1022-2aec-49e0-978c-55911a296527",
+      "status": "error",
+      "files": [],
+      "commitSha": null,
+      "errorMessage": "GitHub PUT categories.json failed (409): is at cea99788b995edabec1085a7e7e8ca844efe2dd1 but expected 11dc96221a63c1654999047e5d4a8fa2eab24d76",
+      "createdAt": "2026-10-28T03:23:16.881473+00:00"
+    },
+    {
+      "id": "dcf0279b-e40f-43f6-8dcb-4683837748fc",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "c1a89a3920d2f8f8d967ecd6c587e7aee98fbc38",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T03:20:46.762561+00:00"
+    },
+    {
+      "id": "72f6cead-2da2-4815-ab88-e734e3ac0d7b",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "c1a89a3920d2f8f8d967ecd6c587e7aee98fbc38",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T03:16:36.976084+00:00"
+    },
+    {
+      "id": "64ce6381-8a7f-4163-a16f-1275e50a5e90",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "3f1b2494a13b61176e2614da360dc5f4d6adae1d",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T02:56:54.132335+00:00"
+    },
+    {
+      "id": "1622b299-4761-4912-bb0c-54dba7ace173",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "3f1b2494a13b61176e2614da360dc5f4d6adae1d",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T02:56:31.773571+00:00"
+    },
+    {
+      "id": "db826887-69a4-4a53-9f8d-54eb547e74d4",
+      "status": "success",
+      "files": [
+        "apps.json",
+        "categories.json",
+        "settings.json",
+        "index.html"
+      ],
+      "commitSha": "3f1b2494a13b61176e2614da360dc5f4d6adae1d",
+      "errorMessage": null,
+      "createdAt": "2026-10-28T02:56:25.663008+00:00"
+    },
+    {
+      "id": "0563c490-61fc-4226-a1ff-64943d89ec7b",
+      "status": "error",
+      "files": [],
+      "commitSha": null,
+      "errorMessage": "GitHub PUT apps.json failed (409): apps.json does not match 5c8bbc41b231f39176cdbad62ebd566fb4fad0dc",
+      "createdAt": "2026-10-28T02:56:21.488854+00:00"
+    }
+  ],
+  "syncedFiles": [
+    "apps.json",
+    "categories.json",
+    "settings.json"
+  ]
+}
