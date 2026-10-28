@@ -1,0 +1,107 @@
+[
+  {
+    "name": "GameVault",
+    "description": "Keep your favorite games organized with quick launch tools, update notes and controller tips.",
+    "category": "Games",
+    "url": "https://t.me/snappshub",
+    "icon": ""
+  },
+  {
+    "name": "Pixel Sketch",
+    "description": "A focused sketchbook with layers, color palettes and quick export for creative ideas.",
+    "category": "Apps",
+    "url": "https://t.me/snappshub",
+    "icon": ""
+  },
+  {
+    "name": "Learnly English",
+    "description": "Build everyday English confidence with short lessons, pronunciation practice and review cards.",
+    "category": "Education",
+    "url": "https://t.me/snappshub",
+    "icon": ""
+  },
+  {
+    "name": "StreamBox",
+    "description": "A polished entertainment hub for organizing your favorite shows, trailers and watchlist.",
+    "category": "Entertainment",
+    "url": "https://t.me/snappshub",
+    "icon": ""
+  },
+  {
+    "name": "Nova Launcher Prime",
+    "description": "Personalize your home screen with clean layouts, gesture controls and a fast app drawer.",
+    "category": "Apps",
+    "url": "https://t.me/snappshub",
+    "icon": ""
+  },
+  {
+    "name": "WhatsApp Plus",
+    "description": "Enhanced messaging with custom themes, privacy controls, extra features and a smoother sharing experience.",
+    "category": "Social",
+    "url": "https://t.me/snappshub",
+    "icon": ""
+  },
+  {
+    "name": "Secure Notes",
+    "description": "Keep private notes tidy with folders, quick search and a calm distraction-free editor.",
+    "category": "Tools",
+    "url": "https://t.me/snappshub",
+    "icon": ""
+  },
+  {
+    "name": "Spotify Premium Mod",
+    "description": "Stream millions of songs ad-free with offline downloads and unlimited skips.",
+    "category": "Music",
+    "url": "https://t.me/snappshub",
+    "icon": ""
+  },
+  {
+    "name": "VidMate HD",
+    "description": "Download videos from popular platforms in HD quality. Fast, free and easy to use.",
+    "category": "Apps",
+    "url": "https://t.me/snappshub",
+    "icon": ""
+  },
+  {
+    "name": "PUBG Mobile Lite",
+    "description": "Battle royale optimized for lower-end devices. 60 players, smaller map, same intense action.",
+    "category": "Games",
+    "url": "https://t.me/snappshub",
+    "icon": ""
+  },
+  {
+    "name": "MX Player Pro",
+    "description": "Powerful video player with hardware acceleration, subtitle support and multi-core decoding.",
+    "category": "Tools",
+    "url": "https://t.me/snappshub",
+    "icon": ""
+  },
+  {
+    "name": "Photo Editor Pro",
+    "description": "Professional photo editing with filters, layers, crop tools and AI enhancements.",
+    "category": "Tools",
+    "url": "https://t.me/snappshub",
+    "icon": ""
+  },
+  {
+    "name": "SnappsBoost Cleaner",
+    "description": "Lightweight phone cleaner that clears cache, junk files and boosts RAM with one tap. No ads, no extra permissions.",
+    "category": "Apps",
+    "url": "https://t.me/snappshub/15",
+    "icon": ""
+  },
+  {
+    "name": "PixelArt Studio",
+    "description": "Create pixel art on your phone with layers, palette tools and export to PNG. Great for game developers and hobbyists.",
+    "category": "Games",
+    "url": "https://t.me/snappshub/17",
+    "icon": ""
+  },
+  {
+    "name": "TubeVideo Player",
+    "description": "Minimal video player supporting all major formats. Background play, subtitle support and gesture controls.",
+    "category": "Tools",
+    "url": "https://t.me/snappshub/16",
+    "icon": ""
+  }
+]

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alaminsaheb.github.io/snappshub.github.io/sitemap.xml

@@ -1,0 +1,33 @@
+{
+  "siteName": "SN Apps Hub",
+  "tagline": "Android Phone & TV Apps / PC / Laptop Apps",
+  "description": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+  "primaryColor": "#079447",
+  "accentColor": "#37c878",
+  "logoText": "SN Apps Hub",
+  "logoUrl": "",
+  "heroImageUrl": "",
+  "heroTitle": "Your Trusted Source for Apps & Tools",
+  "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
+  "heroSize": "standard",
+  "heroAnimation": "fade",
+  "siteUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+  "footerText": "© 2026 SnappsHub. Built By Alamin Saheb",
+  "homepageFeatured": 6,
+  "enableSearch": true,
+  "enableCategories": true,
+  "enableRatings": false,
+  "downloadButtonEnabled": true,
+  "downloadLinkEnabled": true,
+  "ticker": {
+    "enabled": true,
+    "text": "SN Apps Hub চালু করেছি — আপনাদের সাপোর্ট চাই। নতুন অ্যাপ পেতে আমাদের সাথেই থাকুন।",
+    "position": "top",
+    "size": "medium"
+  },
+  "publishMode": "preview",
+  "analytics": {
+    "endpoint": "https://poalliiaypqfhjdswyju.supabase.co",
+    "anonKey": "sb_publishable_OjUkEZUELPFvQADJFpFBcA_zKEqNTZx"
+  }
+}

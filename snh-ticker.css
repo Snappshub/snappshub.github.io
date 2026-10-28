@@ -1,0 +1,36 @@
+.snh-ticker {
+  width: 100%;
+  overflow: hidden;
+  background: #073f2b;
+  border-bottom: 2px solid #b8e986;
+  white-space: nowrap;
+}
+.snh-ticker > a {
+  display: block;
+  overflow: hidden;
+  color: #e6f7a8;
+  text-decoration: none;
+}
+.snh-ticker-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 64px;
+  padding: 11px 0;
+  animation: snh-ticker-scroll 42s linear infinite;
+}
+.snh-ticker-track span {
+  flex: 0 0 auto;
+  font-size: 15px;
+  font-weight: 800;
+}
+.snh-ticker:hover .snh-ticker-track {
+  animation-play-state: paused;
+}
+@keyframes snh-ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .snh-ticker-track { animation: none; }
+}

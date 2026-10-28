@@ -1,1 +1,1 @@
-# SN-Apps-Hub
+# snappshub.github.io
