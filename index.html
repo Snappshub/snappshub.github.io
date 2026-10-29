@@ -1,78 +1,422 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#030b24"><title>SnappsHub — Apps, Games & More</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030b24">
+  <title id="sitePageTitle">SnappsHub — Apps, Games & More</title>
   <link rel="preload" as="image" href="hero-bg.png" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="snh-device.css">
+  <link rel="stylesheet" href="snh-ticker.css">
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <!-- MAIN SIDEBAR -->
   <aside class="sidebar" id="sidebar" aria-label="Main sidebar">
-    <a class="sidebar-brand" href="#home"><span class="brand-mark">S</span><span>Snapps<span class="mint">Hub</span></span></a>
+    <a class="sidebar-brand" href="#home"><span class="brand-mark">S</span><span id="sideBrandText">Snapps<span class="mint">Hub</span></span></a>
     <p class="sidebar-label">MAIN MENU</p>
-    <nav class="side-nav">
+    <nav class="side-nav" id="sideNavMenu">
       <a class="active" href="#home"><span>⌂</span> Home</a>
-      <a href="#dashboard"><span>▦</span> Dashboard</a>
+      <a href="admin/"><span>▦</span> Admin Dashboard</a>
       <a href="#apps"><span>▣</span> Apps</a>
       <a href="#games"><span>🎮</span> Games</a>
-      <a href="#movies"><span>▧</span> Movies</a>
-      <a href="#livetv"><span>▣</span> Live TV</a>
-      <a href="#tools"><span>⚒</span> Tools</a>
-      <a href="#settings"><span>⚙</span> Settings</a>
+      <a href="https://t.me/snappshub" target="_blank"><span>📢</span> Telegram Channel</a>
     </nav>
-    <div class="sidebar-note"><span class="brand-mark">S</span><b>SnappsHub</b><small>More Apps · More Fun · All Devices</small><small>Demo UI v2.0</small></div>
+    <div class="sidebar-note">
+      <span class="brand-mark">S</span>
+      <b id="sideNoteTitle">SnappsHub</b>
+      <small id="sideNoteSubtitle">More Apps · More Fun · All Devices</small>
+      <small>Live Auto-Sync</small>
+    </div>
   </aside>
+
   <div class="site-shell">
-  <header class="topbar">
-    <div class="topbar-main">
-      <div class="topbar-brand-row">
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle sidebar" aria-expanded="false"><span aria-hidden="true">☰</span><span class="menu-word">MENU</span></button>
-        <a class="brand" href="#home"><span class="brand-mark">S</span><span>Snapps<span class="mint">Hub</span></span></a>
-        <div class="top-actions"><div class="search-wrap"><input aria-label="Search" id="search" placeholder="Search apps, games, movies..."><button class="search-submit" type="button" aria-label="Search">⌕</button></div></div>
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="topbar-main">
+        <div class="topbar-brand-row">
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle sidebar" aria-expanded="false">
+            <span aria-hidden="true">☰</span>
+            <span class="menu-word">MENU</span>
+          </button>
+          <a class="brand" href="#home">
+            <span class="brand-mark">S</span>
+            <span id="topBrandText">Snapps<span class="mint">Hub</span></span>
+          </a>
+          <div class="top-actions">
+            <div class="search-wrap">
+              <input aria-label="Search" id="search" placeholder="Search apps, games, tools...">
+              <button class="search-submit" type="button" aria-label="Search">⌕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANNOUNCEMENT TICKER (AUTO-LOADS FROM settings.json) -->
+      <div class="notice-bar" aria-label="Announcement">
+        <span class="notice-arrow">◀</span>
+        <div class="notice-track" id="liveTickerTrack">
+          <span id="tickerTextOne">📢 নতুন নতুন অ্যাপ, গেম এবং টুলস আপডেট পেতে SnappsHub-এর সাথে থাকুন</span>
+          <span id="tickerTextTwo" aria-hidden="true">📢 নতুন নতুন অ্যাপ, গেম এবং টুলস আপডেট পেতে SnappsHub-এর সাথে থাকুন</span>
+        </div>
+        <span class="notice-arrow">▶</span>
+      </div>
+
+      <!-- MAIN NAVIGATION BAR -->
+      <nav id="mainNav">
+        <a class="active" href="#home" data-cat="all">⌂ Home</a>
+        <a href="#apps" data-cat="all">▦ All Apps</a>
+        <a href="#games" data-cat="Games Android">🎮 Games</a>
+        <a href="#apps" data-cat="Tools Utilities">⚒ Tools</a>
+        <a href="#apps" data-cat="Android Apps">▣ Apps</a>
+        <a href="https://t.me/snappshub" target="_blank">📢 Telegram</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero" id="home">
+        <div class="hero-scene" aria-hidden="true">
+          <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="hero-bg.png">
+            <source src="red-ninja-sword-live-wallpaper.mp4" type="video/mp4">
+          </video>
+          <div class="sun-glow"></div>
+          <div class="mountain mountain-back"></div>
+          <div class="mountain mountain-front"></div>
+          <div class="island island-one"></div>
+          <div class="island island-two"></div>
+          <div class="parachute p1">🪂</div>
+          <div class="parachute p2">🪂</div>
+          <div class="plane">✈</div>
+          <div class="hero-soldier">🪖</div>
+          <div class="scanline"></div>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">WELCOME TO SNAPPSHUB</p>
+          <h1 id="heroTitle">On your <span>favorite device</span></h1>
+          <p class="intro" id="heroIntro">
+            SnappsHub brings your favorite apps, games, movies and more across all your devices. Fast, safe and always up to date.
+          </p>
+          <div class="benefits">
+            <div><b class="benefit-icon">🚀</b><span>1000+ Apps &amp; Games</span></div>
+            <div><b class="benefit-icon">🛡️</b><span>Safe &amp; Secure</span></div>
+            <div><b class="benefit-icon">⚡</b><span>Fast Download</span></div>
+          </div>
+          <div class="hero-cta">
+            <a class="primary-btn" href="#apps">Explore Apps <span>↗</span></a>
+            <a class="secondary-btn" href="#games">Explore Games</a>
+          </div>
+        </div>
+
+        <div class="hero-side">
+          <div class="pubg-stamp">BATTLE<br><strong>ZONE</strong></div>
+          <p>Play<br>Watch<br><span>Explore</span></p>
+          <i></i>
+        </div>
+        <div class="hero-wave"></div>
+      </section>
+
+      <!-- APPS CATALOG (POPULATES FROM apps.json) -->
+      <section class="catalog" id="apps">
+        <div class="section-heading">
+          <h2><span>✦</span> Popular Apps</h2>
+          <a href="#apps" id="viewAllAppsBtn">View All →</a>
+        </div>
+        
+        <!-- App Grid: Real Apps Auto-Populated Here -->
+        <div class="app-grid" id="appGrid">
+          <!-- Fallback or populated live via JS -->
+        </div>
+      </section>
+
+      <!-- GAMES SECTION -->
+      <section class="catalog games-section" id="games">
+        <div class="section-heading">
+          <h2><span>🎮</span> Popular Games</h2>
+          <a href="#apps" onclick="filterCategoryFromNav('Games Android')">View All →</a>
+        </div>
+        <div class="game-grid">
+          <div class="game-card" onclick="openGameApp('PUBG Mobile Lite')"><div class="game-art art-one">⚔️</div><b>PUBG Mobile</b></div>
+          <div class="game-card" onclick="openGameApp('Free Fire')"><div class="game-art art-two">🔥</div><b>Free Fire</b></div>
+          <div class="game-card" onclick="openGameApp('Call of Duty')"><div class="game-art art-three">🎯</div><b>Call of Duty</b></div>
+          <div class="game-card" onclick="openGameApp('GameVault')"><div class="game-art art-four">🏃</div><b>GameVault</b></div>
+          <div class="game-card" onclick="openGameApp('PixelArt Studio')"><div class="game-art art-five">🟩</div><b>PixelArt</b></div>
+          <div class="game-card" onclick="openGameApp('Asphalt 9')"><div class="game-art art-six">🏎️</div><b>Asphalt 9</b></div>
+        </div>
+      </section>
+
+      <!-- DEVICES SUPPORTED -->
+      <section class="devices" id="about">
+        <div class="device"><div class="device-emoji">📱</div><b>Mobile</b><small>Touch friendly</small></div>
+        <div class="device"><div class="device-emoji">▣</div><b>Tablet</b><small>Adaptive layout</small></div>
+        <div class="device"><div class="device-emoji">💻</div><b>Desktop / Laptop</b><small>Large screen experience</small></div>
+        <div class="device"><div class="device-emoji">📺</div><b>Android TV</b><small>Remote navigation</small></div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div>
+          <b>Theme Colours</b>
+          <div class="swatches"><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div>▣ <b>Fully Responsive</b><small>All devices supported</small></div>
+        <div>✧ <b>Modern UI/UX</b><small>Clean &amp; smooth design</small></div>
+        <div>🛡 <b>Fast &amp; Secure</b><small>Your data, our priority</small></div>
+        <div class="footer-brand">
+          <span class="brand-mark">S</span>
+          <b id="footerBrand">Snapps<span class="mint">Hub</span></b>
+        </div>
+      </footer>
+    </main>
+
+    <!-- APP DETAILS MODAL -->
+    <div class="app-modal" id="appModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-panel">
+        <button class="modal-close" id="modalClose" aria-label="Close details">×</button>
+        <div class="modal-app-icon" id="modalIcon">S</div>
+        <p class="eyebrow">APPLICATION INFORMATION</p>
+        <h2 id="modalTitle">App Details</h2>
+        <p id="modalDescription"></p>
+        <a class="primary-btn" id="modalDownload" target="_blank" rel="noopener noreferrer">Download Page ↗</a>
+        <dl class="detail-list">
+          <div><dt>Category</dt><dd id="modalCategory">—</dd></div>
+          <div><dt>Status</dt><dd id="modalStatus">Verified Release</dd></div>
+          <div><dt>Security</dt><dd>100% Virus-Free APK</dd></div>
+        </dl>
+        <p class="demo-note">Verified application package hosted on SnappsHub. Tap the button above to proceed to download.</p>
       </div>
     </div>
-    <div class="notice-bar" aria-label="Announcement"><span class="notice-arrow">◀</span><div class="notice-track"><span>📢 নতুন নতুন অ্যাপ, গেম এবং টুলস আপডেট পেতে SnappsHub-এর সাথে থাকুন</span><span aria-hidden="true">📢 নতুন নতুন অ্যাপ, গেম এবং টুলস আপডেট পেতে SnappsHub-এর সাথে থাকুন</span></div><span class="notice-arrow">▶</span></div>
-    <nav id="mainNav"><a class="active" href="#home">⌂ Home</a><a href="#apps">▦ Apps</a><a href="#games">🎮 Games</a><a href="#movies">▧ Movies</a><a href="#livetv">▣ Live TV</a><a href="#tools">⚒ Tools</a></nav>
-  </header>
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-scene" aria-hidden="true"><video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="hero-bg.png"><source src="red-ninja-sword-live-wallpaper.mp4" type="video/mp4"></video><div class="sun-glow"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div><div class="island island-one"></div><div class="island island-two"></div><div class="parachute p1">🪂</div><div class="parachute p2">🪂</div><div class="plane">✈</div><div class="hero-soldier">🪖</div><div class="scanline"></div></div>
-      <div class="hero-copy">
-        <p class="eyebrow">WELCOME TO SNAPPSHUB</p>
-        <h1>On your <span>favorite device</span></h1>
-        <p class="intro">SnappsHub brings your favorite apps, games, movies and more across all your devices. Fast, safe and always up to date.</p>
-        <div class="benefits"><div><b class="benefit-icon">🚀</b><span>1000+ Apps &amp; Games</span></div><div><b class="benefit-icon">🛡️</b><span>Safe &amp; Secure</span></div><div><b class="benefit-icon">⚡</b><span>Fast Download</span></div></div>
-        <div class="hero-cta"><a class="primary-btn" href="#apps">Explore Apps <span>↗</span></a><a class="secondary-btn" href="#games">Explore Games</a></div>
-      </div>
-      <div class="hero-side"><div class="pubg-stamp">BATTLE<br><strong>ZONE</strong></div><p>Play<br>Watch<br><span>Explore</span></p><i></i></div>
-      <div class="hero-wave"></div>
-    </section>
-    <section class="catalog" id="apps">
-      <div class="section-heading"><h2><span>✦</span> Popular Apps</h2><a href="#apps">View All →</a></div>
-      <div class="app-grid" id="appGrid">
-        <button class="app-card" data-name="whatsapp" data-title="WhatsApp" data-version="2.26.12.74" data-size="98 MB" data-category="Communication" data-updated="Demo listing" data-description="Messages, voice calls and video calls." type="button"><span class="app-icon whatsapp">☎</span><b>WhatsApp</b><small>v2.26.12.74 · 98 MB</small><span class="app-details">App Details ↗</span></button>
-        <button class="app-card" data-name="youtube" data-title="YouTube" data-version="21.10.35" data-size="145 MB" data-category="Video & Entertainment" data-updated="Demo listing" data-description="Watch videos, music, live streams and creators." type="button"><span class="app-icon youtube">▶</span><b>YouTube</b><small>v21.10.35 · 145 MB</small><span class="app-details">App Details ↗</span></button>
-        <button class="app-card" data-name="netflix" data-title="Netflix" data-version="Version varies by device" data-size="Varies by device" data-category="Movies & TV" data-updated="Demo listing" data-description="Browse movies and series. Version and size vary by device." type="button"><span class="app-icon netflix">N</span><b>Netflix</b><small>Version varies · APK size varies</small><span class="app-details">App Details ↗</span></button>
-        <button class="app-card" data-name="tiktok" data-title="TikTok" data-version="Demo version" data-size="Varies by device" data-category="Short videos" data-updated="Demo listing" data-description="Create, watch and share short videos." type="button"><span class="app-icon tiktok">♪</span><b>TikTok</b><small>Version varies · APK size varies</small><span class="app-details">App Details ↗</span></button>
-        <button class="app-card" data-name="instagram" data-title="Instagram" data-version="Demo version" data-size="Varies by device" data-category="Social" data-updated="Demo listing" data-description="Share photos, reels, stories and messages." type="button"><span class="app-icon instagram">◎</span><b>Instagram</b><small>Version varies · APK size varies</small><span class="app-details">App Details ↗</span></button>
-        <button class="app-card" data-name="facebook" data-title="Facebook" data-version="Demo version" data-size="Varies by device" data-category="Social" data-updated="Demo listing" data-description="Connect with friends, groups and communities." type="button"><span class="app-icon facebook">f</span><b>Facebook</b><small>Version varies · APK size varies</small><span class="app-details">App Details ↗</span></button>
-        <button class="app-card" data-name="spotify" data-title="Spotify" data-version="Demo version" data-size="Varies by device" data-category="Music & Audio" data-updated="Demo listing" data-description="Stream music, podcasts and playlists." type="button"><span class="app-icon spotify">≋</span><b>Spotify</b><small>Version varies · APK size varies</small><span class="app-details">App Details ↗</span></button>
-        <button class="app-card" data-name="disney plus" data-title="Disney+" data-version="Demo version" data-size="Varies by device" data-category="Streaming" data-updated="Demo listing" data-description="Explore films and series from Disney and more." type="button"><span class="app-icon disney">✦</span><b>Disney+</b><small>Version varies · APK size varies</small><span class="app-details">App Details ↗</span></button>
-        <button class="app-card" data-name="prime video" data-title="Prime Video" data-version="Demo version" data-size="Varies by device" data-category="Streaming" data-updated="Demo listing" data-description="Discover movies, series and live entertainment." type="button"><span class="app-icon prime">▶</span><b>Prime Video</b><small>Version varies · APK size varies</small><span class="app-details">App Details ↗</span></button>
-      </div>
-    </section>
-    <section class="catalog games-section" id="games">
-      <div class="section-heading"><h2><span>🎮</span> Popular Games</h2><a href="#games">View All →</a></div>
-      <div class="game-grid"><div class="game-card"><div class="game-art art-one">⚔️</div><b>PUBG Mobile</b></div><div class="game-card"><div class="game-art art-two">🔥</div><b>Free Fire</b></div><div class="game-card"><div class="game-art art-three">🎯</div><b>Call of Duty</b></div><div class="game-card"><div class="game-art art-four">🏃</div><b>Stumble Guys</b></div><div class="game-card"><div class="game-art art-five">🟩</div><b>Minecraft</b></div><div class="game-card"><div class="game-art art-six">🏎️</div><b>Asphalt 9</b></div></div>
-    </section>
-    <section class="devices" id="about"><div class="device"><div class="device-emoji">📱</div><b>Mobile</b><small>Touch friendly</small></div><div class="device"><div class="device-emoji">▣</div><b>Tablet</b><small>Adaptive layout</small></div><div class="device"><div class="device-emoji">💻</div><b>Desktop / Laptop</b><small>Large screen experience</small></div><div class="device"><div class="device-emoji">📺</div><b>Android TV</b><small>Remote navigation</small></div></section>
-    <footer class="footer"><div><b>Theme Colours</b><div class="swatches"><i></i><i></i><i></i><i></i><i></i></div></div><div>▣ <b>Fully Responsive</b><small>All devices supported</small></div><div>✧ <b>Modern UI/UX</b><small>Clean &amp; smooth design</small></div><div>🛡 <b>Fast &amp; Secure</b><small>Your data, our priority</small></div><div class="footer-brand"><span class="brand-mark">S</span><b>Snapps<span class="mint">Hub</span></b></div></footer>
-  </main>
-  <div class="app-modal" id="appModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-panel"><button class="modal-close" id="modalClose" aria-label="Close details">×</button><div class="modal-app-icon" id="modalIcon">S</div><p class="eyebrow">APPLICATION INFORMATION</p><h2 id="modalTitle">App Details</h2><p id="modalDescription"></p><a class="primary-btn" id="modalDownload" target="_blank" rel="noopener noreferrer" hidden>Open / Download ↗</a><dl class="detail-list"><div><dt>Version</dt><dd id="modalVersion">—</dd></div><div><dt>App size</dt><dd id="modalSize">—</dd></div><div><dt>Category</dt><dd id="modalCategory">—</dd></div><div><dt>Updated</dt><dd id="modalUpdated">—</dd></div></dl><p class="demo-note">Demo information only. Verify current version and APK details from the app's official source before installing.</p></div>
   </div>
-  </div>
-  <script src="script.js"></script>
-</body></html>
+
+  <!-- =================================================================== -->
+  <!-- LIVE ENGINE SCRIPT (CONNECTS apps.json, categories.json & settings.json) -->
+  <!-- =================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      let liveApps = [];
+      let currentCategory = 'all';
+
+      const appGrid = document.getElementById('appGrid');
+      const searchInput = document.getElementById('search');
+      const menuToggle = document.getElementById('menuToggle');
+      const sidebar = document.getElementById('sidebar');
+      const appModal = document.getElementById('appModal');
+      const modalClose = document.getElementById('modalClose');
+
+      document.addEventListener('DOMContentLoaded', () => {
+        initSidebar();
+        initModal();
+        loadSettings();
+        loadApps();
+        initSearch();
+        initNavFilter();
+      });
+
+      // 1. Sidebar Toggle
+      function initSidebar() {
+        if (!menuToggle || !sidebar) return;
+        menuToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const open = sidebar.classList.toggle('open');
+          menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+            sidebar.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      // 2. Load settings.json Live (Ticker, Title, Theme)
+      async function loadSettings() {
+        try {
+          const res = await fetch('settings.json?t=' + Date.now());
+          if (!res.ok) return;
+          const cfg = await res.json();
+
+          if (cfg.siteName) {
+            document.getElementById('sitePageTitle').innerText = `${cfg.siteName} — Apps, Games & More`;
+          }
+
+          if (cfg.ticker && cfg.ticker.text) {
+            const t1 = document.getElementById('tickerTextOne');
+            const t2 = document.getElementById('tickerTextTwo');
+            if (t1) t1.innerText = '📢 ' + cfg.ticker.text;
+            if (t2) t2.innerText = '📢 ' + cfg.ticker.text;
+          }
+
+          if (cfg.heroTitle) {
+            document.getElementById('heroTitle').innerHTML = escapeHtml(cfg.heroTitle);
+          }
+          if (cfg.description || cfg.heroSubtitle) {
+            document.getElementById('heroIntro').innerText = cfg.description || cfg.heroSubtitle;
+          }
+        } catch (e) {}
+      }
+
+      // 3. Load apps.json Live & Render into Grid
+      async function loadApps() {
+        try {
+          const res = await fetch('apps.json?t=' + Date.now());
+          if (res.ok) {
+            liveApps = await res.json();
+            renderAppGrid(liveApps);
+          }
+        } catch (e) {
+          console.log('Using cached apps');
+        }
+      }
+
+      function renderAppGrid(apps) {
+        if (!appGrid) return;
+        appGrid.innerHTML = '';
+
+        const filtered = apps.filter(app => {
+          if (currentCategory === 'all') return true;
+          return (app.category || '').toLowerCase() === currentCategory.toLowerCase();
+        });
+
+        if (filtered.length === 0) {
+          appGrid.innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding:40px; color:#a9bddc;">No apps found matching your search.</div>';
+          return;
+        }
+
+        filtered.forEach((app, idx) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'app-card';
+
+          const iconHtml = app.icon 
+            ? `<span class="app-icon" style="background:#07142d; overflow:hidden;"><img src="${escapeAttr(app.icon)}" alt="${escapeAttr(app.name)}" style="width:100%;height:100%;object-fit:cover;"></span>`
+            : `<span class="app-icon" style="background: linear-gradient(135deg, #1d66f2, #00d9ce); font-size:26px;">${app.name.charAt(0)}</span>`;
+
+          btn.innerHTML = `
+            ${iconHtml}
+            <b>${escapeHtml(app.name)}</b>
+            <small>${escapeHtml(app.category || 'App')}</small>
+            <span class="app-details">App Details ↗</span>
+          `;
+
+          btn.addEventListener('click', () => openModal(app));
+          appGrid.appendChild(btn);
+        });
+      }
+
+      // 4. Modal Display
+      function openModal(app) {
+        if (!appModal) return;
+
+        document.getElementById('modalTitle').innerText = app.name;
+        document.getElementById('modalDescription').innerText = app.description || 'Verified Android Application package.';
+        document.getElementById('modalCategory').innerText = app.category || 'General';
+
+        const iconBox = document.getElementById('modalIcon');
+        if (app.icon) {
+          iconBox.innerHTML = `<img src="${escapeAttr(app.icon)}" style="width:100%;height:100%;border-radius:16px;object-fit:cover;">`;
+        } else {
+          iconBox.innerText = app.name.charAt(0);
+        }
+
+        // Connect directly to download.html
+        const downloadBtn = document.getElementById('modalDownload');
+        const dlUrl = `download.html?name=${encodeURIComponent(app.name)}&url=${encodeURIComponent(app.url || 'https://t.me/snappshub')}&icon=${encodeURIComponent(app.icon || '')}`;
+        downloadBtn.href = dlUrl;
+        downloadBtn.hidden = false;
+
+        appModal.classList.add('open');
+        appModal.setAttribute('aria-hidden', 'false');
+      }
+
+      function closeModal() {
+        if (!appModal) return;
+        appModal.classList.remove('open');
+        appModal.setAttribute('aria-hidden', 'true');
+      }
+
+      function initModal() {
+        if (modalClose) modalClose.addEventListener('click', closeModal);
+        if (appModal) {
+          appModal.addEventListener('click', (e) => {
+            if (e.target.hasAttribute('data-close-modal') || e.target === appModal) {
+              closeModal();
+            }
+          });
+        }
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeModal();
+        });
+      }
+
+      // 5. Search Functionality
+      function initSearch() {
+        if (!searchInput) return;
+        searchInput.addEventListener('input', (e) => {
+          const q = e.target.value.toLowerCase().trim();
+          const filtered = liveApps.filter(a => {
+            return a.name.toLowerCase().includes(q) || 
+                   (a.description || '').toLowerCase().includes(q) || 
+                   (a.category || '').toLowerCase().includes(q);
+          });
+          renderAppGrid(filtered);
+        });
+      }
+
+      // 6. Navigation Category Filter
+      function initNavFilter() {
+        const navLinks = document.querySelectorAll('#mainNav a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+            const cat = link.getAttribute('data-cat');
+            if (cat) {
+              e.preventDefault();
+              currentCategory = cat;
+              navLinks.forEach(l => l.classList.remove('active'));
+              link.classList.add('active');
+              renderAppGrid(liveApps);
+              document.getElementById('apps')?.scrollIntoView({ behavior: 'smooth' });
+            }
+          });
+        });
+      }
+
+      window.filterCategoryFromNav = function(cat) {
+        currentCategory = cat;
+        renderAppGrid(liveApps);
+        document.getElementById('apps')?.scrollIntoView({ behavior: 'smooth' });
+      };
+
+      window.openGameApp = function(gameName) {
+        const match = liveApps.find(a => a.name.toLowerCase().includes(gameName.toLowerCase()));
+        if (match) openModal(match);
+        else {
+          openModal({
+            name: gameName,
+            description: "High-octane mobile battle royale game.",
+            category: "Games Android",
+            url: "https://t.me/snappshub"
+          });
+        }
+      };
+
+      function escapeHtml(str) {
+        return String(str || '').replace(/[&<>'"]/g, t => ({
+          '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+        }[t] || t));
+      }
+
+      function escapeAttr(str) {
+        return String(str || '').replace(/"/g, '&quot;');
+      }
+    })();
+  </script>
+</body>
+  </html>
