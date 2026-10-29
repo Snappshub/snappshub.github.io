@@ -1,0 +1,6 @@
+# Admin app build artifacts and local secrets
+admin-app/node_modules/
+admin-app/dist/
+admin-app/.env
+admin-app/.env.local
+admin-app/.env.*.local
