@@ -510,3 +510,13 @@
 .topbar-brand-row > .menu-toggle { grid-column:1 !important; justify-self:start !important; }
 .topbar-brand-row > .brand { grid-column:2 !important; justify-self:center !important; margin:0 !important; }
 .topbar-brand-row > .top-actions { grid-column:3 !important; justify-self:end !important; margin-left:0 !important; }
+
+/* Supported devices: compact icon-led list (mobile friendly). */
+.devices.device-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;padding:14px 18px;margin:18px 0;border:1px solid var(--line, #20365c);border-radius:16px;background:var(--panel, #07162f)}
+.devices.device-list .device{display:flex;align-items:center;justify-content:flex-start;gap:12px;text-align:left;padding:13px 4px;border-bottom:1px solid #ffffff12;min-width:0}
+.devices.device-list .device:nth-last-child(-n+2){border-bottom:0}
+.devices.device-list .device-emoji{font-size:25px;line-height:1;flex:0 0 34px;text-align:center}
+.devices.device-list .device b,.devices.device-list .device small{display:block}
+.devices.device-list .device small{margin-top:3px}
+.footer .footer-security{font-size:13px}.footer .footer-security small{display:block;margin-top:5px}
+@media(max-width:560px){.devices.device-list{grid-template-columns:1fr;gap:0}.devices.device-list .device:nth-last-child(-n+2){border-bottom:1px solid #ffffff12}.devices.device-list .device:last-child{border-bottom:0}}

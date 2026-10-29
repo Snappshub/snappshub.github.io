@@ -82,10 +82,10 @@ document.querySelector('.search-submit')?.addEventListener('click', () => {
     } catch (_) { return ''; }
   };
   const knownIconDomains = {whatsapp:'whatsapp.com',telegram:'telegram.org',youtube:'youtube.com',facebook:'facebook.com',instagram:'instagram.com',tiktok:'tiktok.com',discord:'discord.com',spotify:'spotify.com',netflix:'netflix.com',google:'google.com',chrome:'google.com',gmail:'gmail.com',github:'github.com',firefox:'mozilla.org',snapchat:'snapchat.com',reddit:'reddit.com',pinterest:'pinterest.com',capcut:'capcut.com',chatgpt:'chatgpt.com',openai:'openai.com',zoom:'zoom.us'};
-  const suggestedIcon = (name, url) => {
-    const key = String(name || '').trim().toLowerCase();
-    let domain = knownIconDomains[key] || '';
-    if (!domain) { try { const u = new URL(String(url || '')); if (u.protocol === 'https:' || u.protocol === 'http:') domain = u.hostname; } catch (_) {} }
+  const suggestedIcon = (name) => {
+    const key = String(name || '').trim().toLowerCase().replace(/\s+(pro|lite|premium|mod|hd)$/i, '');
+    const aliases = { 'pubg mobile':'pubg.com', 'pubg mobile lite':'pubg.com', 'mx player':'mxplayer.in', 'mx player pro':'mxplayer.in', 'photo editor':'picsart.com','photo editor pro':'picsart.com', 'novalauncher prime':'novalauncher.com', 'nova launcher prime':'novalauncher.com', 'spotify premium':'spotify.com','spotify premium mod':'spotify.com', 'whatsapp plus':'whatsapp.com', 'secure notes':'keep.google.com', 'vidmate hd':'vidmateapp.com', 'snappsboost cleaner':'google.com','snapboost cleaner':'google.com', 'pixelart studio':'play.google.com','pixel sketch':'play.google.com','streambox':'play.google.com','gamevault':'play.google.com','learnly english':'play.google.com', 'tubevideo player':'youtube.com' };
+    const domain = knownIconDomains[key] || aliases[key] || '';
     return domain ? 'https://www.google.com/s2/favicons?domain=' + encodeURIComponent(domain) + '&sz=128' : '';
   };
   const modal = document.getElementById('appModal');
@@ -134,7 +134,8 @@ document.querySelector('.search-submit')?.addEventListener('click', () => {
       const description = String(record.description || '');
       const category = String(record.category || 'Apps');
       const iconValue = String(record.icon || '').trim();
-      const iconUrl = safeHttpUrl(iconValue) || suggestedIcon(name, record.url);
+      const rawIconUrl = safeHttpUrl(iconValue);
+      const iconUrl = rawIconUrl && !/(^|\.)((t\.me)|(telegram\.org))$/i.test(new URL(rawIconUrl).hostname) ? rawIconUrl : suggestedIcon(name);
       const card = document.createElement('button');
       card.type = 'button';
       card.className = 'app-card';
@@ -152,7 +153,7 @@ document.querySelector('.search-submit')?.addEventListener('click', () => {
         const img = document.createElement('img');
         img.src = iconUrl; img.alt = ''; img.loading = 'lazy';
         img.style.cssText = 'width:100%;height:100%;object-fit:contain;border-radius:inherit';
-        img.onerror = () => { img.remove(); icon.textContent = iconValue && !iconUrl ? iconValue : name.charAt(0).toUpperCase(); };
+        img.onerror = () => { img.remove(); icon.textContent = name.charAt(0).toUpperCase(); };
         icon.appendChild(img);
       } else {
         icon.textContent = iconValue && !/^https?:\/\//i.test(iconValue) ? iconValue : name.charAt(0).toUpperCase();
