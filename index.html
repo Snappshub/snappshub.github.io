@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#030b24"><title>SnappsHub — Apps, Games & More</title>
+  <meta name="theme-color" content="#030b24"><title>SnappsHub — Apps for Every Device</title>
   <link rel="preload" as="image" href="hero-bg.png" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,15 +13,12 @@
     <p class="sidebar-label">MAIN MENU</p>
     <nav class="side-nav">
       <a class="active" href="#home"><span>⌂</span> Home</a>
-      <a href="#dashboard"><span>▦</span> Dashboard</a>
-      <a href="#apps"><span>▣</span> Apps</a>
-      <a href="#games"><span>🎮</span> Games</a>
-      <a href="#movies"><span>▧</span> Movies</a>
-      <a href="#livetv"><span>▣</span> Live TV</a>
-      <a href="#tools"><span>⚒</span> Tools</a>
-      <a href="#settings"><span>⚙</span> Settings</a>
+      <a href="#mobile" data-device-filter="Mobile"><span>📱</span> Android Apps</a>
+      <a href="#android-tv" data-device-filter="Android TV"><span>📺</span> Android TV Apps</a>
+      <a href="#desktop" data-device-filter="Desktop"><span>💻</span> Desktop / Laptop Apps</a>
+      <a href="#categories"><span>▤</span> Categories</a>
     </nav>
-    <div class="sidebar-note"><span class="brand-mark">S</span><b>SnappsHub</b><small>More Apps · More Fun · All Devices</small><small>Demo UI v2.0</small></div>
+    <div class="sidebar-note"><span class="brand-mark">S</span><b>SnappsHub</b><small>Apps for All Devices</small></div>
   </aside>
   <div class="site-shell">
   <header class="topbar">
@@ -29,11 +26,11 @@
       <div class="topbar-brand-row">
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle sidebar" aria-expanded="false"><span aria-hidden="true">☰</span><span class="menu-word">MENU</span></button>
         <a class="brand" href="#home"><span class="brand-mark">S</span><span>Snapps<span class="mint">Hub</span></span></a>
-        <div class="top-actions"><div class="search-wrap"><input aria-label="Search" id="search" placeholder="Search apps, games, movies..."><button class="search-submit" type="button" aria-label="Search">⌕</button></div></div>
+        <div class="top-actions"><div class="search-wrap"><input aria-label="Search" id="search" placeholder="Search apps..."><button class="search-submit" type="button" aria-label="Search">⌕</button></div></div>
       </div>
     </div>
-    <div class="notice-bar" aria-label="Announcement"><span class="notice-arrow">◀</span><div class="notice-track"><span>📢 নতুন নতুন অ্যাপ, গেম এবং টুলস আপডেট পেতে SnappsHub-এর সাথে থাকুন</span><span aria-hidden="true">📢 নতুন নতুন অ্যাপ, গেম এবং টুলস আপডেট পেতে SnappsHub-এর সাথে থাকুন</span></div><span class="notice-arrow">▶</span></div>
-    <nav id="mainNav"><a class="active" href="#home">⌂ Home</a><a href="#apps">▦ Apps</a><a href="#games">🎮 Games</a><a href="#movies">▧ Movies</a><a href="#livetv">▣ Live TV</a><a href="#tools">⚒ Tools</a></nav>
+    <div class="notice-bar" aria-label="Announcement"><span class="notice-arrow">◀</span><div class="notice-track"><span>📢 নতুন নতুন অ্যাপ আপডেট পেতে SnappsHub-এর সাথে থাকুন</span><span aria-hidden="true">📢 নতুন নতুন অ্যাপ আপডেট পেতে SnappsHub-এর সাথে থাকুন</span></div><span class="notice-arrow">▶</span></div>
+    <nav id="mainNav"><a class="active" href="#home">⌂ Home</a><a href="#mobile" data-device-filter="Mobile">📱 Android Apps</a><a href="#android-tv" data-device-filter="Android TV">📺 Android TV Apps</a><a href="#desktop" data-device-filter="Desktop">💻 Desktop / Laptop Apps</a><a href="#categories">▤ Categories</a></nav>
   </header>
   <main>
     <section class="hero" id="home">
@@ -41,15 +38,15 @@
       <div class="hero-copy">
         <p class="eyebrow">WELCOME TO SNAPPSHUB</p>
         <h1>On your <span>favorite device</span></h1>
-        <p class="intro">SnappsHub brings your favorite apps, games, movies and more across all your devices. Fast, safe and always up to date.</p>
-        <div class="benefits"><div><b class="benefit-icon">🚀</b><span>1000+ Apps &amp; Games</span></div><div><b class="benefit-icon">🛡️</b><span>Safe &amp; Secure</span></div><div><b class="benefit-icon">⚡</b><span>Fast Download</span></div></div>
-        <div class="hero-cta"><a class="primary-btn" href="#apps">Explore Apps <span>↗</span></a><a class="secondary-btn" href="#games">Explore Games</a></div>
+        <p class="intro">SnappsHub brings useful apps to Mobile, Tablet, Desktop / Laptop and Android TV.</p>
+        <div class="benefits"><div><b class="benefit-icon">🚀</b><span>Apps for Every Device</span></div><div><b class="benefit-icon">🛡️</b><span>Safe &amp; Secure</span></div><div><b class="benefit-icon">⚡</b><span>Fast Download</span></div></div>
+        <div class="hero-cta"><a class="primary-btn" href="#apps">Explore Apps <span>↗</span></a></div>
       </div>
-      <div class="hero-side"><div class="pubg-stamp">BATTLE<br><strong>ZONE</strong></div><p>Play<br>Watch<br><span>Explore</span></p><i></i></div>
+
       <div class="hero-wave"></div>
     </section>
     <section class="catalog" id="apps">
-      <div class="section-heading"><h2><span>✦</span> Popular Apps</h2><a href="#apps">View All →</a></div>
+      <div class="section-heading"><h2><span>✦</span> Apps</h2><a href="#apps" id="clearFilters">View All →</a></div><div class="category-filters" id="categories" aria-label="App categories"><button type="button" class="category-chip active" data-category-filter="all">All Categories</button></div>
       <div class="app-grid" id="appGrid">
         <button class="app-card" data-name="whatsapp" data-title="WhatsApp" data-version="2.26.12.74" data-size="98 MB" data-category="Communication" data-updated="Demo listing" data-description="Messages, voice calls and video calls." type="button"><span class="app-icon whatsapp">☎</span><b>WhatsApp</b><small>v2.26.12.74 · 98 MB</small><span class="app-details">App Details ↗</span></button>
         <button class="app-card" data-name="youtube" data-title="YouTube" data-version="21.10.35" data-size="145 MB" data-category="Video & Entertainment" data-updated="Demo listing" data-description="Watch videos, music, live streams and creators." type="button"><span class="app-icon youtube">▶</span><b>YouTube</b><small>v21.10.35 · 145 MB</small><span class="app-details">App Details ↗</span></button>
@@ -62,16 +59,19 @@
         <button class="app-card" data-name="prime video" data-title="Prime Video" data-version="Demo version" data-size="Varies by device" data-category="Streaming" data-updated="Demo listing" data-description="Discover movies, series and live entertainment." type="button"><span class="app-icon prime">▶</span><b>Prime Video</b><small>Version varies · APK size varies</small><span class="app-details">App Details ↗</span></button>
       </div>
     </section>
-    <section class="catalog games-section" id="games">
-      <div class="section-heading"><h2><span>🎮</span> Popular Games</h2><a href="#games">View All →</a></div>
-      <div class="game-grid"><div class="game-card"><div class="game-art art-one">⚔️</div><b>PUBG Mobile</b></div><div class="game-card"><div class="game-art art-two">🔥</div><b>Free Fire</b></div><div class="game-card"><div class="game-art art-three">🎯</div><b>Call of Duty</b></div><div class="game-card"><div class="game-art art-four">🏃</div><b>Stumble Guys</b></div><div class="game-card"><div class="game-art art-five">🟩</div><b>Minecraft</b></div><div class="game-card"><div class="game-art art-six">🏎️</div><b>Asphalt 9</b></div></div>
-    </section>
-    <section class="devices" id="about"><div class="device"><div class="device-emoji">📱</div><b>Mobile</b><small>Touch friendly</small></div><div class="device"><div class="device-emoji">▣</div><b>Tablet</b><small>Adaptive layout</small></div><div class="device"><div class="device-emoji">💻</div><b>Desktop / Laptop</b><small>Large screen experience</small></div><div class="device"><div class="device-emoji">📺</div><b>Android TV</b><small>Remote navigation</small></div></section>
-    <footer class="footer"><div><b>Theme Colours</b><div class="swatches"><i></i><i></i><i></i><i></i><i></i></div></div><div>▣ <b>Fully Responsive</b><small>All devices supported</small></div><div>✧ <b>Modern UI/UX</b><small>Clean &amp; smooth design</small></div><div>🛡 <b>Fast &amp; Secure</b><small>Your data, our priority</small></div><div class="footer-brand"><span class="brand-mark">S</span><b>Snapps<span class="mint">Hub</span></b></div></footer>
+
+    <footer class="site-footer" id="contact">
+      <div class="footer-main">
+        <div class="footer-about"><a class="footer-brand" href="#home"><span class="brand-mark">S</span><b>Snapps<span class="mint">Hub</span></b></a><p>Discover useful apps for Android, desktop and Android TV—all in one place.</p><a class="telegram-join" href="https://t.me/snappshub" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">➤</span> Join our Telegram Channel <span aria-hidden="true">↗</span></a></div>
+        <div class="footer-links"><h3>Explore</h3><a href="#home">Home</a><a href="#apps">Browse Apps</a><a href="#categories">App Categories</a><a href="sitemap.xml">Sitemap</a></div>
+        <div class="footer-links"><h3>Help &amp; Info</h3><a href="#contact">Contact &amp; Support</a><a href="https://t.me/snappshub" target="_blank" rel="noopener noreferrer">Telegram Channel</a><a href="privacy-policy.html">Privacy Policy</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 SnappsHub. All rights reserved.</span><span>Made for apps across your devices.</span></div>
+    </footer>
   </main>
   <div class="app-modal" id="appModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-panel"><button class="modal-close" id="modalClose" aria-label="Close details">×</button><div class="modal-app-icon" id="modalIcon">S</div><p class="eyebrow">APPLICATION INFORMATION</p><h2 id="modalTitle">App Details</h2><p id="modalDescription"></p><a class="primary-btn" id="modalDownload" target="_blank" rel="noopener noreferrer" hidden>Open / Download ↗</a><dl class="detail-list"><div><dt>Version</dt><dd id="modalVersion">—</dd></div><div><dt>App size</dt><dd id="modalSize">—</dd></div><div><dt>Category</dt><dd id="modalCategory">—</dd></div><div><dt>Updated</dt><dd id="modalUpdated">—</dd></div></dl><p class="demo-note">Demo information only. Verify current version and APK details from the app's official source before installing.</p></div>
+    <div class="modal-panel"><button class="modal-close" id="modalClose" aria-label="Close details">×</button><div class="modal-app-icon" id="modalIcon">S</div><p class="eyebrow">CHOOSE YOUR DOWNLOAD METHOD</p><h2 id="modalTitle">App Details</h2><p id="modalDescription"></p><div class="modal-download-options"><a class="primary-btn telegram-download" id="modalTelegram" href="https://t.me/snappshub" target="_blank" rel="noopener noreferrer">Telegram Channel ↗</a><a class="primary-btn direct-download" id="modalDownload" target="_blank" rel="noopener noreferrer" hidden>Direct Download ↓</a></div><dl class="detail-list"><div><dt>Version</dt><dd id="modalVersion">—</dd></div><div><dt>App size</dt><dd id="modalSize">—</dd></div><div><dt>Category</dt><dd id="modalCategory">—</dd></div><div><dt>Updated</dt><dd id="modalUpdated">—</dd></div></dl><p class="demo-note">Demo information only. Verify current version and APK details from the app's official source before installing.</p></div>
   </div>
   </div>
   <script src="script.js"></script>

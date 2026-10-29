@@ -3,105 +3,198 @@
     "name": "GameVault",
     "description": "Keep your favorite games organized with quick launch tools, update notes and controller tips.",
     "category": "Games",
-    "url": "https://t.me/snappshub",
-    "icon": ""
+    "url": "",
+    "icon": "",
+    "devices": [
+      "Mobile"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   },
   {
     "name": "Pixel Sketch",
     "description": "A focused sketchbook with layers, color palettes and quick export for creative ideas.",
-    "category": "Apps",
-    "url": "https://t.me/snappshub",
-    "icon": ""
+    "category": "Photo Editing & Drawing",
+    "url": "",
+    "icon": "",
+    "devices": [
+      "Mobile"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   },
   {
     "name": "Learnly English",
     "description": "Build everyday English confidence with short lessons, pronunciation practice and review cards.",
-    "category": "Education",
-    "url": "https://t.me/snappshub",
-    "icon": ""
+    "category": "Education & Learning",
+    "url": "",
+    "icon": "",
+    "devices": [
+      "Mobile"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   },
   {
     "name": "StreamBox",
     "description": "A polished entertainment hub for organizing your favorite shows, trailers and watchlist.",
-    "category": "Entertainment",
-    "url": "https://t.me/snappshub",
-    "icon": ""
+    "category": "Video & Streaming",
+    "url": "",
+    "icon": "",
+    "devices": [
+      "Mobile",
+      "Android TV"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   },
   {
     "name": "Nova Launcher Prime",
     "description": "Personalize your home screen with clean layouts, gesture controls and a fast app drawer.",
-    "category": "Apps",
-    "url": "https://t.me/snappshub",
-    "icon": ""
+    "category": "Launchers & Customization",
+    "url": "",
+    "icon": "https://www.google.com/s2/favicons?domain=novalauncher.com&sz=128",
+    "devices": [
+      "Mobile"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   },
   {
     "name": "WhatsApp Plus",
     "description": "Enhanced messaging with custom themes, privacy controls, extra features and a smoother sharing experience.",
-    "category": "Social",
-    "url": "https://t.me/snappshub",
-    "icon": ""
+    "category": "Communication & Messaging",
+    "url": "",
+    "icon": "https://www.google.com/s2/favicons?domain=whatsapp.com&sz=128",
+    "devices": [
+      "Mobile"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   },
   {
     "name": "Secure Notes",
     "description": "Keep private notes tidy with folders, quick search and a calm distraction-free editor.",
-    "category": "Tools",
-    "url": "https://t.me/snappshub",
-    "icon": ""
+    "category": "Notes & Productivity",
+    "url": "",
+    "icon": "",
+    "devices": [
+      "Mobile"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   },
   {
     "name": "Spotify Premium Mod",
     "description": "Stream millions of songs ad-free with offline downloads and unlimited skips.",
-    "category": "Music",
-    "url": "https://t.me/snappshub",
-    "icon": ""
+    "category": "Music & Audio",
+    "url": "",
+    "icon": "https://www.google.com/s2/favicons?domain=spotify.com&sz=128",
+    "devices": [
+      "Mobile"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   },
   {
     "name": "VidMate HD",
     "description": "Download videos from popular platforms in HD quality. Fast, free and easy to use.",
-    "category": "Apps",
-    "url": "https://t.me/snappshub",
-    "icon": ""
+    "category": "Video Downloaders",
+    "url": "",
+    "icon": "https://www.google.com/s2/favicons?domain=vidmateapp.com&sz=128",
+    "devices": [
+      "Mobile"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   },
   {
     "name": "PUBG Mobile Lite",
     "description": "Battle royale optimized for lower-end devices. 60 players, smaller map, same intense action.",
     "category": "Games",
-    "url": "https://t.me/snappshub",
-    "icon": ""
+    "url": "",
+    "icon": "https://www.google.com/s2/favicons?domain=pubg.com&sz=128",
+    "devices": [
+      "Mobile"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   },
   {
     "name": "MX Player Pro",
     "description": "Powerful video player with hardware acceleration, subtitle support and multi-core decoding.",
-    "category": "Tools",
-    "url": "https://t.me/snappshub",
-    "icon": ""
+    "category": "Video Players",
+    "url": "",
+    "icon": "https://www.google.com/s2/favicons?domain=mxplayer.in&sz=128",
+    "devices": [
+      "Mobile",
+      "Android TV"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   },
   {
     "name": "Photo Editor Pro",
     "description": "Professional photo editing with filters, layers, crop tools and AI enhancements.",
-    "category": "Tools",
-    "url": "https://t.me/snappshub",
-    "icon": ""
+    "category": "Photo Editing & Drawing",
+    "url": "",
+    "icon": "https://www.google.com/s2/favicons?domain=picsart.com&sz=128",
+    "devices": [
+      "Mobile"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   },
   {
     "name": "SnappsBoost Cleaner",
     "description": "Lightweight phone cleaner that clears cache, junk files and boosts RAM with one tap. No ads, no extra permissions.",
-    "category": "Apps",
+    "category": "Tools & Utilities",
     "url": "https://t.me/snappshub/15",
-    "icon": ""
+    "icon": "",
+    "devices": [
+      "Mobile"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   },
   {
     "name": "PixelArt Studio",
     "description": "Create pixel art on your phone with layers, palette tools and export to PNG. Great for game developers and hobbyists.",
-    "category": "Games",
+    "category": "Photo Editing & Drawing",
     "url": "https://t.me/snappshub/17",
-    "icon": ""
+    "icon": "",
+    "devices": [
+      "Mobile"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   },
   {
     "name": "TubeVideo Player",
     "description": "Minimal video player supporting all major formats. Background play, subtitle support and gesture controls.",
-    "category": "Tools",
+    "category": "Video Players",
     "url": "https://t.me/snappshub/16",
-    "icon": ""
+    "icon": "",
+    "devices": [
+      "Mobile",
+      "Android TV"
+    ],
+    "version": "Not verified",
+    "size": "Not verified",
+    "updated": "Not verified"
   }
 ]
