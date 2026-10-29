@@ -1,7 +1,12 @@
 name: Deploy Admin App
+
 on:
   push:
     branches: [main]
+    paths:
+      - "admin-app/**"
+      - ".github/workflows/deploy-admin.yml"
+
 permissions:
   contents: write
   pages: write
@@ -17,23 +22,23 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
+          cache: npm
+          cache-dependency-path: admin-app/package-lock.json
 
-      # admin-app ফোল্ডারের ভেতরে ঢুকে প্যাকেজ ইন্সটল করবে
       - name: Install Dependencies
         working-directory: ./admin-app
         run: npm install
 
-      # admin-app ফোল্ডারের ভেতরে বিল্ড করবে
       - name: Build Project
         working-directory: ./admin-app
         run: npm run build
 
-      # তৈরি হওয়া ফাইলগুলো admin ফোল্ডারে লাইভ করবে
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
           publish_dir: ./admin-app/dist
           destination_dir: admin
-          
+          keep_files: true
