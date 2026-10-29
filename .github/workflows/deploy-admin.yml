@@ -2,17 +2,37 @@ name: Deploy Admin App
 on:
   push:
     branches: [main]
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install
-      - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+
+      # admin-app ফোল্ডারের ভেতরে ঢুকে প্যাকেজ ইন্সটল করবে
+      - name: Install Dependencies
+        working-directory: ./admin-app
+        run: npm install
+
+      # admin-app ফোল্ডারের ভেতরে বিল্ড করবে
+      - name: Build Project
+        working-directory: ./admin-app
+        run: npm run build
+
+      # তৈরি হওয়া ফাইলগুলো admin ফোল্ডারে লাইভ করবে
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: ./dist
-      - uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./admin-app/dist
+          destination_dir: admin
