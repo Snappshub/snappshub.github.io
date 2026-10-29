@@ -1,58 +1,9 @@
 [
-  {
-    "id": "cat-1",
-    "name": "Utilities",
-    "slug": "utilities",
-    "icon": "wrench",
-    "description": "Essential tools and mobile helpers",
-    "color": "#10b981"
-  },
-  {
-    "id": "cat-2",
-    "name": "Productivity",
-    "slug": "productivity",
-    "icon": "check-circle-2",
-    "description": "Work, document and task automation",
-    "color": "#3b82f6"
-  },
-  {
-    "id": "cat-3",
-    "name": "Tools & Mod",
-    "slug": "tools",
-    "icon": "cpu",
-    "description": "Advanced system and tweak utilities",
-    "color": "#8b5cf6"
-  },
-  {
-    "id": "cat-4",
-    "name": "Media & Video",
-    "slug": "media",
-    "icon": "play-circle",
-    "description": "Players, streamers and sound engines",
-    "color": "#f59e0b"
-  },
-  {
-    "id": "cat-5",
-    "name": "Social & Chat",
-    "slug": "social",
-    "icon": "message-square",
-    "description": "Messaging, downloaders and status savers",
-    "color": "#06b6d4"
-  },
-  {
-    "id": "cat-6",
-    "name": "Security & Privacy",
-    "slug": "security",
-    "icon": "shield-check",
-    "description": "Vaults, VPNs and anti-tracking",
-    "color": "#ef4444"
-  },
-  {
-    "id": "cat-7",
-    "name": "Education & Quran",
-    "slug": "education",
-    "icon": "book-open",
-    "description": "Islamic apps, guides and offline learning",
-    "color": "#10b981"
-  }
+  "Android Apps",
+  "Tools Utilities",
+  "Games Android",
+  "Security Tools",
+  "Productivity Tools",
+  "Web Tools",
+  "Other"
 ]
