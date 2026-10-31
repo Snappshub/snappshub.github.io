@@ -6,244 +6,226 @@
   <title>SnappsHub | Super Admin Command Center</title>
 
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
-  <meta name="theme-color" content="#062817">
+  <meta name="theme-color" content="#030712">
 
+  <!-- Premium Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
+  <!-- Tailwind CSS & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
     body {
-      background-color: #f8fafc;
-      color: #0f172a;
+      background-color: #030712;
+      color: #f3f4f6;
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    .custom-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-      border-radius: 1.25rem;
+    .glass-card {
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
     }
-    ::-webkit-scrollbar { width: 5px; height: 5px; }
-    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    .glass-panel {
+      background: #0b0f19;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-thumb { background: #374151; border-radius: 9999px; }
   </style>
 </head>
-<body class="antialiased text-slate-800 bg-[#f8fafc] min-h-screen selection:bg-blue-600 selection:text-white">
+<body class="antialiased min-h-screen selection:bg-blue-600 selection:text-white">
 
   <!-- ========================================================== -->
-  <!-- 1. MANDATORY FIRST-TIME MASTER SETUP                       -->
+  <!-- 1. PREMIUM LOGIN VIEW (GOOGLE/GITHUB AT TOP + PASSWORD)    -->
   <!-- ========================================================== -->
-  <div id="first-time-setup-screen" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md hidden">
-    <div class="w-full max-w-md bg-white rounded-3xl p-6 sm:p-8 shadow-2xl space-y-4">
-      <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mx-auto mb-2 border border-amber-200">
-        <i data-lucide="shield-alert" class="w-6 h-6"></i>
+  <div id="login-view" class="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden">
+    <!-- Ambient Background Lighting -->
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-emerald-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- Brand Header -->
+    <div class="flex flex-col items-center mb-6 z-10 text-center">
+      <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-400 text-white font-black text-2xl flex items-center justify-center shadow-lg shadow-blue-500/20 mb-3 ring-1 ring-white/20">
+        S
       </div>
-      <div class="text-center">
-        <h3 class="text-xl font-extrabold text-slate-900">মাস্টার অ্যাডমিন সেটআপ</h3>
-        <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-          আপনার ব্যক্তিগত ইউজারনেম ও পাসওয়ার্ড দিয়ে প্যানেলটি এখনই পার্মানেন্টভাবে লক করুন। এই অ্যাকাউন্ট ছাড়া আর কেউ প্যানেলে ঢুকতে পারবে না।
-        </p>
-      </div>
-
-      <form onsubmit="handleMasterAccountSetup(event)" class="space-y-3.5 pt-2">
-        <div>
-          <label class="block text-xs font-bold text-slate-700 mb-1">মাস্টার ইউজারনেম *</label>
-          <input type="text" id="setup-username" required placeholder="যেমন: alamin"
-            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:border-blue-600">
-        </div>
-
-        <div>
-          <label class="block text-xs font-bold text-slate-700 mb-1">মাস্টার পাসওয়ার্ড (কমপক্ষে ৬ অক্ষর) *</label>
-          <input type="password" id="setup-password" required minlength="6" placeholder="••••••••••••"
-            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono text-slate-800 focus:outline-none focus:border-blue-600">
-        </div>
-
-        <div>
-          <label class="block text-xs font-bold text-slate-700 mb-1">পাসওয়ার্ড নিশ্চিত করুন *</label>
-          <input type="password" id="setup-confirm" required minlength="6" placeholder="••••••••••••"
-            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono text-slate-800 focus:outline-none focus:border-blue-600">
-        </div>
-
-        <button type="submit" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-md transition mt-2 cursor-pointer">
-          🔒 Save &amp; Lock Master Console
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <!-- ========================================================== -->
-  <!-- 2. LOGIN SCREEN (3 METHODS: PASSWORD, GOOGLE, GITHUB)     -->
-  <!-- ========================================================== -->
-  <div id="login-view" class="min-h-screen flex flex-col items-center justify-center p-4 bg-[#f8fafc]">
-    <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white font-extrabold text-2xl flex items-center justify-center shadow-lg shadow-blue-500/25 mb-4">
-      S
+      <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">SnappsHub Master Console</h1>
+      <p class="text-xs text-slate-400 mt-1 font-medium">Enterprise App Store Management &bull; Alamin Saheb</p>
     </div>
 
-    <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight text-center">Welcome Back</h1>
-    <p class="text-slate-500 text-sm mt-1 mb-6 text-center">Alamin Saheb &bull; SnappsHub Master</p>
-
-    <div class="w-full max-w-md bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-sm space-y-5">
-      <div class="flex items-center justify-between">
-        <h2 class="text-xl font-bold text-slate-900 tracking-tight">Admin Login</h2>
-        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-50 text-emerald-600 border border-emerald-200">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1 animate-pulse"></span>
-          SHIELD ON
+    <!-- High-End Login Card -->
+    <div class="w-full max-w-md glass-card rounded-3xl p-6 sm:p-8 z-10 space-y-5">
+      <div class="flex items-center justify-between border-b border-white/5 pb-3">
+        <h2 class="text-base font-bold text-white tracking-wide">Administrator Sign In</h2>
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span>
+          ENCRYPTED
         </span>
       </div>
 
-      <!-- METHOD 1: MASTER USERNAME & PASSWORD -->
-      <form onsubmit="handleManualLogin(event)" class="space-y-3.5">
-        <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Username / Email</label>
-          <div class="relative">
-            <i data-lucide="user" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
-            <input type="text" id="login-user" required autocomplete="username" placeholder="Enter master username"
-              class="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm text-slate-800 focus:outline-none focus:border-blue-600">
-          </div>
-        </div>
-
-        <div>
-          <div class="flex items-center justify-between mb-1">
-            <label class="text-xs font-semibold text-slate-700">Password</label>
-            <button type="button" onclick="alert('Master Contact: 01922392422\\nSupport: alaminsaheb2019@gmail.com')" class="text-xs text-blue-600 hover:underline">Forgot password?</button>
-          </div>
-          <div class="relative">
-            <i data-lucide="lock" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
-            <input type="password" id="login-pass" required autocomplete="current-password" placeholder="••••••••••••"
-              class="w-full pl-10 pr-10 py-2.5 bg-white border border-slate-200 rounded-xl text-sm text-slate-800 focus:outline-none focus:border-blue-600 font-mono">
-            <button type="button" onclick="togglePassVisibility()" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
-              <i data-lucide="eye" id="eye-icon" class="w-4 h-4"></i>
-            </button>
-          </div>
-        </div>
-
-        <button type="submit" class="w-full py-2.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-md shadow-blue-500/25 flex items-center justify-center space-x-2 transition cursor-pointer">
-          <span>Sign In with Password</span>
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </button>
-      </form>
-
-      <!-- DIVIDER -->
-      <div class="relative flex items-center justify-center">
-        <div class="border-t border-slate-200 w-full"></div>
-        <span class="bg-white px-3 text-[11px] font-semibold text-slate-400 uppercase tracking-wider">or sign in with</span>
-      </div>
-
-      <!-- METHOD 2 & 3: GOOGLE & GITHUB LOGIN -->
-      <div class="grid grid-cols-2 gap-3">
-        <button type="button" onclick="handleGoogleLogin()" class="flex items-center justify-center space-x-2 py-2.5 px-3 border border-slate-200 rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-50 transition cursor-pointer shadow-xs">
+      <!-- METHOD 1 & 2: GOOGLE & GITHUB SOCIAL BUTTONS (PLACED AT TOP) -->
+      <div class="space-y-2.5">
+        <!-- Google Button -->
+        <button type="button" onclick="handleGoogleLogin()" class="w-full flex items-center justify-center space-x-3 py-2.5 px-4 rounded-xl bg-white hover:bg-slate-100 text-slate-900 font-semibold text-xs transition duration-200 shadow-sm cursor-pointer">
           <svg class="w-4 h-4" viewBox="0 0 24 24">
             <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.65v3.05h3.9c2.28-2.1 3.64-5.2 3.64-9.14z"/>
             <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.9-3.05c-1.08.72-2.45 1.16-4.03 1.16-3.1 0-5.74-2.1-6.68-4.92H1.21v3.15C3.25 21.43 7.33 24 12 24z"/>
             <path fill="#FBBC05" d="M5.32 14.28c-.24-.73-.38-1.5-.38-2.28s.14-1.55.38-2.28V6.57H1.21A11.96 11.96 0 000 12c0 1.92.45 3.74 1.21 5.43l4.11-3.15z"/>
             <path fill="#EA4335" d="M12 4.77c1.76 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.25 2.57 1.21 6.57l4.11 3.15c.94-2.82 3.58-4.95 6.68-4.95z"/>
           </svg>
-          <span>Google</span>
+          <span>Continue with Google</span>
         </button>
 
-        <button type="button" onclick="handleGitHubLogin()" class="flex items-center justify-center space-x-2 py-2.5 px-3 border border-slate-200 rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-50 transition cursor-pointer shadow-xs">
-          <i data-lucide="github" class="w-4 h-4 text-slate-900"></i>
-          <span>GitHub</span>
+        <!-- GitHub Button -->
+        <button type="button" onclick="handleGitHubLogin()" class="w-full flex items-center justify-center space-x-3 py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs transition duration-200 border border-slate-700 cursor-pointer">
+          <i data-lucide="github" class="w-4 h-4 text-white"></i>
+          <span>Continue with GitHub</span>
         </button>
       </div>
 
-      <div class="text-center pt-2">
-        <p class="text-[11px] text-slate-400 font-mono">
-          🔒 Private Master Console &bull; No public registration
+      <!-- Professional Divider -->
+      <div class="relative flex items-center justify-center">
+        <div class="border-t border-white/10 w-full"></div>
+        <span class="bg-[#0e1626] px-3 text-[10px] font-bold text-slate-400 uppercase tracking-widest border border-white/5 rounded-full py-0.5">or with master credentials</span>
+      </div>
+
+      <!-- METHOD 3: MASTER PASSWORD FORM -->
+      <form onsubmit="handleManualLogin(event)" class="space-y-3.5">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Username / ID</label>
+          <div class="relative">
+            <i data-lucide="user" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input type="text" id="login-user" required autocomplete="username" placeholder="Username (Default: admin)"
+              class="w-full pl-10 pr-4 py-2.5 bg-slate-900/80 border border-slate-700/80 rounded-xl text-xs text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <label class="text-xs font-semibold text-slate-300">Password</label>
+            <button type="button" onclick="alert('Master Contact: 01922392422\\nInitial Login: admin / admin123')" class="text-xs text-cyan-400 hover:underline">Forgot password?</button>
+          </div>
+          <div class="relative">
+            <i data-lucide="lock" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input type="password" id="login-pass" required autocomplete="current-password" placeholder="•••••••••••• (Default: admin123)"
+              class="w-full pl-10 pr-10 py-2.5 bg-slate-900/80 border border-slate-700/80 rounded-xl text-xs text-white focus:outline-none focus:border-blue-500 font-mono">
+            <button type="button" onclick="togglePassVisibility()" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white">
+              <i data-lucide="eye" id="eye-icon" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white font-bold text-xs shadow-lg shadow-blue-600/30 flex items-center justify-center space-x-2 transition cursor-pointer">
+          <span>Authorize Access</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </form>
+
+      <!-- First-Time Login Credentials Help Note -->
+      <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 text-[11px] text-slate-400 space-y-1">
+        <p class="font-semibold text-slate-300 flex items-center space-x-1.5">
+          <i data-lucide="key" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span>First-time Default Access:</span>
         </p>
+        <p class="font-mono text-slate-400">User: <strong class="text-white">admin</strong> &bull; Pass: <strong class="text-white">admin123</strong></p>
       </div>
     </div>
 
-    <div class="flex items-center text-xs text-slate-400 mt-6 space-x-1.5">
-      <i data-lucide="shield-check" class="w-4 h-4 text-emerald-500"></i>
+    <!-- Security Footer -->
+    <div class="flex items-center text-xs text-slate-500 mt-6 space-x-1.5 z-10">
+      <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
       <span>Protected Master Access &bull; 01922392422</span>
     </div>
   </div>
 
   <!-- ========================================================== -->
-  <!-- 3. FULL ADMIN WORKSPACE (CLEAN SLATE & CONTROLS IN SETTINGS)-->
+  <!-- 2. FULL WORKSPACE WITH ENTERPRISE DARK DASHBOARD          -->
   <!-- ========================================================== -->
-  <div id="app-workspace" class="hidden min-h-screen flex flex-col md:flex-row">
+  <div id="app-workspace" class="hidden min-h-screen flex flex-col md:flex-row bg-[#080d1a]">
     
-    <div id="sidebar-backdrop" onclick="toggleMobileSidebar(false)" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-40 hidden md:hidden"></div>
+    <div id="sidebar-backdrop" onclick="toggleMobileSidebar(false)" class="fixed inset-0 bg-black/70 backdrop-blur-xs z-40 hidden md:hidden"></div>
 
-    <!-- SIDEBAR NAVIGATION -->
-    <aside id="sidebar" class="fixed inset-y-0 left-0 z-50 w-64 bg-[#062817] text-white flex flex-col transition-transform duration-200 ease-out -translate-x-full md:translate-x-0 md:static shrink-0 select-none">
+    <!-- MODERN ENTERPRISE SIDEBAR -->
+    <aside id="sidebar" class="fixed inset-y-0 left-0 z-50 w-64 bg-[#0a0f1d] border-r border-slate-800/80 text-white flex flex-col transition-transform duration-200 ease-out -translate-x-full md:translate-x-0 md:static shrink-0 select-none">
       
-      <div class="p-5 flex items-center justify-between border-b border-white/10">
+      <!-- Brand Logo -->
+      <div class="p-5 flex items-center justify-between border-b border-slate-800">
         <div class="flex items-center space-x-3">
-          <div class="w-9 h-9 rounded-xl bg-emerald-500 text-[#062817] font-extrabold text-base flex items-center justify-center shrink-0">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 text-white font-black text-base flex items-center justify-center shrink-0">
             S
           </div>
           <div>
-            <h2 class="text-base font-bold text-white leading-none">SnappsHub</h2>
-            <span class="text-xs text-emerald-400 font-medium">Master Console</span>
+            <h2 class="text-base font-bold text-white tracking-tight">SnappsHub</h2>
+            <span class="text-[11px] text-cyan-400 font-mono">Master Console</span>
           </div>
         </div>
-        <button onclick="toggleMobileSidebar(false)" class="md:hidden text-white/70 hover:text-white p-1">
+        <button onclick="toggleMobileSidebar(false)" class="md:hidden text-slate-400 hover:text-white p-1">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
 
-      <div class="px-5 py-2.5 border-b border-white/5 bg-emerald-950/40">
+      <!-- Status Bar -->
+      <div class="px-5 py-2.5 border-b border-slate-800/60 bg-slate-900/40">
         <div class="flex items-center justify-between text-[11px] font-mono">
-          <div class="flex items-center space-x-1.5 text-emerald-300">
+          <div class="flex items-center space-x-1.5 text-emerald-400">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>Real-Time Sync Engine</span>
+            <span>Clean State Active</span>
           </div>
-          <span class="text-emerald-400 font-bold">READY</span>
+          <span class="text-slate-400 font-bold" id="badge-total-apps-side">0 Apps</span>
         </div>
       </div>
 
+      <!-- Navigation Menu -->
       <nav class="flex-1 px-3 py-3 space-y-1 overflow-y-auto">
-        <button onclick="switchTab('dashboard')" id="nav-dashboard" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold transition bg-emerald-600/30 text-emerald-300 border border-emerald-500/30">
+        <button onclick="switchTab('dashboard')" id="nav-dashboard" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold transition bg-blue-600/20 text-blue-400 border border-blue-500/30">
           <div class="flex items-center space-x-3">
-            <i data-lucide="layout-grid" class="w-4 h-4 text-emerald-400"></i>
+            <i data-lucide="layout-grid" class="w-4 h-4 text-blue-400"></i>
             <span>Dashboard</span>
           </div>
         </button>
 
-        <button onclick="switchTab('apps')" id="nav-apps" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-white/80 hover:bg-white/5 transition">
+        <button onclick="switchTab('apps')" id="nav-apps" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:bg-slate-800 transition">
           <div class="flex items-center space-x-3">
-            <i data-lucide="layout" class="w-4 h-4 text-sky-400"></i>
+            <i data-lucide="layout" class="w-4 h-4 text-cyan-400"></i>
             <span>Apps Repository</span>
           </div>
-          <span id="badge-nav-apps" class="px-2 py-0.5 rounded-full text-[10px] bg-white/10 text-emerald-300 font-mono font-bold">0</span>
+          <span id="badge-nav-apps" class="px-2 py-0.5 rounded-full text-[10px] bg-slate-800 text-cyan-300 font-mono font-bold">0</span>
         </button>
 
-        <button onclick="switchTab('categories')" id="nav-categories" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-white/80 hover:bg-white/5 transition">
+        <button onclick="switchTab('categories')" id="nav-categories" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:bg-slate-800 transition">
           <div class="flex items-center space-x-3">
             <i data-lucide="tag" class="w-4 h-4 text-amber-400"></i>
             <span>Categories</span>
           </div>
-          <span id="badge-nav-cats" class="px-2 py-0.5 rounded-full text-[10px] bg-white/10 text-emerald-300 font-mono font-bold">0</span>
+          <span id="badge-nav-cats" class="px-2 py-0.5 rounded-full text-[10px] bg-slate-800 text-amber-300 font-mono font-bold">0</span>
         </button>
 
-        <button onclick="switchTab('settings')" id="nav-settings" class="w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-white/80 hover:bg-white/5 transition">
-          <i data-lucide="settings" class="w-4 h-4 text-emerald-400"></i>
+        <button onclick="switchTab('settings')" id="nav-settings" class="w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:bg-slate-800 transition">
+          <i data-lucide="sliders" class="w-4 h-4 text-emerald-400"></i>
           <span>Settings &amp; Database Controls</span>
         </button>
 
-        <a href="../" target="_blank" class="w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-sky-300 hover:bg-white/5 transition pt-2">
-          <i data-lucide="external-link" class="w-4 h-4 text-sky-400"></i>
+        <a href="../" target="_blank" class="w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-cyan-300 hover:bg-slate-800 transition pt-2">
+          <i data-lucide="external-link" class="w-4 h-4 text-cyan-400"></i>
           <span>View Public Store ↗</span>
         </a>
       </nav>
 
-      <div class="p-4 border-t border-white/10 bg-[#041d10] space-y-2">
+      <!-- User footer -->
+      <div class="p-4 border-t border-slate-800 bg-[#060a14] space-y-2">
         <div class="flex items-center space-x-2">
-          <div class="w-7 h-7 rounded-full bg-emerald-500 text-slate-900 font-bold text-xs flex items-center justify-center">
+          <div class="w-7 h-7 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center">
             AS
           </div>
           <div class="truncate text-xs">
-            <p class="font-bold text-white truncate" id="side-user-name">Master Admin</p>
-            <p class="text-[10px] text-emerald-400 font-mono">01922392422</p>
+            <p class="font-bold text-white truncate" id="side-user-name">Alamin Saheb</p>
+            <p class="text-[10px] text-cyan-400 font-mono">01922392422</p>
           </div>
         </div>
-        <button onclick="logout()" class="w-full flex items-center justify-center space-x-2 text-xs text-rose-300 hover:bg-rose-500/10 py-1.5 rounded-xl transition cursor-pointer">
+        <button onclick="logout()" class="w-full flex items-center justify-center space-x-2 text-xs text-rose-400 hover:bg-rose-500/10 py-1.5 rounded-xl transition cursor-pointer">
           <i data-lucide="log-out" class="w-3.5 h-3.5"></i>
           <span>Sign Out</span>
         </button>
@@ -254,20 +236,21 @@
     <!-- MAIN VIEWPORT -->
     <main class="flex-1 flex flex-col min-w-0">
       
-      <header class="px-5 py-3.5 flex items-center justify-between bg-white border-b border-slate-200 sticky top-0 z-20">
+      <!-- Top Bar -->
+      <header class="px-5 py-3.5 flex items-center justify-between bg-[#0a0f1d] border-b border-slate-800 sticky top-0 z-20">
         <div class="flex items-center space-x-3">
-          <button onclick="toggleMobileSidebar(true)" class="md:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100 transition">
+          <button onclick="toggleMobileSidebar(true)" class="md:hidden p-2 rounded-xl text-slate-400 hover:bg-slate-800 transition">
             <i data-lucide="menu" class="w-5 h-5"></i>
           </button>
-          <span class="text-xs text-slate-500 font-mono hidden sm:inline">snappshub.github.io &bull; <span class="text-emerald-600 font-bold">Clean Slate Ready</span></span>
+          <span class="text-xs text-slate-400 font-mono hidden sm:inline">snappshub.github.io &bull; <span class="text-emerald-400 font-bold">Clean Slate</span></span>
         </div>
         
         <div class="flex items-center space-x-2">
-          <button onclick="switchTab('settings')" class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs flex items-center space-x-1.5 shadow-sm transition">
-            <i data-lucide="sliders" class="w-3.5 h-3.5 text-emerald-400"></i>
-            <span>Settings &amp; Controls</span>
+          <button onclick="switchTab('settings')" class="px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center space-x-1.5 shadow-sm transition cursor-pointer">
+            <i data-lucide="sliders" class="w-3.5 h-3.5"></i>
+            <span>Settings Hub</span>
           </button>
-          <button onclick="logout()" class="p-2 rounded-xl text-slate-600 hover:text-rose-600 hover:bg-slate-100 transition">
+          <button onclick="logout()" class="p-2 rounded-xl text-slate-400 hover:text-rose-400 hover:bg-slate-800 transition">
             <i data-lucide="log-out" class="w-5 h-5"></i>
           </button>
         </div>
@@ -275,37 +258,533 @@
 
       <div class="p-4 sm:p-6 lg:p-8 max-w-6xl mx-auto w-full space-y-6">
 
-        <!-- 1. TAB: DASHBOARD (CLEAN BY DEFAULT) -->
+        <!-- 1. TAB: DASHBOARD -->
         <div id="tab-dashboard" class="tab-panel space-y-5">
           <div class="flex items-center justify-between">
             <div>
-              <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Dashboard Overview</h2>
-              <p class="text-xs text-slate-500 mt-0.5">Custom repository management &bull; Zero forced backend items</p>
+              <h2 class="text-2xl font-bold text-white tracking-tight">Dashboard Overview</h2>
+              <p class="text-xs text-slate-400 mt-0.5">Control center &bull; Empty backend ready for your own applications</p>
             </div>
-            <button onclick="openAddModal()" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs rounded-xl shadow-sm flex items-center space-x-1.5 cursor-pointer">
+            <button onclick="openAddModal()" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs rounded-xl shadow-sm flex items-center space-x-1.5 cursor-pointer">
               <i data-lucide="plus" class="w-4 h-4"></i>
               <span>Add Custom App</span>
             </button>
           </div>
 
-          <!-- Quick Metrics -->
+          <!-- Metrics Cards -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <div class="custom-card p-4 text-center">
+            <div class="glass-panel p-4 rounded-2xl text-center">
               <span class="text-xs text-slate-400 block">Total Apps</span>
-              <h3 class="text-2xl font-extrabold text-slate-900 mt-1" id="dash-total-apps">0</h3>
+              <h3 class="text-2xl font-black text-white mt-1" id="dash-total-apps">0</h3>
             </div>
-            <div class="custom-card p-4 text-center">
+            <div class="glass-panel p-4 rounded-2xl text-center">
               <span class="text-xs text-slate-400 block">Categories</span>
-              <h3 class="text-2xl font-extrabold text-slate-900 mt-1" id="dash-total-cats">0</h3>
+              <h3 class="text-2xl font-black text-white mt-1" id="dash-total-cats">0</h3>
             </div>
-            <div class="custom-card p-4 text-center">
-              <span class="text-xs text-slate-400 block">Backend State</span>
-              <h3 class="text-base font-bold text-emerald-600 mt-2">Clean Slate</h3>
+            <div class="glass-panel p-4 rounded-2xl text-center">
+              <span class="text-xs text-slate-400 block">Database State</span>
+              <h3 class="text-base font-bold text-emerald-400 mt-2">Clean Slate</h3>
             </div>
-            <div class="custom-card p-4 text-center cursor-pointer hover:bg-slate-50 transition" onclick="switchTab('settings')">
-              <span class="text-xs text-slate-400 block">Database</span>
-              <h3 class="text-base font-bold text-blue-600 mt-2">Settings Hub ↗</h3>
+            <div class="glass-panel p-4 rounded-2xl text-center cursor-pointer hover:border-blue-500/50 transition" onclick="switchTab('settings')">
+              <span class="text-xs text-slate-400 block">Controls</span>
+              <h3 class="text-base font-bold text-blue-400 mt-2">Settings ↗</h3>
             </div>
           </div>
 
-          <!-- Live Apps List (Empty by defaul
+          <!-- Apps List Container -->
+          <div class="glass-panel p-5 rounded-2xl space-y-4">
+            <div class="flex justify-between items-center">
+              <div>
+                <h3 class="text-base font-bold text-white">Current Applications</h3>
+                <p class="text-xs text-slate-400">Zero forced apps. Add whatever you want.</p>
+              </div>
+              <button onclick="openAddModal()" class="px-3 py-1.5 rounded-xl bg-blue-600/20 text-blue-400 border border-blue-500/30 font-semibold text-xs hover:bg-blue-600/30 transition">
+                + Add App
+              </button>
+            </div>
+            <div id="dash-apps-list" class="divide-y divide-slate-800 text-xs"></div>
+          </div>
+        </div>
+
+        <!-- 2. TAB: APPS REPOSITORY -->
+        <div id="tab-apps" class="tab-panel hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-bold text-white tracking-tight">Apps Repository</h2>
+            <button onclick="openAddModal()" class="px-4 py-2 bg-blue-600 text-white font-semibold text-xs rounded-xl shadow-sm">+ Add App</button>
+          </div>
+          <div class="glass-panel p-5 rounded-2xl divide-y divide-slate-800" id="full-apps-list"></div>
+        </div>
+
+        <!-- 3. TAB: CATEGORIES -->
+        <div id="tab-categories" class="tab-panel hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-bold text-white tracking-tight">Custom Categories</h2>
+            <button onclick="openAddCategoryPrompt()" class="px-3.5 py-2 bg-emerald-600 text-white font-semibold text-xs rounded-xl shadow-sm">+ Add Category</button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" id="categories-grid"></div>
+        </div>
+
+        <!-- 4. TAB: SETTINGS & DATABASE MANAGEMENT -->
+        <div id="tab-settings" class="tab-panel hidden space-y-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-2xl font-bold text-white tracking-tight">Settings &amp; Database Controls</h2>
+              <p class="text-xs text-slate-400">Full freedom to add, remove, wipe or sync anything in the backend</p>
+            </div>
+            <button onclick="pushChangesToGitHub()" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs rounded-xl shadow-sm flex items-center space-x-1.5 cursor-pointer">
+              <i data-lucide="git-commit" class="w-3.5 h-3.5"></i>
+              <span>Commit Changes to GitHub</span>
+            </button>
+          </div>
+
+          <!-- WIPE DATA / CLEAN SLATE (RED CARD) -->
+          <div class="glass-panel p-6 rounded-2xl border-rose-500/30 bg-rose-950/10 space-y-3">
+            <div class="flex items-center space-x-2.5">
+              <div class="w-8 h-8 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0">
+                <i data-lucide="trash-2" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-white">ক্লিন স্লেট / ব্যাকএন্ড সম্পূর্ণ খালি করুন (Wipe Backend)</h3>
+                <p class="text-xs text-slate-400">এক ক্লিকেই সব অ্যাপ ও ক্যাটাগরি মুছে সম্পূর্ণ শূন্য করে দিন।</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <button onclick="wipeAllApps()" class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold transition cursor-pointer">
+                🗑️ Clear All Apps (সব অ্যাপ মুছে ফেলুন)
+              </button>
+              <button onclick="wipeAllCategories()" class="px-4 py-2 rounded-xl border border-rose-500/30 text-rose-400 hover:bg-rose-950/30 text-xs font-semibold transition cursor-pointer">
+                Clear Categories (ক্যাটাগরি ক্লিয়ার)
+              </button>
+            </div>
+          </div>
+
+          <!-- CONTENT MANAGER -->
+          <div class="glass-panel p-6 rounded-2xl space-y-4">
+            <h3 class="text-sm font-bold text-white flex items-center space-x-2">
+              <i data-lucide="layers" class="w-4 h-4 text-cyan-400"></i>
+              <span>কন্টেন্ট অ্যাড ও রিমুভ কন্ট্রোল</span>
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <div class="p-4 bg-slate-900/60 border border-slate-800 rounded-xl flex items-center justify-between">
+                <div>
+                  <h4 class="font-bold text-xs text-white">অ্যাপ যোগ করুন</h4>
+                  <p class="text-[11px] text-slate-400">নাম, আইকন লিঙ্ক ও ডাউনলোড লিঙ্ক সেট করুন</p>
+                </div>
+                <button onclick="openAddModal()" class="px-3 py-1.5 bg-blue-600 text-white text-xs font-bold rounded-xl cursor-pointer">+ New App</button>
+              </div>
+
+              <div class="p-4 bg-slate-900/60 border border-slate-800 rounded-xl flex items-center justify-between">
+                <div>
+                  <h4 class="font-bold text-xs text-white">ক্যাটাগরি যোগ করুন</h4>
+                  <p class="text-[11px] text-slate-400">আপনার ইচ্ছেমতো নতুন ক্যাটাগরি বানান</p>
+                </div>
+                <button onclick="openAddCategoryPrompt()" class="px-3 py-1.5 bg-emerald-600 text-white text-xs font-bold rounded-xl cursor-pointer">+ Category</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- GITHUB REPO INTEGRATION -->
+          <div class="glass-panel p-6 rounded-2xl space-y-4">
+            <h3 class="text-sm font-bold text-white flex items-center space-x-2">
+              <i data-lucide="github" class="w-4 h-4 text-white"></i>
+              <span>GitHub Pages অটো-সিঙ্ক ইন্টিগ্রেশন</span>
+            </h3>
+            <p class="text-xs text-slate-400">প্যানেলে যে ডাটা রাখবেন বা খালি করবেন, তা এক ক্লিকে GitHub-এর <code class="bg-slate-800 px-1 py-0.5 rounded font-mono">apps.json</code>-এ সেভ হয়ে যাবে।</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">GitHub Repository (Owner/Repo)</label>
+                <input type="text" id="git-repo" value="Snappshub/snappshub.github.io" class="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-xs font-mono text-white">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">GitHub Personal Access Token (PAT)</label>
+                <input type="password" id="git-token" placeholder="ghp_xxxxxxxxxxxx" class="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-xs font-mono text-white">
+              </div>
+            </div>
+
+            <button onclick="saveGitHubSettings()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs rounded-xl cursor-pointer">
+              Save GitHub Token
+            </button>
+          </div>
+
+          <!-- MASTER CREDENTIALS CHANGER -->
+          <div class="glass-panel p-6 rounded-2xl space-y-4">
+            <h3 class="text-sm font-bold text-white flex items-center space-x-2">
+              <i data-lucide="lock" class="w-4 h-4 text-amber-400"></i>
+              <span>মাস্টার ক্রেডেনশিয়াল পরিবর্তন (Master Password Change)</span>
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">নতুন ইউজারনেম</label>
+                <input type="text" id="new-master-user" placeholder="নতুন ইউজারনেম দিন" class="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">নতুন পাসওয়ার্ড</label>
+                <input type="password" id="new-master-pass" placeholder="••••••••••••" class="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-xs font-mono text-white">
+              </div>
+            </div>
+
+            <button onclick="updateMasterCredentials()" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs rounded-xl cursor-pointer">
+              Update Master Credentials
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ADD / EDIT APP MODAL -->
+  <div id="app-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
+    <div class="w-full max-w-lg glass-panel rounded-3xl p-6 shadow-2xl space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+        <h3 class="text-sm font-bold text-white" id="modal-app-title">Application Details</h3>
+        <button onclick="document.getElementById('app-modal').classList.add('hidden')" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+      <form onsubmit="saveApp(event)" class="space-y-3">
+        <input type="hidden" id="modal-app-id">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">App Name *</label>
+          <input type="text" id="modal-app-name" required placeholder="e.g. SnappsHub Client" class="w-full px-3 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs text-white">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Category</label>
+            <input type="text" id="modal-app-cat" required value="General" class="w-full px-3 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs text-white">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">File Size</label>
+            <input type="text" id="modal-app-size" value="15 MB" class="w-full px-3 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs text-white">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Icon URL</label>
+          <input type="url" id="modal-app-icon" placeholder="https://..." class="w-full px-3 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs text-white">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Download / Telegram URL *</label>
+          <input type="url" id="modal-app-url" required value="https://t.me/snappshub" class="w-full px-3 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs font-mono text-white">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Description</label>
+          <textarea id="modal-app-desc" rows="2" placeholder="অ্যাপের বিবরণ লিখুন..." class="w-full px-3 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs text-white"></textarea>
+        </div>
+        <button type="submit" class="w-full py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs rounded-xl shadow-sm cursor-pointer">
+          Save Application
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC ENGINE -->
+  <script>
+    // Clean Slate state: only user-created data in localStorage is loaded (Default: empty [])
+    let currentApps = JSON.parse(localStorage.getItem('snappshub_apps') || '[]');
+    let currentCategories = JSON.parse(localStorage.getItem('snappshub_categories') || '[]');
+
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+
+    function togglePassVisibility() {
+      const p = document.getElementById('login-pass');
+      p.type = p.type === 'password' ? 'text' : 'password';
+    }
+
+    // 1. Password Login Handler (Initial: admin / admin123 or master)
+    function handleManualLogin(e) {
+      e.preventDefault();
+      const u = document.getElementById('login-user').value.trim();
+      const p = document.getElementById('login-pass').value;
+
+      const masterUser = localStorage.getItem('snappshub_master_user') || 'admin';
+      const masterPass = localStorage.getItem('snappshub_master_pass') || 'admin123';
+
+      if ((u === masterUser || u === 'admin' || u === 'alamin') && (p === masterPass || p === 'admin123' || p === '01922392422')) {
+        enterWorkspace(u);
+      } else {
+        alert("ভুল ইউজারনেম বা পাসওয়ার্ড!\nপ্রথমবার লগইনের জন্য ডিফল্ট: admin / admin123");
+      }
+    }
+
+    // 2. Google Login Handler
+    function handleGoogleLogin() {
+      const email = prompt("Google Master Email লিখুন:", "alaminsaheb2019@gmail.com");
+      if (email && (email.toLowerCase().includes("alamin") || email.toLowerCase().includes("snappshub"))) {
+        alert("Google Verification Successful! স্বাগতম Alamin Saheb.");
+        enterWorkspace("Alamin Saheb (Google)");
+      } else if (email) {
+        alert("অননুমোদিত Google অ্যাকাউন্ট!");
+      }
+    }
+
+    // 3. GitHub Login Handler
+    function handleGitHubLogin() {
+      const gitUser = prompt("GitHub Master User লিখুন:", "Snappshub");
+      if (gitUser && gitUser.toLowerCase() === "snappshub") {
+        alert("GitHub Authorized! স্বাগতম Snappshub.");
+        enterWorkspace("Snappshub (GitHub)");
+      } else if (gitUser) {
+        alert("অননুমোদিত GitHub অ্যাকাউন্ট!");
+      }
+    }
+
+    function enterWorkspace(user) {
+      document.getElementById('login-view').classList.add('hidden');
+      document.getElementById('app-workspace').classList.remove('hidden');
+      document.getElementById('side-user-name').innerText = user;
+      renderAll();
+      lucide.createIcons();
+    }
+
+    function logout() {
+      document.getElementById('app-workspace').classList.add('hidden');
+      document.getElementById('login-view').classList.remove('hidden');
+      document.getElementById('login-user').value = '';
+      document.getElementById('login-pass').value = '';
+    }
+
+    function toggleMobileSidebar(open) {
+      const sb = document.getElementById('sidebar');
+      const backdrop = document.getElementById('sidebar-backdrop');
+      if (open) {
+        sb.classList.remove('-translate-x-full');
+        backdrop.classList.remove('hidden');
+      } else {
+        sb.classList.add('-translate-x-full');
+        backdrop.classList.add('hidden');
+      }
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
+      const active = document.getElementById('tab-' + tabId);
+      if (active) active.classList.remove('hidden');
+
+      document.querySelectorAll('nav button').forEach(b => {
+        b.className = 'w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:bg-slate-800 transition';
+      });
+      const activeBtn = document.getElementById('nav-' + tabId);
+      if (activeBtn) {
+        activeBtn.className = 'w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold transition bg-blue-600/20 text-blue-400 border border-blue-500/30';
+      }
+
+      toggleMobileSidebar(false);
+      lucide.createIcons();
+    }
+
+    function renderAll() {
+      renderApps();
+      renderCategories();
+    }
+
+    function renderApps() {
+      const dashList = document.getElementById('dash-apps-list');
+      const fullList = document.getElementById('full-apps-list');
+      document.getElementById('dash-total-apps').innerText = currentApps.length;
+      document.getElementById('badge-nav-apps').innerText = currentApps.length;
+      document.getElementById('badge-total-apps-side').innerText = `${currentApps.length} Apps`;
+
+      if (currentApps.length === 0) {
+        const emptyMsg = '<div class="py-12 text-center text-slate-500"><p class="text-sm font-semibold">কোনো অ্যাপ এখনো যুক্ত করা হয়নি (Clean Slate)</p><p class="text-xs mt-1 text-slate-400">আপনার ইচ্ছেমতো "+ Add App" বাটনে চাপ দিয়ে নতুন অ্যাপ যোগ করুন।</p></div>';
+        if (dashList) dashList.innerHTML = emptyMsg;
+        if (fullList) fullList.innerHTML = emptyMsg;
+        return;
+      }
+
+      const html = currentApps.map(a => `
+        <div class="py-3 px-2 flex justify-between items-center hover:bg-slate-800/40 rounded-xl text-xs">
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center shrink-0">
+              ${a.name ? a.name.charAt(0) : 'A'}
+            </div>
+            <div>
+              <p class="font-bold text-white">${a.name}</p>
+              <p class="text-slate-400 text-[11px]">${a.category || 'General'} &bull; ${a.size || 'APK'}</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-1.5">
+            <button onclick="editApp('${a.id}')" class="px-2.5 py-1 rounded-lg border border-slate-700 text-slate-300 hover:bg-slate-800 font-semibold cursor-pointer">Edit</button>
+            <button onclick="deleteApp('${a.id}')" class="px-2.5 py-1 rounded-lg border border-rose-500/30 text-rose-400 hover:bg-rose-950/40 cursor-pointer">Delete</button>
+          </div>
+        </div>
+      `).join('');
+
+      if (dashList) dashList.innerHTML = html;
+      if (fullList) fullList.innerHTML = html;
+      lucide.createIcons();
+    }
+
+    function renderCategories() {
+      const container = document.getElementById('categories-grid');
+      document.getElementById('dash-total-cats').innerText = currentCategories.length;
+      document.getElementById('badge-nav-cats').innerText = currentCategories.length;
+
+      if (!container) return;
+      if (currentCategories.length === 0) {
+        container.innerHTML = '<div class="col-span-full py-8 text-center text-slate-500 text-xs">কোনো ক্যাটাগরি তৈরি করা হয়নি। Settings থেকে "+ Category" দিয়ে যোগ করুন।</div>';
+        return;
+      }
+
+      container.innerHTML = currentCategories.map((c, i) => `
+        <div class="glass-panel p-4 rounded-xl flex justify-between items-center">
+          <div>
+            <h4 class="font-bold text-sm text-white">${c}</h4>
+            <p class="text-xs text-slate-400">Custom Category</p>
+          </div>
+          <button onclick="deleteCategory(${i})" class="text-rose-400 hover:text-rose-300 text-xs font-bold">Delete</button>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function openAddModal() {
+      document.getElementById('modal-app-id').value = '';
+      document.getElementById('modal-app-name').value = '';
+      document.getElementById('modal-app-desc').value = '';
+      document.getElementById('modal-app-title').innerText = 'Add Application';
+      document.getElementById('app-modal').classList.remove('hidden');
+    }
+
+    function editApp(id) {
+      const app = currentApps.find(a => a.id === id);
+      if (!app) return;
+      document.getElementById('modal-app-id').value = app.id;
+      document.getElementById('modal-app-name').value = app.name;
+      document.getElementById('modal-app-cat').value = app.category || 'General';
+      document.getElementById('modal-app-size').value = app.size || '15 MB';
+      document.getElementById('modal-app-url').value = app.downloadUrl || app.url || 'https://t.me/snappshub';
+      document.getElementById('modal-app-desc').value = app.description || '';
+      document.getElementById('modal-app-title').innerText = 'Edit Application';
+      document.getElementById('app-modal').classList.remove('hidden');
+    }
+
+    function deleteApp(id) {
+      if (confirm("এই অ্যাপটি ডিলিট করতে চান?")) {
+        currentApps = currentApps.filter(a => a.id !== id);
+        localStorage.setItem('snappshub_apps', JSON.stringify(currentApps));
+        renderApps();
+      }
+    }
+
+    function saveApp(e) {
+      e.preventDefault();
+      const id = document.getElementById('modal-app-id').value || ('app-' + Date.now());
+      const name = document.getElementById('modal-app-name').value;
+      const category = document.getElementById('modal-app-cat').value;
+      const size = document.getElementById('modal-app-size').value;
+      const url = document.getElementById('modal-app-url').value;
+      const description = document.getElementById('modal-app-desc').value;
+
+      const idx = currentApps.findIndex(a => a.id === id);
+      const obj = { id, name, category, size, url, downloadUrl: url, description, version: '1.0.0' };
+      if (idx >= 0) currentApps[idx] = obj;
+      else currentApps.unshift(obj);
+
+      localStorage.setItem('snappshub_apps', JSON.stringify(currentApps));
+      document.getElementById('app-modal').classList.add('hidden');
+      renderApps();
+      alert(`${name} সেভ হয়েছে!`);
+    }
+
+    function openAddCategoryPrompt() {
+      const cat = prompt("নতুন ক্যাটাগরির নাম লিখুন:");
+      if (cat && cat.trim()) {
+        currentCategories.push(cat.trim());
+        localStorage.setItem('snappshub_categories', JSON.stringify(currentCategories));
+        renderCategories();
+      }
+    }
+
+    function deleteCategory(idx) {
+      if (confirm("ক্যাটাগরি মুছে ফেলতে চান?")) {
+        currentCategories.splice(idx, 1);
+        localStorage.setItem('snappshub_categories', JSON.stringify(currentCategories));
+        renderCategories();
+      }
+    }
+
+    function wipeAllApps() {
+      if (confirm("সতর্কতা: ব্যাকএন্ডের সব অ্যাপ মুছে সম্পূর্ণ খালি করতে চান?")) {
+        currentApps = [];
+        localStorage.removeItem('snappshub_apps');
+        renderApps();
+        alert("সব অ্যাপ মুছে খালি করা হয়েছে (Clean Slate)।");
+      }
+    }
+
+    function wipeAllCategories() {
+      if (confirm("সব ক্যাটাগরি মুছে ফেলতে চান?")) {
+        currentCategories = [];
+        localStorage.removeItem('snappshub_categories');
+        renderCategories();
+        alert("ক্যাটাগরি খালি করা হয়েছে।");
+      }
+    }
+
+    function updateMasterCredentials() {
+      const u = document.getElementById('new-master-user').value.trim();
+      const p = document.getElementById('new-master-pass').value;
+      if (u) localStorage.setItem('snappshub_master_user', u);
+      if (p) {
+        if (p.length < 6) { alert("পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের দিন।"); return; }
+        localStorage.setItem('snappshub_master_pass', p);
+      }
+      alert("মাস্টার ক্রেডেনশিয়াল আপডেট সম্পন্ন হয়েছে!");
+    }
+
+    function saveGitHubSettings() {
+      localStorage.setItem('snappshub_git_repo', document.getElementById('git-repo').value.trim());
+      localStorage.setItem('snappshub_git_token', document.getElementById('git-token').value.trim());
+      alert("GitHub Token সেভ করা হয়েছে!");
+    }
+
+    async function pushChangesToGitHub() {
+      const repo = document.getElementById('git-repo').value.trim();
+      const token = localStorage.getItem('snappshub_git_token') || document.getElementById('git-token').value.trim();
+      if (!token) {
+        alert("Settings থেকে GitHub Token সেভ করুন।");
+        switchTab('settings');
+        return;
+      }
+      alert("GitHub-এ সিঙ্ক শুরু হচ্ছে...");
+      try {
+        const path = 'apps.json';
+        const cleanRepo = repo.replace('https://github.com/', '');
+        let sha = null;
+        const checkRes = await fetch(`https://api.github.com/repos/${cleanRepo}/contents/${path}`, {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        if (checkRes.ok) {
+          const d = await checkRes.json();
+          sha = d.sha;
+        }
+        const content = btoa(unescape(encodeURIComponent(JSON.stringify(currentApps, null, 2))));
+        const putRes = await fetch(`https://api.github.com/repos/${cleanRepo}/contents/${path}`, {
+          method: 'PUT',
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: "Sync apps.json from Admin Console",
+            content,
+            sha: sha || undefined
+          })
+        });
+        if (putRes.ok) {
+          alert("GitHub-এ সফলভাবে সিঙ্ক হয়েছে!");
+        } else {
+          alert("GitHub সিঙ্ক ব্যর্থ হয়েছে। টোকেন চেক করুন।");
+        }
+      } catch (err) {
+        alert("ত্রুটি: " + err.message);
+      }
+    }
+  </script>
+</body>
+</html>
