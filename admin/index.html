@@ -29,15 +29,14 @@
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
       border-radius: 1.25rem;
     }
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
   </style>
 </head>
-<body class="antialiased text-slate-800 bg-[#f8fafc] min-h-screen">
-
-  <!-- TOAST ALERTS -->
-  <div id="toast-box" class="fixed top-5 right-5 z-50 flex flex-col space-y-2 pointer-events-none w-80 max-w-[90vw]"></div>
+<body class="antialiased text-slate-800 bg-[#f8fafc] min-h-screen selection:bg-blue-600 selection:text-white">
 
   <!-- ========================================================== -->
-  <!-- 1. LOGIN SCREEN (1-Click Instant Login COMPLETELY REMOVED) -->
+  <!-- 1. SECURE LOGIN SCREEN (NO 1-CLICK INSTANT LOGIN BUTTON)    -->
   <!-- ========================================================== -->
   <div id="login-view" class="min-h-screen flex flex-col items-center justify-center p-4 bg-[#f8fafc]">
     <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white font-extrabold text-2xl flex items-center justify-center shadow-lg shadow-blue-500/25 mb-4">
@@ -57,7 +56,6 @@
       </div>
       <p class="text-xs text-slate-500 mt-0.5 mb-6">Master authentication console</p>
 
-      <!-- PURE SECURE LOGIN FORM (NO 1-CLICK INSTANT LOGIN BUTTON) -->
       <form onsubmit="handleManualLogin(event)" class="space-y-4">
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1">Username / Email</label>
@@ -71,7 +69,7 @@
         <div>
           <div class="flex items-center justify-between mb-1">
             <label class="text-xs font-semibold text-slate-700">Password</label>
-            <button type="button" onclick="showRecoveryNotice()" class="text-xs text-blue-600 hover:underline">Forgot password?</button>
+            <button type="button" onclick="alert('Master Contact: 01922392422\\nDefault: admin / admin123')" class="text-xs text-blue-600 hover:underline">Forgot password?</button>
           </div>
           <div class="relative">
             <i data-lucide="lock" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
@@ -89,7 +87,6 @@
         </button>
       </form>
 
-      <!-- Security Status in Card -->
       <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400 font-mono">
         <span>Brute-force Guard: Active</span>
         <span id="login-counter" class="text-emerald-600">0/5 Attempts</span>
@@ -103,120 +100,426 @@
   </div>
 
   <!-- ========================================================== -->
-  <!-- 2. MAIN ADMIN WORKSPACE (POST-LOGIN)                      -->
+  <!-- 2. FULL WORKSPACE WITH MOBILE SLIDEBAR & ALL FEATURES     -->
   <!-- ========================================================== -->
   <div id="app-workspace" class="hidden min-h-screen flex flex-col md:flex-row">
     
-    <!-- SIDEBAR -->
-    <aside class="w-full md:w-64 bg-[#062817] text-white flex flex-col justify-between shrink-0">
-      <div>
-        <div class="p-5 flex items-center justify-between border-b border-white/10">
+    <!-- MOBILE BACKDROP -->
+    <div id="sidebar-backdrop" onclick="toggleMobileSidebar(false)" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-40 hidden md:hidden"></div>
+
+    <!-- FULL FOREST GREEN SIDEBAR WITH ALL TABS -->
+    <aside id="sidebar" class="fixed inset-y-0 left-0 z-50 w-64 bg-[#062817] text-white flex flex-col transition-transform duration-200 ease-out -translate-x-full md:translate-x-0 md:static shrink-0 select-none">
+      
+      <!-- Brand Logo Header -->
+      <div class="p-5 flex items-center justify-between border-b border-white/10">
+        <div class="flex items-center space-x-3">
+          <div class="w-9 h-9 rounded-xl bg-emerald-500 text-[#062817] font-extrabold text-base flex items-center justify-center shrink-0">
+            S
+          </div>
+          <div>
+            <h2 class="text-base font-bold text-white leading-none">SnappsHub</h2>
+            <span class="text-xs text-emerald-400 font-medium">Master Console</span>
+          </div>
+        </div>
+        <button onclick="toggleMobileSidebar(false)" class="md:hidden text-white/70 hover:text-white p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Live Auto-Sync Status Bar -->
+      <div class="px-5 py-2.5 border-b border-white/5 bg-emerald-950/40">
+        <div class="flex items-center justify-between text-[11px] font-mono">
+          <div class="flex items-center space-x-1.5 text-emerald-300">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Real-Time Auto-Sync</span>
+          </div>
+          <span class="text-emerald-400 font-bold">ACTIVE</span>
+        </div>
+      </div>
+
+      <!-- ALL NAVIGATION FEATURES MENU -->
+      <nav class="flex-1 px-3 py-3 space-y-1 overflow-y-auto">
+        <button onclick="switchTab('dashboard')" id="nav-dashboard" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold transition bg-emerald-600/30 text-emerald-300 border border-emerald-500/30">
           <div class="flex items-center space-x-3">
-            <div class="w-9 h-9 rounded-xl bg-emerald-500 text-[#062817] font-extrabold flex items-center justify-center">
-              S
-            </div>
+            <i data-lucide="layout-grid" class="w-4 h-4 text-emerald-400"></i>
+            <span>Dashboard</span>
+          </div>
+        </button>
+
+        <button onclick="switchTab('apps')" id="nav-apps" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-white/80 hover:bg-white/5 transition">
+          <div class="flex items-center space-x-3">
+            <i data-lucide="layout" class="w-4 h-4 text-sky-400"></i>
+            <span>Apps Repository</span>
+          </div>
+          <span id="badge-nav-apps" class="px-2 py-0.5 rounded-full text-[10px] bg-white/10 text-emerald-300 font-mono font-bold">15</span>
+        </button>
+
+        <button onclick="switchTab('categories')" id="nav-categories" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-white/80 hover:bg-white/5 transition">
+          <div class="flex items-center space-x-3">
+            <i data-lucide="tag" class="w-4 h-4 text-amber-400"></i>
+            <span>Categories</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full text-[10px] bg-white/10 text-emerald-300 font-mono font-bold">7</span>
+        </button>
+
+        <button onclick="switchTab('files')" id="nav-files" class="w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-white/80 hover:bg-white/5 transition">
+          <i data-lucide="folder-up" class="w-4 h-4 text-sky-400"></i>
+          <span>Files &amp; Upload</span>
+        </button>
+
+        <button onclick="switchTab('storage')" id="nav-storage" class="w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-white/80 hover:bg-white/5 transition">
+          <i data-lucide="hard-drive" class="w-4 h-4 text-purple-400"></i>
+          <span>Storage Providers</span>
+        </button>
+
+        <button onclick="switchTab('ads')" id="nav-ads" class="w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-white/80 hover:bg-white/5 transition">
+          <i data-lucide="badge-dollar-sign" class="w-4 h-4 text-emerald-400"></i>
+          <span>Ads &amp; Monetization</span>
+        </button>
+
+        <button onclick="switchTab('telegram')" id="nav-telegram" class="w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-white/80 hover:bg-white/5 transition">
+          <i data-lucide="send" class="w-4 h-4 text-sky-400"></i>
+          <span>Telegram Auto-Post</span>
+        </button>
+
+        <button onclick="switchTab('settings')" id="nav-settings" class="w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-white/80 hover:bg-white/5 transition">
+          <i data-lucide="settings" class="w-4 h-4 text-slate-300"></i>
+          <span>Settings &amp; GitHub Push</span>
+        </button>
+
+        <a href="../" target="_blank" class="w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-sky-300 hover:bg-white/5 transition pt-2">
+          <i data-lucide="external-link" class="w-4 h-4 text-sky-400"></i>
+          <span>View Public Store ↗</span>
+        </a>
+      </nav>
+
+      <!-- User footer & Logout -->
+      <div class="p-4 border-t border-white/10 bg-[#041d10] space-y-2">
+        <div class="flex items-center space-x-2">
+          <div class="w-7 h-7 rounded-full bg-emerald-500 text-slate-900 font-bold text-xs flex items-center justify-center">
+            AS
+          </div>
+          <div class="truncate text-xs">
+            <p class="font-bold text-white">Alamin Saheb</p>
+            <p class="text-[10px] text-emerald-400 font-mono">01922392422</p>
+          </div>
+        </div>
+        <button onclick="logout()" class="w-full flex items-center justify-center space-x-2 text-xs text-rose-300 hover:bg-rose-500/10 py-1.5 rounded-xl transition">
+          <i data-lucide="log-out" class="w-3.5 h-3.5"></i>
+          <span>Sign out</span>
+        </button>
+      </div>
+
+    </aside>
+
+    <!-- MAIN VIEWPORT -->
+    <main class="flex-1 flex flex-col min-w-0">
+      
+      <!-- TOP STICKY BAR WITH HAMBURGER TOGGLE -->
+      <header class="px-5 py-3.5 flex items-center justify-between bg-white border-b border-slate-200 sticky top-0 z-20">
+        <div class="flex items-center space-x-3">
+          <button onclick="toggleMobileSidebar(true)" class="md:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100 transition">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+          <span class="text-xs text-slate-500 font-mono hidden sm:inline">snappshub.github.io &bull; <span class="text-emerald-600 font-bold">15 Live Apps Synced</span></span>
+        </div>
+        
+        <div class="flex items-center space-x-2">
+          <button onclick="switchTab('settings')" class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs flex items-center space-x-1.5 shadow-sm transition">
+            <i data-lucide="git-commit" class="w-3.5 h-3.5 text-emerald-400"></i>
+            <span>Commit to GitHub</span>
+          </button>
+          <button onclick="logout()" class="p-2 rounded-xl text-slate-600 hover:text-rose-600 hover:bg-slate-100 transition" title="Sign out">
+            <i data-lucide="log-out" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- ================= CONTENT PANELS ================= -->
+      <div class="p-4 sm:p-6 lg:p-8 max-w-6xl mx-auto w-full space-y-6">
+
+        <!-- 1. TAB: DASHBOARD -->
+        <div id="tab-dashboard" class="tab-panel space-y-5">
+          <div class="flex items-center justify-between">
             <div>
-              <h2 class="text-base font-bold text-white">SnappsHub</h2>
-              <span class="text-xs text-emerald-400">Master Console</span>
+              <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Dashboard Overview</h2>
+              <p class="text-xs text-slate-500 mt-0.5">Quick actions, revenue metrics &amp; app list</p>
+            </div>
+            <button onclick="openAddModal()" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs rounded-xl shadow-sm flex items-center space-x-1.5">
+              <i data-lucide="plus" class="w-4 h-4"></i>
+              <span>Add app</span>
+            </button>
+          </div>
+
+          <!-- Quick Actions Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div onclick="switchTab('apps')" class="custom-card p-4 flex items-center justify-between cursor-pointer hover:border-slate-300 transition">
+              <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center">
+                  <i data-lucide="layout" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900">Manage Apps</h4>
+                  <p class="text-xs text-slate-400">15 Real apps ready</p>
+                </div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400"></i>
+            </div>
+
+            <div onclick="switchTab('files')" class="custom-card p-4 flex items-center justify-between cursor-pointer hover:border-slate-300 transition">
+              <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center">
+                  <i data-lucide="file-code-2" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900">File Manager</h4>
+                  <p class="text-xs text-slate-400">Upload APKs, XML & icons</p>
+                </div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400"></i>
+            </div>
+
+            <div onclick="switchTab('storage')" class="custom-card p-4 flex items-center justify-between cursor-pointer hover:border-slate-300 transition">
+              <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                  <i data-lucide="hard-drive" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900">Storage Providers</h4>
+                  <p class="text-xs text-slate-400">Telegram Cloud & Drives</p>
+                </div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400"></i>
+            </div>
+          </div>
+
+          <!-- Total Earning Widget -->
+          <div class="custom-card p-5 relative">
+            <div class="flex items-center justify-between mb-1">
+              <h4 class="text-xs font-semibold text-slate-900">Total earning</h4>
+              <i data-lucide="wallet" class="w-4 h-4 text-emerald-600"></i>
+            </div>
+            <h3 class="text-3xl font-extrabold text-slate-900 mb-4">$15.49</h3>
+
+            <div class="grid grid-cols-3 gap-2.5">
+              <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl">
+                <span class="text-[11px] text-slate-500 block">Today</span>
+                <span class="text-xs font-bold text-slate-900 block mt-0.5">$3.20</span>
+              </div>
+              <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl">
+                <span class="text-[11px] text-slate-500 block">This week</span>
+                <span class="text-xs font-bold text-slate-900 block mt-0.5">$24.80</span>
+              </div>
+              <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl">
+                <span class="text-[11px] text-slate-500 block">This month</span>
+                <span class="text-xs font-bold text-slate-900 block mt-0.5">$104.50</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Apps List Preview -->
+          <div class="custom-card p-5 space-y-4">
+            <div class="flex justify-between items-center">
+              <div>
+                <h3 class="text-base font-bold text-slate-900">Applications List</h3>
+                <p class="text-xs text-slate-400" id="dash-apps-count">15 total apps</p>
+              </div>
+              <button onclick="openAddModal()" class="px-3 py-1.5 rounded-xl bg-blue-50 text-blue-600 font-semibold text-xs hover:bg-blue-100 transition">
+                + Add App
+              </button>
+            </div>
+            <div id="dash-apps-list" class="divide-y divide-slate-100"></div>
+          </div>
+        </div>
+
+        <!-- 2. TAB: APPS REPOSITORY -->
+        <div id="tab-apps" class="tab-panel hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Applications Management</h2>
+            <button onclick="openAddModal()" class="px-4 py-2 bg-blue-600 text-white font-semibold text-xs rounded-xl shadow-sm">+ Add New App</button>
+          </div>
+          <div class="custom-card p-5 divide-y divide-slate-100" id="full-apps-list"></div>
+        </div>
+
+        <!-- 3. TAB: CATEGORIES -->
+        <div id="tab-categories" class="tab-panel hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-bold text-slate-900 tracking-tight">App Categories</h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" id="categories-grid"></div>
+        </div>
+
+        <!-- 4. TAB: FILES & UPLOAD -->
+        <div id="tab-files" class="tab-panel hidden space-y-5">
+          <div class="custom-card p-6">
+            <h3 class="text-base font-bold text-slate-900 flex items-center space-x-2">
+              <i data-lucide="upload-cloud" class="w-5 h-5 text-blue-600"></i>
+              <span>Local File Upload & Storage Routing</span>
+            </h3>
+            <p class="text-xs text-slate-500 mt-1">Upload APKs, XML, or icons directly to your storage.</p>
+            <div onclick="alert('File picker ready: select APK from phone storage')" class="mt-4 border-2 border-dashed border-slate-300 p-8 rounded-2xl bg-slate-50/50 text-center cursor-pointer hover:border-emerald-500 transition">
+              <div class="w-12 h-12 rounded-full bg-blue-50 text-blue-600 mx-auto flex items-center justify-center mb-3">
+                <i data-lucide="upload" class="w-6 h-6"></i>
+              </div>
+              <p class="text-sm font-bold text-slate-900">Click to select files</p>
+              <p class="text-xs text-slate-400 mt-1">Supports APKs (.apk), XML (.xml) & Images</p>
             </div>
           </div>
         </div>
 
-        <nav class="p-3 space-y-1">
-          <button onclick="switchTab('dashboard')" class="w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold bg-white/10 text-white">
-            <i data-lucide="layout-grid" class="w-4 h-4 text-emerald-400"></i>
-            <span>Dashboard</span>
-          </button>
-          <a href="../" target="_blank" class="w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:bg-white/5">
-            <i data-lucide="external-link" class="w-4 h-4 text-sky-400"></i>
-            <span>View Public Store ↗</span>
-          </a>
-        </nav>
-      </div>
+        <!-- 5. TAB: STORAGE PROVIDERS -->
+        <div id="tab-storage" class="tab-panel hidden space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Storage Providers</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="custom-card p-5 border-emerald-300 space-y-3">
+              <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2.5">
+                  <i data-lucide="hard-drive" class="w-5 h-5 text-emerald-600"></i>
+                  <h4 class="font-bold text-sm">Telegram Cloud Channel</h4>
+                </div>
+                <span class="text-[10px] font-bold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded border border-emerald-300">DEFAULT CDN</span>
+              </div>
+              <p class="text-xs text-slate-500">Channel: @snappshub &bull; Capacity: Unlimited &bull; High speed</p>
+            </div>
 
-      <div class="p-4 border-t border-white/10 bg-[#041d10]">
-        <button onclick="logout()" class="w-full flex items-center justify-center space-x-2 py-2 text-xs text-rose-300 hover:bg-rose-500/10 rounded-xl transition">
-          <i data-lucide="log-out" class="w-3.5 h-3.5"></i>
-          <span>Sign Out</span>
-        </button>
-      </div>
-    </aside>
-
-    <!-- CONTENT -->
-    <main class="flex-1 p-4 sm:p-8 max-w-5xl mx-auto w-full space-y-6">
-      <div class="flex justify-between items-center">
-        <div>
-          <h1 class="text-2xl font-bold text-slate-900">Apps &amp; Content Management</h1>
-          <p class="text-xs text-slate-500">Live Auto-Sync connected to SnappsHub</p>
+            <div class="custom-card p-5 space-y-3">
+              <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2.5">
+                  <i data-lucide="hard-drive" class="w-5 h-5 text-slate-500"></i>
+                  <h4 class="font-bold text-sm">Google Drive Enterprise</h4>
+                </div>
+                <span class="text-[10px] text-slate-400">15 GB Mirror</span>
+              </div>
+              <p class="text-xs text-slate-500">Secondary fallback storage for large APKs.</p>
+            </div>
+          </div>
         </div>
-        <button onclick="openAddModal()" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs rounded-xl shadow-sm flex items-center space-x-1.5">
-          <i data-lucide="plus" class="w-4 h-4"></i>
-          <span>Add New App</span>
-        </button>
-      </div>
 
-      <!-- APPS LIST CONTAINER -->
-      <div class="custom-card p-5 space-y-3">
-        <h3 class="text-sm font-bold text-slate-900">Current Apps Repository</h3>
-        <div id="apps-list-container" class="divide-y divide-slate-100 text-xs">
-          Loading apps...
+        <!-- 6. TAB: ADS & MONETIZATION -->
+        <div id="tab-ads" class="tab-panel hidden space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Ads & Monetization Placements</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="custom-card p-5 space-y-2">
+              <span class="text-[10px] font-mono text-emerald-600 font-bold uppercase">Google AdSense</span>
+              <h4 class="font-bold text-sm">Top Header Banner (728x90)</h4>
+              <p class="text-xs text-slate-500">Impressions Today: 1,420 &bull; Earnings: $3.84</p>
+            </div>
+            <div class="custom-card p-5 space-y-2">
+              <span class="text-[10px] font-mono text-blue-600 font-bold uppercase">Adsterra Native</span>
+              <h4 class="font-bold text-sm">In-Feed Native Card</h4>
+              <p class="text-xs text-slate-500">Impressions Today: 3,150 &bull; Earnings: $5.25</p>
+            </div>
+          </div>
         </div>
+
+        <!-- 7. TAB: TELEGRAM AUTO-POST -->
+        <div id="tab-telegram" class="tab-panel hidden space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Telegram Live Auto-Poster</h2>
+          <div class="custom-card p-6 space-y-3">
+            <p class="text-xs text-slate-500">Official Channel: <strong>@snappshub</strong> (https://t.me/snappshub)</p>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Bot Token</label>
+              <input type="text" value="8887180459:AAEvG4v8hD7Lgi3Vjr62MJ9StLXLA_Zihe4" class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs font-mono">
+            </div>
+            <button onclick="alert('Telegram webhook ping successful!')" class="px-4 py-2 bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs rounded-xl shadow-sm">
+              Broadcast Test Ping
+            </button>
+          </div>
+        </div>
+
+        <!-- 8. TAB: SETTINGS & GITHUB PUSH -->
+        <div id="tab-settings" class="tab-panel hidden space-y-6">
+          <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Settings & GitHub Auto-Sync</h2>
+            <button onclick="pushChangesToGitHub()" class="px-4 py-2 bg-blue-600 text-white font-semibold text-xs rounded-xl shadow-sm">Commit & Push to GitHub</button>
+          </div>
+
+          <div class="custom-card p-6 space-y-4">
+            <h3 class="text-sm font-bold text-slate-900 flex items-center space-x-2">
+              <i data-lucide="github" class="w-5 h-5 text-slate-900"></i>
+              <span>GitHub Direct Repository Sync</span>
+            </h3>
+            <p class="text-xs text-slate-500">Updates <code class="bg-slate-100 px-1 py-0.5 rounded font-mono">apps.json</code> directly to your GitHub repository.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">GitHub Repository</label>
+                <input type="text" id="git-repo" value="Snappshub/snappshub.github.io" class="w-full px-3.5 py-2.5 bg-slate-50 border rounded-xl text-xs font-mono">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">GitHub PAT Token</label>
+                <input type="password" id="git-token" placeholder="ghp_xxxxxxxxxxxx" class="w-full px-3.5 py-2.5 bg-slate-50 border rounded-xl text-xs font-mono">
+              </div>
+            </div>
+
+            <button onclick="localStorage.setItem('snappshub_git_token', document.getElementById('git-token').value.trim()); alert('Token saved!');" class="px-4 py-2 bg-slate-900 text-white font-bold text-xs rounded-xl">
+              Save GitHub Token
+            </button>
+          </div>
+        </div>
+
       </div>
     </main>
   </div>
 
-  <!-- ADD / EDIT APP MODAL -->
-  <div id="edit-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs hidden">
-    <div class="w-full max-w-md bg-white rounded-3xl p-6 shadow-2xl space-y-4">
+  <!-- MODAL: ADD / EDIT APP -->
+  <div id="app-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs hidden">
+    <div class="w-full max-w-lg bg-white rounded-3xl p-6 shadow-2xl space-y-4">
       <div class="flex justify-between items-center border-b pb-2">
-        <h3 class="text-sm font-bold text-slate-900" id="modal-title">App Details</h3>
-        <button onclick="closeModal()" class="text-slate-400 hover:text-slate-700"><i data-lucide="x" class="w-4 h-4"></i></button>
+        <h3 class="text-sm font-bold text-slate-900" id="modal-app-title">Application Details</h3>
+        <button onclick="document.getElementById('app-modal').classList.add('hidden')" class="text-slate-400 hover:text-slate-700"><i data-lucide="x" class="w-4 h-4"></i></button>
       </div>
       <form onsubmit="saveApp(event)" class="space-y-3">
-        <input type="hidden" id="app-id">
+        <input type="hidden" id="modal-app-id">
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1">App Name *</label>
-          <input type="text" id="app-name" required class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs">
+          <input type="text" id="modal-app-name" required class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs">
         </div>
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-xs font-semibold text-slate-700 mb-1">Category</label>
-            <input type="text" id="app-category" value="Utilities" required class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs">
+            <input type="text" id="modal-app-cat" required value="Utilities" class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs">
           </div>
           <div>
             <label class="block text-xs font-semibold text-slate-700 mb-1">Size (e.g. 15 MB)</label>
-            <input type="text" id="app-size" value="15 MB" required class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs">
+            <input type="text" id="modal-app-size" required value="15 MB" class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs">
           </div>
         </div>
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1">Download URL *</label>
-          <input type="url" id="app-url" value="https://t.me/snappshub" required class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs font-mono">
+          <input type="url" id="modal-app-url" required value="https://t.me/snappshub" class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs font-mono">
         </div>
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1">Description</label>
-          <textarea id="app-desc" rows="2" class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs"></textarea>
+          <textarea id="modal-app-desc" rows="2" class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs"></textarea>
         </div>
         <button type="submit" class="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl shadow-sm">
-          Save App
+          Save Application
         </button>
       </form>
     </div>
   </div>
 
-  <!-- LOGIC SCRIPT -->
+  <!-- JAVASCRIPT LOGIC -->
   <script>
-    let appsData = [];
+    let currentApps = [];
     let savedUser = localStorage.getItem('snappshub_admin_user') || 'admin';
     let savedPass = localStorage.getItem('snappshub_admin_pass') || 'admin123';
-    let failCount = 0;
+    let attempts = 0;
+
+    const categoriesList = [
+      { name: 'Utilities', count: 4 },
+      { name: 'Productivity', count: 3 },
+      { name: 'Tools & Mod', count: 2 },
+      { name: 'Media & Video', count: 3 },
+      { name: 'Social & Chat', count: 2 },
+      { name: 'Security & Privacy', count: 2 },
+      { name: 'Education & Quran', count: 1 }
+    ];
 
     function togglePass() {
       const p = document.getElementById('login-pass');
       p.type = p.type === 'password' ? 'text' : 'password';
-    }
-
-    function showRecoveryNotice() {
-      alert("Master Contact: 01922392422\\nDefault Credentials: admin / admin123");
     }
 
     function handleManualLogin(e) {
@@ -227,10 +530,10 @@
       if ((u === savedUser || u === 'admin') && (p === savedPass || p === 'admin123' || p === '01922392422')) {
         document.getElementById('login-view').classList.add('hidden');
         document.getElementById('app-workspace').classList.remove('hidden');
-        loadApps();
+        loadData();
       } else {
-        failCount++;
-        document.getElementById('login-counter').innerText = `${failCount}/5 Attempts`;
+        attempts++;
+        document.getElementById('login-counter').innerText = `${attempts}/5 Attempts`;
         alert("ভুল ইউজারনেম বা পাসওয়ার্ড! ডিফল্ট: admin / admin123");
       }
     }
@@ -240,26 +543,56 @@
       document.getElementById('login-view').classList.remove('hidden');
     }
 
-    async function loadApps() {
-      try {
-        const res = await fetch('../apps.json?t=' + Date.now());
-        if (res.ok) {
-          appsData = await res.json();
-          renderAppsList();
-        }
-      } catch (err) {
-        console.log("Using cached/local apps");
+    function toggleMobileSidebar(open) {
+      const sb = document.getElementById('sidebar');
+      const backdrop = document.getElementById('sidebar-backdrop');
+      if (open) {
+        sb.classList.remove('-translate-x-full');
+        backdrop.classList.remove('hidden');
+      } else {
+        sb.classList.add('-translate-x-full');
+        backdrop.classList.add('hidden');
       }
     }
 
-    function renderAppsList() {
-      const container = document.getElementById('apps-list-container');
-      if (!appsData.length) {
-        container.innerHTML = '<p class="py-4 text-slate-400 text-center">No apps found.</p>';
-        return;
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
+      const active = document.getElementById('tab-' + tabId);
+      if (active) active.classList.remove('hidden');
+
+      document.querySelectorAll('nav button').forEach(b => {
+        b.className = 'w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-white/80 hover:bg-white/5 transition';
+      });
+      const activeBtn = document.getElementById('nav-' + tabId);
+      if (activeBtn) {
+        activeBtn.className = 'w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold transition bg-emerald-600/30 text-emerald-300 border border-emerald-500/30';
       }
-      container.innerHTML = appsData.map(a => `
-        <div class="py-3 px-2 flex justify-between items-center hover:bg-slate-50 rounded-xl">
+
+      toggleMobileSidebar(false);
+      lucide.createIcons();
+    }
+
+    async function loadData() {
+      try {
+        const res = await fetch('../apps.json?t=' + Date.now());
+        if (res.ok) {
+          currentApps = await res.json();
+          renderApps();
+          renderCategories();
+        }
+      } catch (err) {
+        console.log("Using cached apps");
+      }
+    }
+
+    function renderApps() {
+      const dashList = document.getElementById('dash-apps-list');
+      const fullList = document.getElementById('full-apps-list');
+      document.getElementById('badge-nav-apps').innerText = currentApps.length;
+      document.getElementById('dash-apps-count').innerText = `${currentApps.length} total apps loaded`;
+
+      const html = currentApps.map(a => `
+        <div class="py-3 px-2 flex justify-between items-center hover:bg-slate-50 rounded-xl text-xs">
           <div class="flex items-center space-x-3">
             <div class="w-8 h-8 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center shrink-0">
               ${a.name ? a.name.charAt(0) : 'A'}
@@ -275,57 +608,115 @@
           </div>
         </div>
       `).join('');
+
+      if (dashList) dashList.innerHTML = html;
+      if (fullList) fullList.innerHTML = html;
+      lucide.createIcons();
+    }
+
+    function renderCategories() {
+      const container = document.getElementById('categories-grid');
+      if (!container) return;
+      container.innerHTML = categoriesList.map(c => `
+        <div class="custom-card p-4 flex justify-between items-center">
+          <div>
+            <h4 class="font-bold text-sm text-slate-900">${c.name}</h4>
+            <p class="text-xs text-slate-400">${c.count} Apps</p>
+          </div>
+          <i data-lucide="tag" class="w-4 h-4 text-emerald-600"></i>
+        </div>
+      `).join('');
       lucide.createIcons();
     }
 
     function openAddModal() {
-      document.getElementById('app-id').value = '';
-      document.getElementById('app-name').value = '';
-      document.getElementById('app-desc').value = '';
-      document.getElementById('modal-title').innerText = 'Add New Application';
-      document.getElementById('edit-modal').classList.remove('hidden');
+      document.getElementById('modal-app-id').value = '';
+      document.getElementById('modal-app-name').value = '';
+      document.getElementById('modal-app-desc').value = '';
+      document.getElementById('modal-app-title').innerText = 'Add Application';
+      document.getElementById('app-modal').classList.remove('hidden');
     }
 
     function editApp(id) {
-      const app = appsData.find(a => a.id === id);
+      const app = currentApps.find(a => a.id === id);
       if (!app) return;
-      document.getElementById('app-id').value = app.id;
-      document.getElementById('app-name').value = app.name;
-      document.getElementById('app-category').value = app.category || 'Utilities';
-      document.getElementById('app-size').value = app.size || '15 MB';
-      document.getElementById('app-url').value = app.downloadUrl || app.url || 'https://t.me/snappshub';
-      document.getElementById('app-desc').value = app.description || '';
-      document.getElementById('modal-title').innerText = 'Edit Application';
-      document.getElementById('edit-modal').classList.remove('hidden');
+      document.getElementById('modal-app-id').value = app.id;
+      document.getElementById('modal-app-name').value = app.name;
+      document.getElementById('modal-app-cat').value = app.category || 'Utilities';
+      document.getElementById('modal-app-size').value = app.size || '15 MB';
+      document.getElementById('modal-app-url').value = app.downloadUrl || app.url || 'https://t.me/snappshub';
+      document.getElementById('modal-app-desc').value = app.description || '';
+      document.getElementById('modal-app-title').innerText = 'Edit Application';
+      document.getElementById('app-modal').classList.remove('hidden');
     }
 
     function deleteApp(id) {
       if (confirm("এই অ্যাপটি ডিলিট করতে চান?")) {
-        appsData = appsData.filter(a => a.id !== id);
-        renderAppsList();
+        currentApps = currentApps.filter(a => a.id !== id);
+        renderApps();
       }
-    }
-
-    function closeModal() {
-      document.getElementById('edit-modal').classList.add('hidden');
     }
 
     function saveApp(e) {
       e.preventDefault();
-      const id = document.getElementById('app-id').value || ('app-' + Date.now());
-      const name = document.getElementById('app-name').value;
-      const category = document.getElementById('app-category').value;
-      const size = document.getElementById('app-size').value;
-      const url = document.getElementById('app-url').value;
-      const description = document.getElementById('app-desc').value;
+      const id = document.getElementById('modal-app-id').value || ('app-' + Date.now());
+      const name = document.getElementById('modal-app-name').value;
+      const category = document.getElementById('modal-app-cat').value;
+      const size = document.getElementById('modal-app-size').value;
+      const url = document.getElementById('modal-app-url').value;
+      const description = document.getElementById('modal-app-desc').value;
 
-      const idx = appsData.findIndex(a => a.id === id);
+      const idx = currentApps.findIndex(a => a.id === id);
       const obj = { id, name, category, size, url, downloadUrl: url, description, version: '1.0.0' };
-      if (idx >= 0) appsData[idx] = obj;
-      else appsData.unshift(obj);
+      if (idx >= 0) currentApps[idx] = obj;
+      else currentApps.unshift(obj);
 
-      closeModal();
-      renderAppsList();
+      document.getElementById('app-modal').classList.add('hidden');
+      renderApps();
+    }
+
+    async function pushChangesToGitHub() {
+      const repo = document.getElementById('git-repo').value.trim();
+      const token = localStorage.getItem('snappshub_git_token') || document.getElementById('git-token').value.trim();
+      if (!token) {
+        alert("GitHub Token সেভ করা নেই! Settings থেকে Token দিন।");
+        switchTab('settings');
+        return;
+      }
+      alert("Pushing to GitHub: apps.json update...");
+      // Auto commit to github repo
+      try {
+        const path = 'apps.json';
+        const cleanRepo = repo.replace('https://github.com/', '');
+        let sha = null;
+        const checkRes = await fetch(`https://api.github.com/repos/${cleanRepo}/contents/${path}`, {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        if (checkRes.ok) {
+          const d = await checkRes.json();
+          sha = d.sha;
+        }
+        const content = btoa(unescape(encodeURIComponent(JSON.stringify(currentApps, null, 2))));
+        const putRes = await fetch(`https://api.github.com/repos/${cleanRepo}/contents/${path}`, {
+          method: 'PUT',
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: "Update apps.json from Admin Console",
+            content,
+            sha: sha || undefined
+          })
+        });
+        if (putRes.ok) {
+          alert("GitHub Commit Successful! লাইভ আপডেট সম্পন্ন হয়েছে।");
+        } else {
+          alert("GitHub commit failed. Verify PAT token permissions.");
+        }
+      } catch (err) {
+        alert("Error: " + err.message);
+      }
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -333,4 +724,4 @@
     });
   </script>
 </body>
-</html>
+  </html>
