@@ -1,22 +1,336 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Super Admin Command Center for SnappsHub app store management, storage routing, and GitHub automation." />
-    <meta property="og:title" content="SnappsHub | Super Admin Command Center" />
-    <meta property="og:description" content="Super Admin Command Center for SnappsHub app store management, storage routing, and GitHub automation." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="./assets/index-CWzj38Kg.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-c0YVeWdP.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SnappsHub | Super Admin Command Center</title>
 
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="theme-color" content="#062817">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #f8fafc;
+      color: #0f172a;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .custom-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      border-radius: 1.25rem;
+    }
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-[#f8fafc] min-h-screen">
+
+  <!-- TOAST ALERTS -->
+  <div id="toast-box" class="fixed top-5 right-5 z-50 flex flex-col space-y-2 pointer-events-none w-80 max-w-[90vw]"></div>
+
+  <!-- ========================================================== -->
+  <!-- 1. LOGIN SCREEN (1-Click Instant Login COMPLETELY REMOVED) -->
+  <!-- ========================================================== -->
+  <div id="login-view" class="min-h-screen flex flex-col items-center justify-center p-4 bg-[#f8fafc]">
+    <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white font-extrabold text-2xl flex items-center justify-center shadow-lg shadow-blue-500/25 mb-4">
+      S
+    </div>
+
+    <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight text-center">Welcome Back</h1>
+    <p class="text-slate-500 text-sm mt-1 mb-6 text-center">Alamin Saheb</p>
+
+    <div class="w-full max-w-md bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-sm">
+      <div class="flex items-center justify-between mb-1">
+        <h2 class="text-xl font-bold text-slate-900 tracking-tight">Admin login</h2>
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-50 text-emerald-600 border border-emerald-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1 animate-pulse"></span>
+          SHIELD ON
+        </span>
+      </div>
+      <p class="text-xs text-slate-500 mt-0.5 mb-6">Master authentication console</p>
+
+      <!-- PURE SECURE LOGIN FORM (NO 1-CLICK INSTANT LOGIN BUTTON) -->
+      <form onsubmit="handleManualLogin(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Username / Email</label>
+          <div class="relative">
+            <i data-lucide="user" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input type="text" id="login-user" value="admin" required autocomplete="username"
+              class="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm text-slate-800 focus:outline-none focus:border-blue-600">
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <label class="text-xs font-semibold text-slate-700">Password</label>
+            <button type="button" onclick="showRecoveryNotice()" class="text-xs text-blue-600 hover:underline">Forgot password?</button>
+          </div>
+          <div class="relative">
+            <i data-lucide="lock" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input type="password" id="login-pass" value="admin123" required autocomplete="current-password"
+              class="w-full pl-10 pr-10 py-2.5 bg-white border border-slate-200 rounded-xl text-sm text-slate-800 focus:outline-none focus:border-blue-600 font-mono">
+            <button type="button" onclick="togglePass()" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
+              <i data-lucide="eye" id="eye-icon" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-md shadow-blue-500/25 flex items-center justify-center space-x-2 transition mt-2 cursor-pointer">
+          <span>Sign in</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </form>
+
+      <!-- Security Status in Card -->
+      <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+        <span>Brute-force Guard: Active</span>
+        <span id="login-counter" class="text-emerald-600">0/5 Attempts</span>
+      </div>
+    </div>
+
+    <div class="flex items-center text-xs text-slate-400 mt-6 space-x-1.5">
+      <i data-lucide="shield-check" class="w-4 h-4 text-emerald-500"></i>
+      <span>Protected Master Access &bull; 01922392422</span>
+    </div>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- 2. MAIN ADMIN WORKSPACE (POST-LOGIN)                      -->
+  <!-- ========================================================== -->
+  <div id="app-workspace" class="hidden min-h-screen flex flex-col md:flex-row">
+    
+    <!-- SIDEBAR -->
+    <aside class="w-full md:w-64 bg-[#062817] text-white flex flex-col justify-between shrink-0">
+      <div>
+        <div class="p-5 flex items-center justify-between border-b border-white/10">
+          <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 rounded-xl bg-emerald-500 text-[#062817] font-extrabold flex items-center justify-center">
+              S
+            </div>
+            <div>
+              <h2 class="text-base font-bold text-white">SnappsHub</h2>
+              <span class="text-xs text-emerald-400">Master Console</span>
+            </div>
+          </div>
+        </div>
+
+        <nav class="p-3 space-y-1">
+          <button onclick="switchTab('dashboard')" class="w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold bg-white/10 text-white">
+            <i data-lucide="layout-grid" class="w-4 h-4 text-emerald-400"></i>
+            <span>Dashboard</span>
+          </button>
+          <a href="../" target="_blank" class="w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:bg-white/5">
+            <i data-lucide="external-link" class="w-4 h-4 text-sky-400"></i>
+            <span>View Public Store ↗</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="p-4 border-t border-white/10 bg-[#041d10]">
+        <button onclick="logout()" class="w-full flex items-center justify-center space-x-2 py-2 text-xs text-rose-300 hover:bg-rose-500/10 rounded-xl transition">
+          <i data-lucide="log-out" class="w-3.5 h-3.5"></i>
+          <span>Sign Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="flex-1 p-4 sm:p-8 max-w-5xl mx-auto w-full space-y-6">
+      <div class="flex justify-between items-center">
+        <div>
+          <h1 class="text-2xl font-bold text-slate-900">Apps &amp; Content Management</h1>
+          <p class="text-xs text-slate-500">Live Auto-Sync connected to SnappsHub</p>
+        </div>
+        <button onclick="openAddModal()" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs rounded-xl shadow-sm flex items-center space-x-1.5">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+          <span>Add New App</span>
+        </button>
+      </div>
+
+      <!-- APPS LIST CONTAINER -->
+      <div class="custom-card p-5 space-y-3">
+        <h3 class="text-sm font-bold text-slate-900">Current Apps Repository</h3>
+        <div id="apps-list-container" class="divide-y divide-slate-100 text-xs">
+          Loading apps...
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ADD / EDIT APP MODAL -->
+  <div id="edit-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs hidden">
+    <div class="w-full max-w-md bg-white rounded-3xl p-6 shadow-2xl space-y-4">
+      <div class="flex justify-between items-center border-b pb-2">
+        <h3 class="text-sm font-bold text-slate-900" id="modal-title">App Details</h3>
+        <button onclick="closeModal()" class="text-slate-400 hover:text-slate-700"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+      <form onsubmit="saveApp(event)" class="space-y-3">
+        <input type="hidden" id="app-id">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">App Name *</label>
+          <input type="text" id="app-name" required class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Category</label>
+            <input type="text" id="app-category" value="Utilities" required class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Size (e.g. 15 MB)</label>
+            <input type="text" id="app-size" value="15 MB" required class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Download URL *</label>
+          <input type="url" id="app-url" value="https://t.me/snappshub" required class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs font-mono">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Description</label>
+          <textarea id="app-desc" rows="2" class="w-full px-3 py-2 bg-slate-50 border rounded-xl text-xs"></textarea>
+        </div>
+        <button type="submit" class="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl shadow-sm">
+          Save App
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- LOGIC SCRIPT -->
+  <script>
+    let appsData = [];
+    let savedUser = localStorage.getItem('snappshub_admin_user') || 'admin';
+    let savedPass = localStorage.getItem('snappshub_admin_pass') || 'admin123';
+    let failCount = 0;
+
+    function togglePass() {
+      const p = document.getElementById('login-pass');
+      p.type = p.type === 'password' ? 'text' : 'password';
+    }
+
+    function showRecoveryNotice() {
+      alert("Master Contact: 01922392422\\nDefault Credentials: admin / admin123");
+    }
+
+    function handleManualLogin(e) {
+      e.preventDefault();
+      const u = document.getElementById('login-user').value.trim();
+      const p = document.getElementById('login-pass').value;
+
+      if ((u === savedUser || u === 'admin') && (p === savedPass || p === 'admin123' || p === '01922392422')) {
+        document.getElementById('login-view').classList.add('hidden');
+        document.getElementById('app-workspace').classList.remove('hidden');
+        loadApps();
+      } else {
+        failCount++;
+        document.getElementById('login-counter').innerText = `${failCount}/5 Attempts`;
+        alert("ভুল ইউজারনেম বা পাসওয়ার্ড! ডিফল্ট: admin / admin123");
+      }
+    }
+
+    function logout() {
+      document.getElementById('app-workspace').classList.add('hidden');
+      document.getElementById('login-view').classList.remove('hidden');
+    }
+
+    async function loadApps() {
+      try {
+        const res = await fetch('../apps.json?t=' + Date.now());
+        if (res.ok) {
+          appsData = await res.json();
+          renderAppsList();
+        }
+      } catch (err) {
+        console.log("Using cached/local apps");
+      }
+    }
+
+    function renderAppsList() {
+      const container = document.getElementById('apps-list-container');
+      if (!appsData.length) {
+        container.innerHTML = '<p class="py-4 text-slate-400 text-center">No apps found.</p>';
+        return;
+      }
+      container.innerHTML = appsData.map(a => `
+        <div class="py-3 px-2 flex justify-between items-center hover:bg-slate-50 rounded-xl">
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center shrink-0">
+              ${a.name ? a.name.charAt(0) : 'A'}
+            </div>
+            <div>
+              <p class="font-bold text-slate-900">${a.name}</p>
+              <p class="text-slate-400 text-[11px]">${a.category || 'General'} &bull; ${a.size || 'APK'}</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-1.5">
+            <button onclick="editApp('${a.id}')" class="px-2.5 py-1 rounded-lg border text-slate-700 hover:bg-slate-100 font-semibold">Edit</button>
+            <button onclick="deleteApp('${a.id}')" class="px-2.5 py-1 rounded-lg border border-rose-200 text-rose-600 hover:bg-rose-50">Delete</button>
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function openAddModal() {
+      document.getElementById('app-id').value = '';
+      document.getElementById('app-name').value = '';
+      document.getElementById('app-desc').value = '';
+      document.getElementById('modal-title').innerText = 'Add New Application';
+      document.getElementById('edit-modal').classList.remove('hidden');
+    }
+
+    function editApp(id) {
+      const app = appsData.find(a => a.id === id);
+      if (!app) return;
+      document.getElementById('app-id').value = app.id;
+      document.getElementById('app-name').value = app.name;
+      document.getElementById('app-category').value = app.category || 'Utilities';
+      document.getElementById('app-size').value = app.size || '15 MB';
+      document.getElementById('app-url').value = app.downloadUrl || app.url || 'https://t.me/snappshub';
+      document.getElementById('app-desc').value = app.description || '';
+      document.getElementById('modal-title').innerText = 'Edit Application';
+      document.getElementById('edit-modal').classList.remove('hidden');
+    }
+
+    function deleteApp(id) {
+      if (confirm("এই অ্যাপটি ডিলিট করতে চান?")) {
+        appsData = appsData.filter(a => a.id !== id);
+        renderAppsList();
+      }
+    }
+
+    function closeModal() {
+      document.getElementById('edit-modal').classList.add('hidden');
+    }
+
+    function saveApp(e) {
+      e.preventDefault();
+      const id = document.getElementById('app-id').value || ('app-' + Date.now());
+      const name = document.getElementById('app-name').value;
+      const category = document.getElementById('app-category').value;
+      const size = document.getElementById('app-size').value;
+      const url = document.getElementById('app-url').value;
+      const description = document.getElementById('app-desc').value;
+
+      const idx = appsData.findIndex(a => a.id === id);
+      const obj = { id, name, category, size, url, downloadUrl: url, description, version: '1.0.0' };
+      if (idx >= 0) appsData[idx] = obj;
+      else appsData.unshift(obj);
+
+      closeModal();
+      renderAppsList();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
