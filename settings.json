@@ -11,7 +11,7 @@
   "heroSubtitle": "Discover useful apps and practical tools for Android phones, Android TV, PCs and laptops — organized in one simple place.",
   "heroSize": "standard",
   "heroAnimation": "fade",
-  "siteUrl": "https://alaminsaheb.github.io/snappshub.github.io/",
+  "siteUrl": "https://snappshub.github.io",
   "footerText": "© 2026 SnappsHub. Built By Alamin Saheb",
   "homepageFeatured": 6,
   "enableSearch": true,
@@ -29,5 +29,14 @@
   "analytics": {
     "endpoint": "https://poalliiaypqfhjdswyju.supabase.co",
     "anonKey": "sb_publishable_OjUkEZUELPFvQADJFpFBcA_zKEqNTZx"
-  }
+  },
+  "siteTitle": "SnappsHub",
+  "siteSubtitle": "Master Console & App Directory",
+  "contactPhone": "01922392422",
+  "contactEmail": "alaminsaheb2019@gmail.com",
+  "telegramChannel": "@snappshub",
+  "telegramBotToken": "8887180459:AAEvG4v8hD7Lgi3Vjr62MJ9StLXLA_Zihe4",
+  "githubRepo": "Snappshub/snappshub.github.io",
+  "githubBranch": "main",
+  "metaDescription": "SnappsHub is the premier Android APK hub and software repository curated by Alamin Saheb."
 }
