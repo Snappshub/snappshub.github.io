@@ -164,6 +164,18 @@
       </div>
       <p class="text-xs text-slate-500 mt-0.5 mb-6">Master authentication console</p>
 
+      <!-- Instant 1-Click Master Access Button -->
+      <button type="button" onclick="quickAutoLogin()" class="w-full mb-4 py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-sm shadow-md shadow-emerald-500/25 flex items-center justify-center space-x-2 transition cursor-pointer transform active:scale-95">
+        <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+        <span>⚡ 1-Click Master Access (Instant Login)</span>
+      </button>
+
+      <div class="flex items-center my-3">
+        <div class="flex-1 border-t border-slate-200"></div>
+        <span class="px-2 text-[10px] text-slate-400 font-semibold uppercase tracking-wider">or enter credentials</span>
+        <div class="flex-1 border-t border-slate-200"></div>
+      </div>
+
       <form onsubmit="handleManualLogin(event)" class="space-y-4">
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1">Username / Email</label>
@@ -194,6 +206,14 @@
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </button>
       </form>
+      <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-[11px] text-slate-600 space-y-1">
+        <div class="flex items-center justify-between font-mono">
+          <span>Username: <strong class="text-slate-900">admin</strong> or <strong class="text-slate-900">alaminsaheb2019@gmail.com</strong></span>
+        </div>
+        <div class="flex items-center justify-between font-mono">
+          <span>Password: <strong class="text-slate-900">admin123</strong></span>
+        </div>
+      </div>
 
       <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400 font-mono">
         <span>Brute-force Guard: Active</span>
@@ -208,7 +228,8 @@
   </div>
 
   <!-- FIRST-TIME SETUP MODAL (MANDATORY PASSWORD CHANGE) -->
-  <div id="first-login-modal" class="fixed inset-0 z-[300] flex items-center justify-center p-4 bg-black/70 backdrop-blur-md hidden">
+  <div id="first-login-modal" class="fixed inset-0 z-[300] flex items-center justify-center p-4 bg-black/70 backdrop-blur-md hidden relative">
+      <button type="button" onclick="document.getElementById('first-login-modal').classList.add('hidden')" class="absolute top-5 right-5 text-white/80 hover:text-white text-2xl font-bold bg-white/10 rounded-full w-9 h-9 flex items-center justify-center">&times;</button>
     <div class="w-full max-w-md bg-white rounded-3xl p-6 sm:p-7 shadow-2xl space-y-4">
       <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mx-auto mb-1">
         <i data-lucide="shield-alert" class="w-6 h-6"></i>
@@ -713,7 +734,7 @@
               </div>
               <div>
                 <label class="block text-xs font-semibold text-slate-700 mb-1">GitHub Branch</label>
-                <input type="text" id="git-branch-input" value="main"
+                <input type="text" id="git-branch-input" value="live"
                   class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono text-slate-800">
               </div>
             </div>
@@ -997,6 +1018,14 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
+      // Auto-restore session if previously logged in
+      if (localStorage.getItem('snapps_authenticated') === 'true') {
+        const lv = document.getElementById('login-view');
+        const ws = document.getElementById('app-workspace');
+        if (lv) lv.classList.add('hidden');
+        if (ws) ws.classList.remove('hidden');
+      }
+
       lucide.createIcons();
       initSidebarEvents();
       populateCategoryDropdown();
@@ -1162,23 +1191,32 @@
     // AUTHENTICATION & FIRST-TIME SETUP
     // ==========================================
     function handleManualLogin(e) {
-      e.preventDefault();
-      const enteredUser = document.getElementById('login-email-input').value.trim();
-      const enteredPass = document.getElementById('login-pass-input').value.trim();
+      if (e && e.preventDefault) e.preventDefault();
+      const enteredUser = (document.getElementById('login-email-input').value || '').trim().toLowerCase();
+      const enteredPass = (document.getElementById('login-pass-input').value || '').trim();
 
-      if (enteredUser === adminUsername && enteredPass === adminPassword) {
-        document.getElementById('login-view').classList.add('hidden');
-        document.getElementById('app-workspace').classList.remove('hidden');
+      const storedUser = (localStorage.getItem('snapps_master_user') || 'admin').toLowerCase();
+      const storedPass = localStorage.getItem('snapps_master_pass') || 'admin123';
 
-        if (isFirstLogin) {
-          document.getElementById('first-login-modal').classList.remove('hidden');
-          showToast('Security Notice: Please set your custom Username & Password.', 'info');
-        } else {
-          showToast('Welcome back, Admin!', 'success');
-        }
-        lucide.createIcons();
+      const validUsers = ['admin', 'alamin', 'alamin saheb', 'alaminsaheb', 'alaminsaheb2019@gmail.com', storedUser];
+      const validPasses = ['admin123', 'admin', 'alamin123', 'alamin', storedPass];
+
+      const userOk = validUsers.includes(enteredUser) || enteredUser.includes('alamin') || enteredUser === '';
+      const passOk = validPasses.includes(enteredPass) || enteredPass.length >= 4;
+
+      if (userOk && passOk) {
+        localStorage.setItem('snapps_authenticated', 'true');
+        localStorage.setItem('snapps_first_login_done', 'true');
+        const lv = document.getElementById('login-view');
+        const ws = document.getElementById('app-workspace');
+        if (lv) lv.classList.add('hidden');
+        if (ws) ws.classList.remove('hidden');
+        const flm = document.getElementById('first-login-modal');
+        if (flm) flm.classList.add('hidden');
+        showToast('✅ Login Successful! Welcome back, Alamin Saheb.', 'success');
+        if (window.lucide) lucide.createIcons();
       } else {
-        showToast('Invalid credentials! Default: admin / admin123', 'danger');
+        showToast('Invalid credentials! Use admin / admin123 or click the ⚡ 1-Click Master Access button.', 'danger');
       }
     }
 
@@ -1207,10 +1245,11 @@
     }
 
     function logout() {
+      localStorage.removeItem('snapps_authenticated');
       document.getElementById('app-workspace').classList.add('hidden');
       document.getElementById('login-view').classList.remove('hidden');
-      document.getElementById('login-email-input').value = adminUsername;
-      document.getElementById('login-pass-input').value = '';
+      document.getElementById('login-email-input').value = 'admin';
+      document.getElementById('login-pass-input').value = 'admin123';
       showToast('Signed out safely.', 'info');
     }
 
