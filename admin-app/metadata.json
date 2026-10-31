@@ -1,6 +1,0 @@
-{
-  "name": "SnappsHub Admin",
-  "description": "Super Admin Command Center for SnappsHub app store management, storage routing, and GitHub automation.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
