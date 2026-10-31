@@ -20,7 +20,14 @@
     "status": "active",
     "lastUpdated": "2026-10-25",
     "developer": "Alamin Saheb Dev",
-    "minAndroid": "Android 7.0+"
+    "minAndroid": "Android 7.0+",
+    "url": "https://snappshub.github.io/downloads/snappshub-v2.4.0.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-25"
   },
   {
     "id": "app-2",
@@ -43,7 +50,14 @@
     "status": "active",
     "lastUpdated": "2026-10-22",
     "developer": "SnappsHub Studio",
-    "minAndroid": "Android 6.0+"
+    "minAndroid": "Android 6.0+",
+    "url": "https://snappshub.github.io/downloads/whatsclean-v3.1.2.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-22"
   },
   {
     "id": "app-3",
@@ -66,7 +80,14 @@
     "status": "active",
     "lastUpdated": "2026-10-18",
     "developer": "Bangla Soft Works",
-    "minAndroid": "Android 5.0+"
+    "minAndroid": "Android 5.0+",
+    "url": "https://snappshub.github.io/downloads/bangla-keyboard-v4.0.1.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-18"
   },
   {
     "id": "app-4",
@@ -89,7 +110,14 @@
     "status": "active",
     "lastUpdated": "2026-10-15",
     "developer": "Alamin Saheb Dev",
-    "minAndroid": "Android 6.0+"
+    "minAndroid": "Android 6.0+",
+    "url": "https://snappshub.github.io/downloads/quickcalc-v1.8.0.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-15"
   },
   {
     "id": "app-5",
@@ -112,7 +140,14 @@
     "status": "active",
     "lastUpdated": "2026-10-24",
     "developer": "MediaCore Labs",
-    "minAndroid": "Android 8.0+"
+    "minAndroid": "Android 8.0+",
+    "url": "https://snappshub.github.io/downloads/fasttube-v5.2.0.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-24"
   },
   {
     "id": "app-6",
@@ -135,7 +170,14 @@
     "status": "active",
     "lastUpdated": "2026-10-12",
     "developer": "VaultGuard Systems",
-    "minAndroid": "Android 7.0+"
+    "minAndroid": "Android 7.0+",
+    "url": "https://snappshub.github.io/downloads/securevault-v2.1.0.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-12"
   },
   {
     "id": "app-7",
@@ -158,7 +200,14 @@
     "status": "active",
     "lastUpdated": "2026-10-10",
     "developer": "Alamin Saheb Dev",
-    "minAndroid": "Android 7.0+"
+    "minAndroid": "Android 7.0+",
+    "url": "https://snappshub.github.io/downloads/autocall-v3.5.0.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-10"
   },
   {
     "id": "app-8",
@@ -181,7 +230,14 @@
     "status": "active",
     "lastUpdated": "2026-10-19",
     "developer": "OfficePro Apps",
-    "minAndroid": "Android 6.0+"
+    "minAndroid": "Android 6.0+",
+    "url": "https://snappshub.github.io/downloads/pdfmaster-v4.3.2.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-19"
   },
   {
     "id": "app-9",
@@ -204,7 +260,14 @@
     "status": "active",
     "lastUpdated": "2026-10-26",
     "developer": "NetShield Global",
-    "minAndroid": "Android 6.0+"
+    "minAndroid": "Android 6.0+",
+    "url": "https://snappshub.github.io/downloads/turbovpn-v6.0.4.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-26"
   },
   {
     "id": "app-10",
@@ -227,7 +290,14 @@
     "status": "active",
     "lastUpdated": "2026-10-08",
     "developer": "SnappsHub Studio",
-    "minAndroid": "Android 5.0+"
+    "minAndroid": "Android 5.0+",
+    "url": "https://snappshub.github.io/downloads/qrscanner-v2.0.1.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-08"
   },
   {
     "id": "app-11",
@@ -250,7 +320,14 @@
     "status": "active",
     "lastUpdated": "2026-10-05",
     "developer": "Alamin Saheb Dev",
-    "minAndroid": "Android 6.0+"
+    "minAndroid": "Android 6.0+",
+    "url": "https://snappshub.github.io/downloads/notes-v1.9.5.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-05"
   },
   {
     "id": "app-12",
@@ -273,7 +350,14 @@
     "status": "active",
     "lastUpdated": "2026-10-21",
     "developer": "SportsByte BD",
-    "minAndroid": "Android 6.0+"
+    "minAndroid": "Android 6.0+",
+    "url": "https://snappshub.github.io/downloads/bdcricket-v3.0.8.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-21"
   },
   {
     "id": "app-13",
@@ -296,7 +380,14 @@
     "status": "active",
     "lastUpdated": "2026-10-16",
     "developer": "SnappsHub Studio",
-    "minAndroid": "Android 6.0+"
+    "minAndroid": "Android 6.0+",
+    "url": "https://snappshub.github.io/downloads/instasaver-v2.8.0.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-16"
   },
   {
     "id": "app-14",
@@ -319,7 +410,14 @@
     "status": "active",
     "lastUpdated": "2026-10-09",
     "developer": "TurboTools Lab",
-    "minAndroid": "Android 5.0+"
+    "minAndroid": "Android 5.0+",
+    "url": "https://snappshub.github.io/downloads/rambooster-v4.1.0.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-09"
   },
   {
     "id": "app-15",
@@ -342,6 +440,13 @@
     "status": "active",
     "lastUpdated": "2026-10-27",
     "developer": "Noor Islam Apps",
-    "minAndroid": "Android 5.0+"
+    "minAndroid": "Android 5.0+",
+    "url": "https://snappshub.github.io/downloads/quran-mazid-v3.2.0.apk",
+    "devices": [
+      "Android Phone",
+      "Android TV",
+      "PC/Laptop"
+    ],
+    "updated": "2026-10-27"
   }
 ]
