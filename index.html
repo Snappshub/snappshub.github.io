@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="bn" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>SnappsHub - Universal Category & Download Hub</title>
+  <link rel="icon" type="image/png" href="./logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sora: ['Sora', 'sans-serif'], sans: ['Plus Jakarta Sans', 'sans-serif'] },
+          colors: { brand: { cyan: '#00F0FF', purple: '#8A3FFC', green: '#00E676', dark: '#0A0E17', card: '#111726', border: '#1F293D' } }
+        }
+      }
+    }
+  </script>
+<style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background-color 0.25s, color 0.25s; overflow-x: hidden; }
+    html.theme-light body { background-color: #F8FAFC !important; color: #0F172A !important; }
+    html.theme-light .theme-bg-card { background-color: #FFFFFF !important; border-color: #E2E8F0 !important; color: #0F172A !important; }
+    html.theme-cyberpunk body { background-color: #0B001A !important; color: #00F0FF !important; }
+    html.theme-cyberpunk .theme-bg-card { background-color: #190033 !important; border-color: #FF007F !important; }
+    html.theme-oled body { background-color: #000000 !important; color: #E2E8F0 !important; }
+    html.theme-oled .theme-bg-card { background-color: #0A0A0A !important; border-color: #1F1F1F !important; }
+    @keyframes marqueeScroll { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+    .marquee-container { display: flex; width: 200%; animation: marqueeScroll 26s linear infinite; will-change: transform; }
+    .marquee-wrapper:hover .marquee-container { animation-play-state: paused; }
+    @keyframes progressCountdown { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    .animate-progress { transform-origin: left; animation: progressCountdown 5s linear forwards; }
+  </style>
+<div class="marquee-wrapper relative overflow-hidden bg-gradient-to-r from-brand-purple/20 via-brand-cyan/20 to-brand-purple/20 border-b border-brand-border/60 py-1.5 px-2 text-[11px] sm:text-xs text-slate-300">
+<div class="marquee-container flex items-center gap-8 whitespace-nowrap">
+<div class="flex items-center gap-6">
+<span class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span> ⚠️ সকল অ্যাপের স্বত্ব সংশ্লিষ্ট কর্তৃপক্ষের। অফিসিয়াল ও ভেরিফাইড সোর্স থেকে ডাউনলোড করুন।</span>
+<span class="text-brand-cyan font-bold">• 100% Zero-virus clean guarantee</span>
+<span class="text-slate-400">• DMCA Policy compliant</span>
+<span class="text-brand-purple font-bold">• All builds cryptographically SHA-256 verified</span>
+</div>
+<div class="flex items-center gap-6">
+<span class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span> ⚠️ সকল অ্যাপের স্বত্ব সংশ্লিষ্ট কর্তৃপক্ষের। অফিসিয়াল ও ভেরিফাইড সোর্স থেকে ডাউনলোড করুন।</span>
+<span class="text-brand-cyan font-bold">• 100% Zero-virus clean guarantee</span>
+<span class="text-slate-400">• DMCA Policy compliant</span>
+<span class="text-brand-purple font-bold">• All builds cryptographically SHA-256 verified</span>
+</div>
+</div>
+</div>
+<header class="sticky top-0 z-40 bg-[#0A0E17]/95 backdrop-blur-md border-b border-brand-border/60 px-3 sm:px-6 py-2.5">
+<div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+<a class="flex items-center gap-2.5 shrink-0 group" href="./">
+<div class="w-9 h-9 rounded-xl overflow-hidden bg-[#111726] border border-brand-cyan/40 p-0.5 shadow-md shadow-brand-cyan/20 group-hover:border-brand-cyan transition-all flex items-center justify-center font-black text-brand-cyan">
+          SH
+        </div>
+<div>
+<span class="font-sora font-bold text-base tracking-tight text-white block leading-none">Snapps<span class="text-brand-cyan">Hub</span></span>
+<span class="text-[9px] text-slate-400 font-medium tracking-wider uppercase block mt-0.5">Apps • Tools • Firmware</span>
+</div>
+</a>
+<div class="flex-1 max-w-xs mx-2 relative">
+<i class="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" data-lucide="search"></i>
+<input class="w-full bg-[#111726] border border-brand-border rounded-xl pl-8 pr-7 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-cyan transition-colors" id="quick-search" onkeyup="filterApps(this.value)" placeholder="Quick Search..." type="text"/>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<a class="p-1.5 rounded-lg bg-[#111726] border border-brand-border text-slate-300 hover:text-brand-cyan hover:border-brand-cyan transition-colors" href="./admin.html" title="Super Admin Studio">
+<i class="w-3.5 h-3.5 text-brand-cyan" data-lucide="shield-alert"></i>
+</a>
+<button class="flex items-center gap-1 px-2 py-1.5 rounded-lg bg-[#111726] border border-brand-border text-xs font-semibold hover:border-brand-purple transition-colors" id="theme-btn" onclick="cycleTheme()">
+<i class="w-3 h-3 text-brand-purple" data-lucide="moon"></i>
+<span class="hidden sm:inline" id="current-theme">Dark</span>
+</button>
+<a class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-[#0088cc] hover:bg-[#0077b5] text-white text-xs font-bold transition-colors" href="https://t.me/snappshub" target="_blank">
+<i class="w-3 h-3" data-lucide="send"></i>
+<span class="hidden sm:inline">Telegram</span>
+</a>
+</div>
+</div>
+</header>
+<section class="max-w-7xl mx-auto w-full px-3 sm:px-6 pt-4 pb-2">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+<div class="lg:col-span-7 space-y-2.5">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-[11px] font-bold">
+<i class="w-3 h-3" data-lucide="sparkles"></i> <span>THE EVERYDAY DIGITAL TOOLKIT</span>
+</div>
+<h1 class="font-sora font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight leading-tight">
+          Discover more.<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-blue-400 to-brand-purple">Do more on every screen.</span>
+</h1>
+<p class="text-xs sm:text-sm text-slate-400 max-w-lg leading-relaxed">
+          Explore signature-verified Android APKs, streaming apps, desktop tools, and high-performance router firmwares in one unified ecosystem.
+        </p>
+</div>
+<div class="lg:col-span-5">
+<div class="theme-bg-card bg-[#111726] border border-brand-cyan/40 rounded-3xl p-4 sm:p-5 text-center relative overflow-hidden shadow-2xl shadow-brand-cyan/10">
+<div class="w-20 h-20 mx-auto rounded-full p-1 bg-gradient-to-tr from-brand-cyan via-brand-purple to-pink-500 shadow-lg shadow-brand-cyan/20 mb-2 flex items-center justify-center text-white font-sora font-extrabold text-2xl">
+            SH
+          </div>
+<h3 class="font-sora font-extrabold text-base sm:text-lg text-white">SnappsHub</h3>
+<p class="text-[10px] sm:text-[11px] text-brand-cyan font-bold tracking-widest uppercase mt-0.5">APPS • GAMES • TOOLS • MORE</p>
+<div class="grid grid-cols-2 gap-2 mt-3">
+<a class="py-2 px-3 rounded-xl bg-gradient-to-r from-[#0088cc] to-blue-600 text-white font-sora font-bold text-xs" href="https://t.me/snappshub" target="_blank">@snappshub</a>
+<a class="py-2 px-3 rounded-xl bg-[#0A0E17] border border-brand-border text-slate-200 font-sora font-bold text-xs" href="mailto:alaminsaheb2019@gmail.com">Email Us</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<main class="max-w-7xl mx-auto w-full px-3 sm:px-6 py-3 flex-1 space-y-6" id="catalog-container">
+<div class="flex items-center justify-center py-12 text-slate-400 text-xs">
+<i class="w-5 h-5 animate-spin mr-2 text-brand-cyan" data-lucide="loader-2"></i> Loading apps catalog...
+    </div>
+</main>
+<div class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4" id="timer-modal">
+<div class="bg-[#111726] border border-brand-cyan/50 rounded-3xl max-w-sm w-full p-5 relative shadow-2xl">
+<button class="absolute top-4 right-4 text-slate-400 hover:text-white" onclick="closeTimerPopup()"><i class="w-5 h-5" data-lucide="x"></i></button>
+<div class="text-center space-y-1">
+<div class="inline-flex p-2.5 rounded-2xl bg-brand-cyan/10 text-brand-cyan mb-1"><i class="w-6 h-6" data-lucide="clock"></i></div>
+<h3 class="font-sora font-extrabold text-base text-white">Preparing Verified Mirror</h3>
+<p class="text-xs text-brand-cyan font-semibold" id="modal-app-name"></p>
+</div>
+<div class="my-4 p-3 rounded-2xl bg-[#0A0E17] border border-brand-border text-center">
+<div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+<span>Generating mirror gateway</span>
+<span class="font-mono font-bold text-brand-cyan text-sm" id="countdown-text">5s</span>
+</div>
+<div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-brand-purple to-brand-cyan w-full transform scale-x-0" id="modal-progress"></div>
+</div>
+</div>
+<button class="w-full py-3 px-4 rounded-xl bg-slate-800 text-slate-500 font-sora font-bold text-xs cursor-not-allowed" disabled="" id="modal-download-btn">
+<span id="modal-btn-text">Please wait 5 seconds...</span>
+</button>
+</div>
+</div>
+<footer class="bg-[#06090F] border-t border-brand-border/60 py-6 px-4 text-xs text-slate-400 mt-auto">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+<div>Website Designed By Alamin Saheb 😎 • SnappsHub © 2026</div>
+<div class="flex gap-4">
+<a class="text-brand-cyan" href="https://t.me/snappshub" target="_blank">Telegram</a>
+<a class="text-slate-300" href="mailto:alaminsaheb2019@gmail.com">Email</a>
+</div>
+</div>
+</footer>
+<script>
+    let allAppsData = [];
+    async function loadCatalog() {
+      try {
+        const res = await fetch('./data/apps.json');
+        allAppsData = res.ok ? await res.json() : getFallbackApps();
+      } catch(e) {
+        allAppsData = getFallbackApps();
+      }
+      renderCatalog(allAppsData);
+    }
+    function getFallbackApps() {
+      return [
+        { "id": "newpipe", "name": "NewPipe", "category": "Android APKs & FOSS", "version": "v0.29.1", "size": "11.4 MB", "download_url": "https://github.com/TeamNewPipe/NewPipe/releases" },
+        { "id": "vlc", "name": "VLC Player", "category": "Android APKs & FOSS", "version": "v3.7.1", "size": "34.2 MB", "download_url": "https://get.videolan.org/vlc-android/" },
+        { "id": "obs", "name": "OBS Studio", "category": "Windows PC Utilities", "version": "v30.2", "size": "128 MB", "download_url": "https://obsproject.com/download" }
+      ];
+    }
+    function renderCatalog(apps) {
+      const container = document.getElementById('catalog-container');
+      container.innerHTML = '';
+      const grouped = {};
+      apps.forEach(a => { (grouped[a.category || 'General'] = grouped[a.category || 'General'] || []).push(a); });
+      for (const [cat, items] of Object.entries(grouped)) {
+        const sec = document.createElement('section');
+        sec.innerHTML = `
+          <div class="flex items-center justify-between mb-2">
+            <h2 class="font-sora font-extrabold text-xs sm:text-sm text-white">${cat}</h2>
+            <span class="text-[9px] bg-brand-cyan/10 text-brand-cyan px-2 py-0.5 rounded-full font-mono font-bold">${items.length} Builds</span>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3">
+            ${items.map(app => `
+              <div class="app-card theme-bg-card bg-[#111726] border border-brand-border rounded-xl p-2.5 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-sora font-bold text-xs text-white truncate app-name">${app.name}</h3>
+                  <p class="text-[9px] text-slate-400">${app.version || 'Latest'} • ${app.size || 'Direct'}</p>
+                </div>
+                <button onclick="openTimerPopup('${app.name}', '${app.download_url}')" class="mt-2 w-full py-1 bg-[#0A0E17] hover:bg-brand-cyan hover:text-black transition-colors text-brand-cyan text-[10px] font-bold rounded-lg border border-brand-border">
+                  Get File
+                </button>
+              </div>
+            `).join('')}
+          </div>
+        `;
+        container.appendChild(sec);
+      }
+      lucide.createIcons();
+    }
+    function filterApps(q) {
+      q = q.toLowerCase().trim();
+      document.querySelectorAll('.app-card').forEach(c => {
+        c.style.display = (c.querySelector('.app-name')?.innerText.toLowerCase() || '').includes(q) ? 'flex' : 'none';
+      });
+    }
+    function cycleTheme() {
+      const themes = ['dark', 'theme-light', 'theme-cyberpunk', 'theme-oled'];
+      const cur = document.documentElement.className;
+      let next = themes[(themes.indexOf(cur) + 1) % themes.length];
+      document.documentElement.className = next;
+    }
+    let countdownInterval, targetDownloadUrl = '';
+    function openTimerPopup(name, url) {
+      targetDownloadUrl = url;
+      document.getElementById('modal-app-name').innerText = name;
+      const m = document.getElementById('timer-modal');
+      m.classList.remove('hidden'); m.classList.add('flex');
+      let t = 5;
+      const cd = document.getElementById('countdown-text');
+      const btn = document.getElementById('modal-download-btn');
+      const btnT = document.getElementById('modal-btn-text');
+      const prg = document.getElementById('modal-progress');
+      prg.classList.remove('animate-progress');
+      void prg.offsetWidth;
+      prg.classList.add('animate-progress');
+      btn.disabled = true;
+      clearInterval(countdownInterval);
+      countdownInterval = setInterval(() => {
+        t--;
+        if (t > 0) { cd.innerText = t + 's'; btnT.innerText = 'Please wait ' + t + 's...'; }
+        else {
+          clearInterval(countdownInterval);
+          cd.innerText = 'Ready!';
+          btn.disabled = false;
+          btn.className = "w-full py-3 px-4 rounded-xl bg-brand-cyan text-black font-sora font-extrabold text-xs cursor-pointer";
+          btnT.innerText = '⚡ Download Mirror';
+          btn.onclick = () => {
+            window.open(targetDownloadUrl, '_blank');
+            closeTimerPopup();
+          };
+        }
+      }, 1000);
+    }
+    function closeTimerPopup() {
+      clearInterval(countdownInterval);
+      document.getElementById('timer-modal').classList.add('hidden');
+      document.getElementById('timer-modal').classList.remove('flex');
+    }
+    window.addEventListener('DOMContentLoaded', loadCatalog);
+  </script>
+</body>
+</html>
