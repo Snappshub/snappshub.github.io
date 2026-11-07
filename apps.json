@@ -1,0 +1,101 @@
+[
+  {
+    "id": "newpipe",
+    "name": "NewPipe",
+    "category": "Android APKs & FOSS",
+    "version": "v0.29.1",
+    "size": "11.4 MB",
+    "badge": "Clean",
+    "icon": "play",
+    "download_url": "https://github.com/TeamNewPipe/NewPipe/releases",
+    "ad_link": "https://uplcm.com/4/12193811"
+  },
+  {
+    "id": "fossify",
+    "name": "Fossify Gallery",
+    "category": "Android APKs & FOSS",
+    "version": "v1.13.1",
+    "size": "8.7 MB",
+    "badge": "FOSS",
+    "icon": "image",
+    "download_url": "https://github.com/FossifyOrg/Gallery/releases",
+    "ad_link": "https://uplcm.com/4/12193811"
+  },
+  {
+    "id": "vlc",
+    "name": "VLC Player",
+    "category": "Android APKs & FOSS",
+    "version": "v3.7.1",
+    "size": "34.2 MB",
+    "badge": "Official",
+    "icon": "film",
+    "download_url": "https://get.videolan.org/vlc-android/",
+    "ad_link": "https://uplcm.com/4/12193811"
+  },
+  {
+    "id": "seal",
+    "name": "Seal Media",
+    "category": "Android APKs & FOSS",
+    "version": "v1.12.0",
+    "size": "24.0 MB",
+    "badge": "Clean",
+    "icon": "download-cloud",
+    "download_url": "https://github.com/JunkFood02/Seal/releases",
+    "ad_link": "https://uplcm.com/4/12193811"
+  },
+  {
+    "id": "spotify",
+    "name": "Spotify Lite Mod",
+    "category": "Media & Streaming",
+    "version": "v1.9.0",
+    "size": "16.5 MB",
+    "badge": "Audio Mod",
+    "icon": "disc",
+    "download_url": "https://snappshub.github.io/",
+    "ad_link": "https://uplcm.com/4/12193811"
+  },
+  {
+    "id": "revanced",
+    "name": "ReVanced Extended",
+    "category": "Media & Streaming",
+    "version": "v19.16.39",
+    "size": "58.2 MB",
+    "badge": "Patched",
+    "icon": "play-square",
+    "download_url": "https://github.com/inotia00/VancedMicroG/releases",
+    "ad_link": "https://uplcm.com/4/12193811"
+  },
+  {
+    "id": "smarttube",
+    "name": "SmartTube TV",
+    "category": "Android TV & FireStick",
+    "version": "v22.40",
+    "size": "19.5 MB",
+    "badge": "4K HDR",
+    "icon": "youtube",
+    "download_url": "https://github.com/yuliskov/SmartTube/releases",
+    "ad_link": "https://uplcm.com/4/12193811"
+  },
+  {
+    "id": "obs",
+    "name": "OBS Studio",
+    "category": "Windows PC Utilities",
+    "version": "v30.2",
+    "size": "128 MB",
+    "badge": "64-bit",
+    "icon": "video",
+    "download_url": "https://obsproject.com/download",
+    "ad_link": "https://uplcm.com/4/12193811"
+  },
+  {
+    "id": "openwrt",
+    "name": "OpenWrt Target",
+    "category": "Router Firmware & OpenWrt",
+    "version": "v23.05.4",
+    "size": "14.1 MB",
+    "badge": "Router",
+    "icon": "network",
+    "download_url": "https://downloads.openwrt.org/",
+    "ad_link": "https://uplcm.com/4/12193811"
+  }
+]

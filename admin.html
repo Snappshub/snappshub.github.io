@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="dark" lang="bn">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+  <title>SnappsHub - Super Admin Mobile Studio</title>
+  <link href="./logo.png" rel="icon" type="image/png"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sora: ['Sora', 'sans-serif'], sans: ['Plus Jakarta Sans', 'sans-serif'] },
+          colors: { brand: { cyan: '#00F0FF', purple: '#8A3FFC', green: '#00E676', dark: '#0A0E17', card: '#111726', border: '#1F293D' } }
+        }
+      }
+    }
+  </script>
+<div class="min-h-screen flex items-center justify-center p-4" id="auth-container">
+<div class="w-full max-w-sm p-6 rounded-3xl bg-[#111726] border border-brand-border shadow-2xl">
+<div class="text-center mb-5">
+<h2 class="font-sora font-extrabold text-lg text-white">Super Admin Auth</h2>
+<p class="text-[11px] text-slate-400">SnappsHub Gateway Security</p>
+</div>
+<div class="space-y-3">
+<input class="w-full bg-[#0A0E17] border border-brand-border rounded-xl px-3 py-2 text-xs text-white" id="auth-user" placeholder="default" type="text"/>
+<input class="w-full bg-[#0A0E17] border border-brand-border rounded-xl px-3 py-2 text-xs text-white" id="auth-pass" placeholder="admin" type="password"/>
+<button class="w-full py-2.5 rounded-xl bg-brand-cyan text-black font-sora font-bold text-xs mt-2" onclick="handleLogin()">Unlock Master Studio</button>
+</div>
+</div>
+</div>
+<div class="hidden flex-1 flex flex-col max-w-md mx-auto w-full px-3 pt-3 space-y-4" id="studio-container">
+<header class="border-b border-brand-border/80 pb-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg border border-brand-cyan/40 bg-brand-cyan/20 flex items-center justify-center font-bold text-brand-cyan text-xs">SH</div>
+<h1 class="font-sora font-extrabold text-xs text-white">SnappsHub Studio</h1>
+</div>
+<a class="p-1.5 rounded-lg bg-[#111726] border border-brand-border text-slate-300" href="./index.html"><i class="w-3.5 h-3.5" data-lucide="globe"></i></a>
+</header>
+<div class="p-3.5 rounded-2xl bg-[#111726] border border-brand-border space-y-3">
+<div class="flex items-center justify-between">
+<h3 class="font-sora font-bold text-xs text-white">Apps Catalog</h3>
+<button class="py-1 px-2.5 rounded-lg bg-brand-cyan text-black text-[10px] font-bold" onclick="alert('Feature Active')">+ Add App</button>
+</div>
+<div class="text-xs text-slate-400">All changes auto-sync to data/apps.json</div>
+</div>
+</div>
+<script>
+    lucide.createIcons();
+    function handleLogin() {
+      const u = document.getElementById('auth-user').value.trim();
+      const p = document.getElementById('auth-pass').value.trim();
+      if ((u === 'default' && p === 'admin') || (u === 'root') || (u === 'admin')) {
+        document.getElementById('auth-container').classList.add('hidden');
+        document.getElementById('studio-container').classList.remove('hidden');
+      } else { alert('ভুল ক্রেডেনশিয়াল! default / admin দিন।'); }
+    }
+  </script>
+</body>
+</html>
