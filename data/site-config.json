@@ -1,9 +1,11 @@
 {
-  "syncedAt": "2026-11-15T13:07:53.718Z",
+  "syncedAt": "2026-11-15T13:22:22.879Z",
   "meta": {
     "siteDomain": "https://snappshub.github.io",
     "seoTitle": "SN Apps Hub — Trusted & Secure Apps for Every Device",
     "seoDescription": "Verified Android, Android TV, Desktop, and Router software curated by SN Apps Hub with fast direct mirrors.",
+    "seoKeywords": "android apk, android tv apps, windows desktop installers, router bin firmware, sha256 verified",
+    "ogImageUrl": "/assets/aistudio/SN_Apps_Hub_Brand_Logo_cb936f51.png",
     "maintenanceMode": false,
     "maintenanceMessage": "Scheduled catalogue update in progress. Back online in a few minutes."
   },
@@ -293,6 +295,11 @@
     "cardBorderWidthPx": 1,
     "sectionGapPx": 28,
     "downloadButtonStyle": "gradient",
+    "fontFamily": "space-grotesk",
+    "cardShadowStyle": "subtle",
+    "floatingSupportEnabled": true,
+    "floatingSupportLabel": "VIP Telegram",
+    "floatingSupportUrl": "https://t.me/snappshub",
     "customCss": "/* Custom Live CSS injected directly into SN Apps Hub */\n.sn-hero-glow {\n  box-shadow: 0 20px 60px rgba(243, 201, 105, 0.08);\n}"
   },
   "adminPanel": {
@@ -301,7 +308,7 @@
     "animationsEnabled": true,
     "glassIntensity": 14,
     "showInlinePreview": true,
-    "dragMoveEnabled": true,
+    "dragMoveEnabled": false,
     "adminAppsViewStyle": "list",
     "adminSettingsViewStyle": "tabs",
     "uiScalePct": 100,
@@ -645,8 +652,8 @@
     "filePath": "data/site-config.json",
     "deployFullSite": true,
     "autoSyncEnabled": true,
-    "lastSyncedAt": null,
-    "lastSyncStatus": "idle",
+    "lastSyncedAt": "2026-11-15T13:08:00.330Z",
+    "lastSyncStatus": "synced",
     "lastSyncError": ""
   }
 }
