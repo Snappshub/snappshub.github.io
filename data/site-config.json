@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-15T13:24:35.836Z",
+  "syncedAt": "2026-11-15T13:25:15.547Z",
   "meta": {
     "siteDomain": "https://snappshub.github.io",
     "seoTitle": "SN Apps Hub — Trusted & Secure Apps for Every Device",
@@ -652,7 +652,7 @@
     "filePath": "data/site-config.json",
     "deployFullSite": true,
     "autoSyncEnabled": true,
-    "lastSyncedAt": "2026-11-15T13:22:30.068Z",
+    "lastSyncedAt": "2026-11-15T13:24:42.371Z",
     "lastSyncStatus": "synced",
     "lastSyncError": ""
   }
