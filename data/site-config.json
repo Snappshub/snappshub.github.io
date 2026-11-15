@@ -1,29 +1,33 @@
 {
-  "syncedAt": "2026-11-14T06:35:55.032Z",
+  "syncedAt": "2026-11-15T13:07:53.718Z",
   "meta": {
     "siteDomain": "https://snappshub.github.io",
-    "seoTitle": "SnappsHub — Publisher-Linked Software, APKs & Firmware Vault",
-    "seoDescription": "Explore curated Android apps, Android TV utilities, desktop software and router firmware with links to publisher sources.",
+    "seoTitle": "SN Apps Hub — Trusted & Secure Apps for Every Device",
+    "seoDescription": "Verified Android, Android TV, Desktop, and Router software curated by SN Apps Hub with fast direct mirrors.",
     "maintenanceMode": false,
     "maintenanceMessage": "Scheduled catalogue update in progress. Back online in a few minutes."
   },
   "header": {
-    "brandTitle": "SnappsHub",
+    "brandTitle": "SN Apps Hub",
     "brandSubtitle": "Trusted & Secure for Your Device",
-    "logoUrl": "https://snappshub.github.io/assets/snappshub-logo.svg",
-    "logoSizePx": 34,
+    "brandBadge": "v4.8 VAULT",
+    "logoUrl": "/assets/aistudio/SN_Apps_Hub_Brand_Logo_cb936f51.png",
+    "logoSizePx": 40,
+    "headerHeightPx": 64,
     "showLogo": true,
+    "showThemeSwitcher": true,
     "sticky": true,
     "headerHeight": "standard",
     "showSearch": true,
     "announcementEnabled": true,
     "announcementMode": "ticker",
-    "announcementBadge": "LIVE",
+    "announcementBadge": "LIVE FEED",
     "announcementText": "All builds verified · New Android TV & Router releases live now",
     "announcementLink": "#apps",
-    "announcementSpeedSec": 18,
+    "announcementSpeedSec": 22,
     "ctaLabel": "Telegram",
     "ctaUrl": "https://t.me/snappshub",
+    "drawerFooterNote": "256-bit GPG Verified SSL",
     "navLinks": [
       {
         "id": "nav-home",
@@ -56,42 +60,43 @@
     ],
     "sidebarFolders": [
       {
-        "id": "sf-apk",
-        "name": "Android APK",
-        "slug": "apk",
-        "fileTypeHint": "APK / XAPK",
+        "id": "sf-android",
+        "name": "1. Android Core Apps",
+        "slug": "android",
+        "fileTypeHint": "v14 Ready",
         "icon": "📱",
         "enabled": true
       },
       {
-        "id": "sf-msi",
-        "name": "Windows MSI & EXE",
-        "slug": "msi",
-        "fileTypeHint": "MSI / EXE",
-        "icon": "🪟",
+        "id": "sf-tv",
+        "name": "2. Android TV & FireOS Tools",
+        "slug": "android-tv",
+        "fileTypeHint": "Leanback 4K",
+        "icon": "📺",
         "enabled": true
       },
       {
-        "id": "sf-os",
-        "name": "OS & Router Firmware",
-        "slug": "ipk",
-        "fileTypeHint": "ISO / IPK / IMG",
-        "icon": "🛰️",
-        "enabled": true
-      },
-      {
-        "id": "sf-mac",
-        "name": "macOS & Linux",
-        "slug": "dmg",
-        "fileTypeHint": "DMG / DEB / APPIMAGE",
+        "id": "sf-desktop",
+        "name": "3. Desktop & Laptop Binaries",
+        "slug": "desktop",
+        "fileTypeHint": "Win x64",
         "icon": "💻",
+        "enabled": true
+      },
+      {
+        "id": "sf-router",
+        "name": "4. Router Firmware Vault",
+        "slug": "router",
+        "fileTypeHint": "BIN Flash",
+        "icon": "📡",
         "enabled": true
       }
     ]
   },
   "hero": {
     "eyebrow": "Trusted & Secure for Your Device",
-    "headline": "Publisher-Linked Apps, TV Tools & Firmware",
+    "headline": "Curated apps, verified mirrors, zero clutter.",
+    "heroHeadlineSizePx": 42,
     "subheadline": "Discover clean, checksum-verified releases across Android, Android TV, Desktop, and Router platforms with direct high-speed download mirrors.",
     "primaryCtaLabel": "Browse Catalogue",
     "primaryCtaUrl": "#apps",
@@ -101,12 +106,67 @@
     "backgroundStyle": "sapphire-aurora",
     "heroImageUrl": "/assets/aistudio/SN_Apps_Hub_Brand_Logo_cb936f51.png",
     "heroImageSize": "medium",
-    "heroImageWidthPx": 76,
-    "heroImageHeightPx": 76,
+    "heroImageWidthPx": 80,
+    "heroImageHeightPx": 80,
     "heroPaddingY": "standard",
     "heroImagePosition": "right",
     "showFeaturedShowcase": true,
-    "featuredAppId": "app-sn-player"
+    "featuredAppId": "app-sn-player",
+    "statPills": [
+      {
+        "id": "stat-uptime",
+        "value": "99.98%",
+        "label": "NODE UPTIME",
+        "color": "#34d399",
+        "enabled": true
+      },
+      {
+        "id": "stat-bins",
+        "value": "1,480+",
+        "label": "BINARIES",
+        "color": "#f3c969",
+        "enabled": true
+      },
+      {
+        "id": "stat-pipe",
+        "value": "10 Gbps",
+        "label": "PIPE MIRROR",
+        "color": "#38bdf8",
+        "enabled": true
+      },
+      {
+        "id": "stat-sha",
+        "value": "SHA-256",
+        "label": "AIR-GAPPED",
+        "color": "#c084fc",
+        "enabled": true
+      }
+    ],
+    "showCommandWidget": true,
+    "commandTitle": "COMMAND STUDIO",
+    "commandBadge": "100Gbps Active",
+    "commandLines": [
+      {
+        "id": "cmd-1",
+        "label": "SHA-256 Air-Gap",
+        "value": "100% Verified",
+        "tone": "emerald"
+      },
+      {
+        "id": "cmd-2",
+        "label": "Cluster Latency",
+        "value": "14 ms (Ultra Low)",
+        "tone": "sky"
+      },
+      {
+        "id": "cmd-3",
+        "label": "Cloudflare Edge",
+        "value": "Active & Armored",
+        "tone": "gold"
+      }
+    ],
+    "commandFooterLeft": "Pipeline: PASS (0/72)",
+    "commandFooterRight": "Audit Log"
   },
   "footer": {
     "brandSummary": "SN Apps Hub curates trusted utility, streaming, browser, and network software with transparent source attribution and reliable download mirrors.",
@@ -117,6 +177,41 @@
     "youtubeUrl": "https://youtube.com/@snappshub",
     "contactEmail": "alaminsahebweb@gmail.com",
     "legalNotice": "All trademarks and package names belong to their respective developers. Official websites and source links are credited on every app page.",
+    "trustMatrixTitle": "Cryptographic Trust & Cleanliness Matrix",
+    "trustMatrixSubtitle": "Every binary mirrored on SnappsHub is isolated in an air-gapped sandbox, checked by 72 antivirus engines, and signed with SHA-256 integrity trees.",
+    "trustBadges": [
+      {
+        "id": "tb-gsc",
+        "title": "Search Console Clean",
+        "subtitle": "Indexed & Google webmaster standing with 0 deceptive flags.",
+        "accent": "sky",
+        "enabled": true
+      },
+      {
+        "id": "tb-cf",
+        "title": "Cloudflare Edge Shield",
+        "subtitle": "Bot Shield active with DDoS zero-downtime routing & TLS 1.3.",
+        "accent": "amber",
+        "enabled": true
+      },
+      {
+        "id": "tb-vt",
+        "title": "VirusTotal 0/72 Clean",
+        "subtitle": "Kaspersky, ESET, Bitdefender and Microsoft Defender 0 detections.",
+        "accent": "emerald",
+        "enabled": true
+      },
+      {
+        "id": "tb-sha",
+        "title": "SHA-256 Air-Gapped",
+        "subtitle": "Cryptographic checksum prevents MITM bit-flip and byte poisoning.",
+        "accent": "purple",
+        "enabled": true
+      }
+    ],
+    "showDesignerBanner": true,
+    "designerBannerText": "✨ Website Designed by Alamin Saheb",
+    "designerBannerUrl": "mailto:alaminsahebweb@gmail.com",
     "columns": [
       {
         "id": "col-platforms",
@@ -191,21 +286,24 @@
     "borderRadius": "balanced",
     "glassBlurPx": 14,
     "animationPreset": "kinetic",
-    "storefrontAppsView": "list",
-    "appIconSizePx": 44,
+    "storefrontAppsView": "grid",
+    "gridColumns": 3,
+    "appIconSizePx": 40,
     "appCardScale": "standard",
+    "cardBorderWidthPx": 1,
+    "sectionGapPx": 28,
     "downloadButtonStyle": "gradient",
     "customCss": "/* Custom Live CSS injected directly into SN Apps Hub */\n.sn-hero-glow {\n  box-shadow: 0 20px 60px rgba(243, 201, 105, 0.08);\n}"
   },
   "adminPanel": {
     "adminThemeId": "cyberpunk-neon",
-    "compactMode": true,
+    "compactMode": false,
     "animationsEnabled": true,
     "glassIntensity": 14,
     "showInlinePreview": true,
     "dragMoveEnabled": true,
     "adminAppsViewStyle": "list",
-    "adminSettingsViewStyle": "stacked",
+    "adminSettingsViewStyle": "tabs",
     "uiScalePct": 100,
     "sidebarWidthPx": 256
   },
@@ -405,7 +503,11 @@
       "fileFormat": "APK",
       "architecture": "universal",
       "license": "Open Source",
-      "screenshots": []
+      "screenshots": [],
+      "ogTitle": "NovaStream Player Pro (APK)",
+      "ogDescription": "Hardware-accelerated 4K HDR media player optimized for Android phones and Android TV leanback navigation.",
+      "seoTitle": "NovaStream Player Pro v4.8.2 (APK) — Free Download",
+      "seoDescription": "Hardware-accelerated 4K HDR media player optimized for Android phones and Android TV leanback navigation."
     },
     {
       "id": "app-shield-browser",
@@ -442,7 +544,11 @@
       "fileFormat": "APK",
       "architecture": "universal",
       "license": "Open Source",
-      "screenshots": []
+      "screenshots": [],
+      "ogTitle": "Aegis Shield Browser (APK)",
+      "ogDescription": "Hardened Chromium-based browser with built-in tracker blocking, DoH support, and desktop extension sync.",
+      "seoTitle": "Aegis Shield Browser v131.2.0 (APK) — Free Download",
+      "seoDescription": "Hardened Chromium-based browser with built-in tracker blocking, DoH support, and desktop extension sync."
     },
     {
       "id": "app-netguard-dns",
@@ -480,7 +586,11 @@
       "fileFormat": "APK",
       "architecture": "universal",
       "license": "Open Source",
-      "screenshots": []
+      "screenshots": [],
+      "ogTitle": "RoutePulse DNS Guard (APK)",
+      "ogDescription": "Zero-root encrypted DNS over HTTPS/TLS profile manager for OpenWrt routers and Android devices.",
+      "seoTitle": "RoutePulse DNS Guard v2.3.5 (APK) — Free Download",
+      "seoDescription": "Zero-root encrypted DNS over HTTPS/TLS profile manager for OpenWrt routers and Android devices."
     }
   ],
   "ads": [
@@ -515,10 +625,10 @@
     "showTelegramSupport": true
   },
   "telegram": {
-    "enabled": false,
+    "enabled": true,
     "channelId": "@snappshub",
     "autoPostOnNewApp": true,
-    "autoPostOnPublish": false,
+    "autoPostOnPublish": true,
     "postTemplate": "🚀 <b>{name}</b> v{version} is now live on SN Apps Hub!\n\n📦 Size: {size}\n📱 Platform: {platform}\n📝 {description}\n\n🔗 Download: {url}",
     "lastPostedAt": null
   },
@@ -535,8 +645,8 @@
     "filePath": "data/site-config.json",
     "deployFullSite": true,
     "autoSyncEnabled": true,
-    "lastSyncedAt": "2026-11-14T09:22:58.435Z",
-    "lastSyncStatus": "synced",
+    "lastSyncedAt": null,
+    "lastSyncStatus": "idle",
     "lastSyncError": ""
   }
 }
